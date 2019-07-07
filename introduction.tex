@@ -26,7 +26,7 @@ density-based distance. This is a slight variation of the original
 definition from~\cite{}.
 
 \begin{definition}
-Given a cost function $c:\R^k \rightarrow \R$, we define the density-based
+Given a continuous cost function $c:\R^k \rightarrow \R$, we define the density-based
 cost of a path $\gamma$ relative to $c$ as: 
 \[ \len_c(\gamma) = \int_{0}^1 c(\gamma(t)) \| \gamma'(t) \|dt. \]
 Here, the path $\gamma$ is defined as a continuous mapping $\gamma:[0,1]
@@ -36,13 +36,15 @@ Let $\ourpath(a,b)$ denote the set
 of piecewise-$C_1$ paths from $a$ to $b$.  We will compute the
 lengths of paths relative to the distance function $\distto_p$ as
 follows. 
-We then define the density-based distance between two points $a, b \in
+We then define the \textbf{density-based distance} between two points $a, b \in
 \R^k$ as 
 \[ d_c(a,b) \inf_{\gamma\in\ourpath(a,b)} \len_c(\gamma)\]
 \end{definition} $$PICTURE$$
 
+Conceptually, the density-based cost of a path is the weighted path length,
+where each infinitesimal path piece is weighted with cost function $c$.
 Density-based distances have been notable in the machine learning setting
-for over a decade. To build a density-sensitive metric from density-based
+for over a decade~\cite{}. To build a density-sensitive metric from density-based
 distances, we would like a cost function $c$ that is small when close to
 the data set, and large when far away. The Nearest Neighbor function is the
 most natural candidate, and has been traditionally used as a proximity
@@ -56,10 +58,13 @@ diagrams or Delaunay triangulation as intermediate data structures.
 real-valued function $\distto_P: \R^k\to \R$ defined as
 $\distto_P(z) = \min_{x\in p} \|x-z\|$.  The \textbf{Nearest Neighbor Cost}
 of a path $\gamma$ is $2 \cdot \len_{\distto_P}$, which we will shorthand to
-$\len_N$. The \textbf{Nearest Neighbor Metric} between two points is
+$\len_N$.
+
+The \textbf{Nearest Neighbor Metric} between two points is
 defined as $\dist_{\distto_P}$, which we short-hand as $\dist_N$.
-The factor of $2$ in the definition is a normalizing constant.
 \end{definition}
+The factor of $2$ in the definition of the Nearest Neighbor Cost is a
+normalizing constant.
 
 The Nearest Neighbor metric, and density-based distances in general, are
 examples of manifold geodesics (see~\cite{} for details). Manifold
