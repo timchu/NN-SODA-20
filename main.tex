@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+
+% \usepackage[backref=true]{biblatex}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}	
+
+
+\DeclareMathOperator{\vol}{Vol}
+\DeclareMathOperator{\kNN}{kNN}
+\DeclareMathOperator{\NN}{NN}
+
+
+\title{Exact Computation of a Manifold Metric with Desirable Machine Learning Properties, via Shortest Paths in a Geometric Graph}
+\author{
+  Timothy Chu \\
+  CMU\\
+  \texttt{tzchu@andrew.cmu.edu}
+  \and
+  Gary L.\ Miller\\
+  CMU\\
+  \texttt{glmiller@cs.cmu.edu} \\
+  \and
+    \newline
+  Donald Sheehy\\
+  University of Connecticut \\
+  \texttt{don.r.sheehy@gmail.com}
+}
+	
+\input{macros}
+\input{environments}
+
+\usepackage{color}
+
+\newcommand{\gary}[1]{{\bf \color{red} Gary: #1}}
+%\newcommand{\gary}[1]{}
+\newcommand{\tim}[1]{{\bf \color{red} Tim: #1}}
+%\newcommand{\tim}[1]{}
+\newcommand{\don}[1]{{\bf \color{red} Don: #1}}
+%\newcommand{\don}[1]{}
+
+\begin{document}
+
+  \setcounter{page}{0}
+  \maketitle
+  \thispagestyle{empty}
+  \input{abstract}
+  \clearpage
+  
+  %  \input{old_introduction}
+  \input{introduction}
+  \input{contributions}
+  \input{outline}
+   % \input{definitions} %% now in introduction
+  %% \input{NN}
+  %% \input{general-spanner}
+  %% \input{distribution-spanner}
+  %% \input{edge-power}
+  %% \input{conclusions}
+  %% \appendix
+  %% %\input{combined-edge-squared}
+  %% \input{motivation}
+  %% %\input{higher_powers}
+ 
+  \clearpage
+   \bibliographystyle{alpha}
+%   \nocite{alamgir12shortest,hein07graph}
+   %   \bibliography{Bibtex/bibtexNN,Bibtex/bibtex}
+      \bibliography{Bibtex/NNbibtex,Bibtex/bibtex}
+   % \bibliography{Bibtex/bibtexNN}
+
+\end{document}
