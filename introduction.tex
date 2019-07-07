@@ -22,23 +22,23 @@ one of the most important and challenging problem on any manifold-based
 metric.
 
 To define the nearest neighbor metric, we first define the notion of a
-density-based distance. (from~\cite{})
+density-based distance. This is a slight variation of the original
+definition from~\cite{}.
 
 \begin{definition}
+Given a cost function $c:\R^k \rightarrow \R$, we define the density-based
+cost of a path $\gamma$ relative to $c$ as: 
+\[ \len_c(\gamma) = \int_{0}^1 c(\gamma(t)) \| \gamma'(t) \|dt. \]
+Here, the path $\gamma$ is defined as a continuous mapping $\gamma:[0,1]
+\to \R^k$.
 
-Another metric on the points of $P$ is called the \textbf{Nearest Neighbor
-Geodesic} and is denoted $\dist_N$.  Before we can define it, we
-need a couple other definitions.
-
-Given any finite set $P\subset \R^k$, there is a real-valued function
-$\distto_P: \R^k\to \R$ defined as $\distto_P(z) = \min_{x\in P}
-\|x-z\|$.  A path is a continuous mapping $\gamma:[0,1]\to \R^d$.
-Let $\ourpath(a,b)$ denote the set of piecewise-$C_1$ paths from
-$a$ to $b$.  We will compute the lengths of paths relative to the
-distance function $\distto_P$ as follows.  \[ \len(\gamma) :=
-\int_0^1 \distto_P(\gamma(t))\|\gamma'(t)\|dt.  \] By considering
-the velocity of $\gamma$, this definition is independent of the
-parameterization of the path. 
+Let $\ourpath(a,b)$ denote the set
+of piecewise-$C_1$ paths from $a$ to $b$.  We will compute the
+lengths of paths relative to the distance function $\distto_p$ as
+follows. 
+We then define the density-based distance between two points $a, b \in
+\R^k$ as 
+\[ d_c(a,b) \inf_{\gamma\in\ourpath(a,b)} \len_c(\gamma)\]
 \end{definition} $$PICTURE$$
 
 Density-based distances have been notable in the machine learning setting
@@ -52,24 +52,13 @@ learning settings~\cite{}. It has been used as such in Nearest Neighbor
 element methods, and any of the hundreds of methods that use Voronoi
 diagrams or Delaunay triangulation as intermediate data structures.
 
-\begin{definition} Given any finite set $p\subset \R^k$, there is a
-	real-valued function $\distto_p: \R^k\to \R$ defined as
-	$\distto_p(z) = \min_{x\in p} \|x-z\|$.  A path is a continuous
-	mapping $\gamma:[0,1]\to \R^d$.  let $\ourpath(a,b)$ denote the set
-	of piecewise-$c_1$ paths from $a$ to $b$.  We will compute the
-	lengths of paths relative to the distance function $\distto_p$ as
-	follows.
- \[ \len(\gamma) := \int_0^1
-\distto_p(\gamma(t))\|\gamma'(t)\|dt.  \] By considering the
-velocity of $\gamma$, this definition is independent of the
-parameterization of the path.  The \textbf{Nearest Neighbor Metric}
-is defined as: \[ \dist_N(a,b) := 2 \inf_{\gamma\in
-\ourpath(a,b)}\len(\gamma).
-\]
-
-The factor of $2$ is a normalizing constant. If there exists a path
-$\gamma$ such that the equality is satisfied, then this path is known as
-the \textbf{optimal nearest neighbor path}. (Nearest neighbor cost?)
+\begin{definition} Given any finite set $P\subset \R^k$, there is a
+real-valued function $\distto_P: \R^k\to \R$ defined as
+$\distto_P(z) = \min_{x\in p} \|x-z\|$.  The \textbf{Nearest Neighbor Cost}
+of a path $\gamma$ is $2 \cdot \len_{\distto_P}$, which we will shorthand to
+$\len_N$. The \textbf{Nearest Neighbor Metric} between two points is
+defined as $\dist_{\distto_P}$, which we short-hand as $\dist_N$.
+The factor of $2$ in the definition is a normalizing constant.
 \end{definition}
 
 The Nearest Neighbor metric, and density-based distances in general, are

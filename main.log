@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  7 JUL 2019 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  7 JUL 2019 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -269,7 +269,11 @@ Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 143.
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `thm:NN' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -286,8 +290,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
 \scratchdimen=\dimen118
@@ -350,56 +353,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: Reference `' on page 2 undefined on input line 15.
 
-
-Overfull \hbox (9.05676pt too wide) in paragraph at lines 29--32
-[][]\OT1/cmr/bx/n/12 Definition 1.1. []\OT1/cmr/m/it/12 An-other met-ric on the
- points of $\OML/cmm/m/it/12 P$ \OT1/cmr/m/it/12 is called the \OT1/cmr/bx/it/1
-2 Near-est Neigh-bor Geodesic
- []
-
 [2
 
 ] [3]
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 178.
+LaTeX Warning: Reference `' on page 4 undefined on input line 167.
 
-[4]
+[4] [5]
 
-LaTeX Warning: Reference `thm:NN' on page 5 undefined on input line 183.
+LaTeX Warning: Reference `' on page 6 undefined on input line 256.
 
-
-LaTeX Warning: Reference `thm:NN' on page 5 undefined on input line 190.
-
-
-LaTeX Warning: Reference `thm:NN' on page 5 undefined on input line 201.
-
-
-LaTeX Warning: Reference `thm:NN' on page 5 undefined on input line 202.
-
-
-LaTeX Warning: Reference `thm:NN' on page 5 undefined on input line 227.
-
-
-LaTeX Warning: Reference `thm:NN' on page 5 undefined on input line 230.
-
-
-LaTeX Warning: Reference `thm:NN' on page 5 undefined on input line 242.
-
-[5]
-
-LaTeX Warning: Reference `thm:NN' on page 6 undefined on input line 262.
-
-
-LaTeX Warning: Reference `' on page 6 undefined on input line 267.
-
-[6]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
-) (./contributions.tex (./theorems.tex)
-
-LaTeX Warning: Reference `thm:NN' on page 7 undefined on input line 6.
-
+[6]) (./contributions.tex (./theorems.tex)
 
 LaTeX Warning: Citation `cohen15approximating' on page 7 undefined on input lin
 e 7.
@@ -409,10 +376,6 @@ LaTeX Warning: Citation `Naor15' on page 7 undefined on input line 12.
 
 
 LaTeX Warning: Citation `Deza1997' on page 7 undefined on input line 14.
-
-
-LaTeX Warning: Reference `thm:general-spanner' on page 7 undefined on input lin
-e 17.
 
 
 LaTeX Warning: Citation `Callahan1993' on page 7 undefined on input line 19.
@@ -426,32 +389,16 @@ LaTeX Warning: Citation `Elkin2013' on page 7 undefined on input line 25.
 
 LaTeX Warning: Citation `LiWan2001' on page 7 undefined on input line 31.
 
-[7]
 
-LaTeX Warning: Reference `thm:distribution-spanner' on page 8 undefined on inpu
-t line 33.
+LaTeX Warning: Citation `LiWan2001' on page 7 undefined on input line 45.
 
-
-LaTeX Warning: Citation `LiWan2001' on page 8 undefined on input line 45.
-
-) (./outline.tex
+[7]) (./outline.tex
 
 LaTeX Warning: Reference `sec:NN' on page 8 undefined on input line 6.
 
 
-LaTeX Warning: Reference `thm:NN' on page 8 undefined on input line 6.
-
-
 LaTeX Warning: Reference `sec:general-spanner' on page 8 undefined on input lin
 e 11.
-
-
-LaTeX Warning: Reference `thm:general-spanner' on page 8 undefined on input lin
-e 12.
-
-
-LaTeX Warning: Reference `thm:distribution-spanner' on page 8 undefined on inpu
-t line 15.
 
 
 LaTeX Warning: Reference `sec:distribution-spanner' on page 8 undefined on inpu
@@ -465,14 +412,6 @@ LaTeX Warning: Reference `sec:edge-power' on page 8 undefined on input line 18.
 LaTeX Warning: Reference `sec:conclusions' on page 8 undefined on input line 27
 .
 
-
-LaTeX Warning: Reference `thm:distribution-spanner' on page 8 undefined on inpu
-t line 28.
-
-
-LaTeX Warning: Reference `thm:general-spanner' on page 8 undefined on input lin
-e 28.
-
 ) [8]
 No file main.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
@@ -480,50 +419,46 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
 (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D765C06C0D98B1AC3B0FA483BE404981;151.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  D765C06C0D98B1AC3B0FA483BE404981;151.
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
  ) 
 Here is how much of TeX's memory you used:
- 6196 strings out of 494440
- 88314 string characters out of 6173197
- 173464 words of memory out of 5000000
- 9381 multiletter control sequences out of 15000+600000
+ 6200 strings out of 494440
+ 88354 string characters out of 6173197
+ 173611 words of memory out of 5000000
+ 9385 multiletter control sequences out of 15000+600000
  15755 words of font info for 60 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  29i,6n,28p,1005b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (9 pages, 205528 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (9 pages, 218629 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+ 166 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  25 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
