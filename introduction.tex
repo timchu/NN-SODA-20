@@ -31,7 +31,6 @@ cost of a path $\gamma$ relative to $c$ as:
 \[ \len_c(\gamma) = \int_{0}^1 c(\gamma(t)) \| \gamma'(t) \|dt. \]
 Here, the path $\gamma$ is defined as a continuous mapping $\gamma:[0,1]
 \to \R^k$.
-
 Let $\ourpath(a,b)$ denote the set
 of piecewise-$C_1$ paths from $a$ to $b$.  We will compute the
 lengths of paths relative to the distance function $\distto_p$ as
@@ -58,14 +57,13 @@ diagrams or Delaunay triangulation as intermediate data structures.
 real-valued function $\distto_P: \R^k\to \R$ defined as
 $\distto_P(z) = \min_{x\in p} \|x-z\|$.  The \textbf{Nearest Neighbor Cost}
 of a path $\gamma$ is $2 \cdot \len_{\distto_P}$, which we will shorthand to
-$\len_N$.
-
+$\len_N$.  
 The \textbf{Nearest Neighbor Metric} between two points is
 defined as $\dist_{\distto_P}$, which we short-hand as $\dist_N$.
-\end{definition}
+
 The factor of $2$ in the definition of the Nearest Neighbor Cost is a
 normalizing constant.
-
+\end{definition}
 The Nearest Neighbor metric, and density-based distances in general, are
 examples of manifold geodesics (see~\cite{} for details). Manifold
 geodesics are defined by embedding a point set into a continuous geometric
