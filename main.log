@@ -739,7 +739,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
 Here is how much of TeX's memory you used:
  6331 strings out of 494440
  90042 string characters out of 6173197
- 177186 words of memory out of 5000000
+ 178186 words of memory out of 5000000
  9438 multiletter control sequences out of 15000+600000
  16411 words of font info for 63 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
@@ -763,7 +763,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (19 pages, 307039 bytes).
+Output written on main.pdf (19 pages, 306884 bytes).
 PDF statistics:
  326 PDF objects out of 1000 (max. 8388607)
  282 compressed objects within 3 object streams
