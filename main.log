@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -607,7 +607,7 @@ Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-) [14]) (./potential-construction.tex
+)) (./potential-construction.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -616,7 +616,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[15]
+[14] [15]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
@@ -640,10 +640,10 @@ Overfull \hbox (436.23436pt too wide) in paragraph at lines 121--121
 [] 
  []
 
-[16]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
+[16]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -693,7 +693,6 @@ ne 207.
 
 LaTeX Warning: Reference `' on page 17 undefined on input line 210.
 
-[17]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -718,7 +717,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-(./fractional-laplacian.tex
+(./fractional-laplacian.tex [17]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -735,13 +734,12 @@ LaTeX Warning: Citation `' on page 18 undefined on input line 31.
 
 LaTeX Warning: Citation `' on page 18 undefined on input line 31.
 
-[18]
 
-LaTeX Warning: Reference `sec:frac-lap-eigenvector' on page 19 undefined on inp
+LaTeX Warning: Reference `sec:frac-lap-eigenvector' on page 18 undefined on inp
 ut line 39.
 
 
-LaTeX Warning: Reference `' on page 19 undefined on input line 48.
+LaTeX Warning: Reference `' on page 18 undefined on input line 48.
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -750,12 +748,12 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 
-LaTeX Warning: Reference `' on page 19 undefined on input line 54.
+LaTeX Warning: Reference `' on page 18 undefined on input line 54.
 
 
-LaTeX Warning: Reference `thm:embed' on page 19 undefined on input line 60.
+LaTeX Warning: Reference `thm:embed' on page 18 undefined on input line 60.
 
-)) (./spanner.tex) (./homology.tex) (./relation-to-MST.tex) [19]
+)) (./spanner.tex) (./homology.tex) (./relation-to-MST.tex) [18] [19]
 No file main.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
@@ -800,7 +798,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (20 pages, 365228 bytes).
+Output written on main.pdf (20 pages, 361757 bytes).
 PDF statistics:
  466 PDF objects out of 1000 (max. 8388607)
  383 compressed objects within 4 object streams

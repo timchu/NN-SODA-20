@@ -1,0 +1,48 @@
+
+Now, our proof will proceed in two parts. First, we construct a function
+$B':\mathbb{R}^n \rightarrow \mathbb{R}^{2^n}$ assigning every point in
+Euclidean space to a vector, representing a convex combination of vertices in
+$G'$. We build $B'$ such that $B'(v_S)= e_S$, where $e_S$ is the unit vector
+with $1$ in the dimension indexed by $S$. Next, we lower bound the
+Nearest-Neighbor cost of an infinitesimal path piece. If the infinitesimal path
+piece runs from $x \in \mathbb{R}^n$ to $x+\Delta(x)$, where both $x$ and
+$x+\Delta(x)$ are in the same circumcentric subdivision (DEFINE), then we lower
+bound it with some flow on the graph $G'$ satisfying demands $B'(x+\Delta(x)) -
+B'(x)$.
+
+If we can find a cost function $B'$ with these properties, we can integrate
+over all the infinitesimal path pieces to show that the $p$-NN cost of a path
+from $x_0$ to $x_{n-1}$ is lower bounded by some flow on $G'$. This is a unit
+flow from $x_0$ to $x_n$. If we furthermore have that the shortest path on $G'$
+equals the shortest path on $G$, then we have:
+
+$$NN(path) \geq Q' \geq SP_{G'}(v_0, v_n) = SP_{G}(x_0, x_n).$$
+
+Here, $Q'$ represents the cost of some flow from $v_0$ to $v_n$ on $G'$. Here,
+$SP_{G'}(v_0, v_n)$ is the shortest path from $v_0$ to $v_n$ on $G'$ and
+$SP_G(x_0, x_n)$ is the shortest path from $x_0$ to $x_n$ on the q-edge power
+graph of the $q$-screw simplex.
+
+Our proof then consists of two parts: the first is finding a graph $G'$ and
+showing $SP_{G'}(v_0, v_n) = SP_G(x_0, x_n)$ (STANDARDIZE INDICES). The second
+is finding a function $B'$ satisfying our desired properties listed in our
+strategy. In the remainder of this section, we build our graph $G'$ and
+establish
+
+a discrete, sufficient-but-not-necessary criterion for when $SP_{G'}(v_0, v_n)
+= SP_G(x_0, x_n)$. Then we build a function $B'$ and prove that $NN(path) \geq
+Q'$, where the path runs from $v_0$ to $v_1$.
+
+We then show that this necessary-but-not-sufficient criterion holds for any $5$
+point $q$-screw simplex, thereby showing that the $q$-edge power metric equals
+the $q$-NN metric for all $5$ point sets. We further conjecture that this
+criterion holds for any $n$ points, but the authors are currently unable to
+prove it.
+
+Therefore, we have provided a sufficient but not necessary criterion for which
+the $q$-edge power metric equals the $q$-NN Metric on the $q$-screw simplex.
+Furthermore
+
+Then we establish a discrete criterion in which $G' \geq G$. We then prove this
+criterion holds for all sets of $5$ points in arbitrary dimension, and
+conjecture that it holds for all sets of $n$ points in arbitrary dimension.
