@@ -60,12 +60,15 @@ $\Convr_i$ is shorthand for the value of $\Convr$ on $\pr_{i}$.
 }
 {
 \Rr_i^q - \Rr_{i-1}^q
-} - \sum_{i < j < k} \Convr(\xr)_j
+} - \sum_{i < j < n} \Convr(\xr)_j
 \end{align}
 
-for all $1 \leq i \leq k-1$, and
+for all $1 \leq i \leq n-1$, and \tim{make sure you replace all k's with
+n's, and claim that you're dealing with simplices of full dimension. You
+may want to say that the proof is counterintuitive since simplices of full
+dimension are usually considered harder?}
 
-\[ \Convr(\xr)_0 = 1 - \sum_{1 \leq j < k} \Convr(\xr)_j
+\[ \Convr(\xr)_0 = 1 - \sum_{1 \leq j < n} \Convr(\xr)_j
 \]
 
 The key feature about $\Convr$ is that
@@ -109,7 +112,7 @@ where $F(d)$ is the unique cost of a flow satisfying demand $d \in
 Here, the left hand side represents the $q$-NN cost of a path piece from
 $x$ to $x+\Delta(x)$, and the right hand side is the unique cost of the
 induced flow on graph $G'$, with the restriction that the flow is only
-nonzero on the vertices $\pr_i\pr_{i+1}$ for any $0 \leq i < k$. This flow
+nonzero on the vertices $\pr_i\pr_{i+1}$ for any $0 \leq i < n$. This flow
 is unique since we forced our flow to be non-zero only on the edges
 $\pr_i\pr_{i+1}$, which form a line graph; and for any set of demands on
 vertices of a line, there is a unique flow satisfying those demands.
@@ -130,6 +133,8 @@ quantity comes out to be:
 As $\Delta(x)$ goes to $0$, the change in Expression~\ref{eq:flow-cost} is
 
 \begin{align}
+\begin{split}
+\label{eq:flow-cost-on-edge}
 &
 \left(q\xr_0 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
 q\xr_0\left(\sum_{s=1}^{i-1} \xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_0
@@ -148,42 +153,50 @@ q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1}
 &+
 \left(q\xr_i \left(\sum_{s=1}^i \xr_s^2
 \right)^{q/2-1}\right)\Delta(\xr)_i,
+\end{split}
 \end{align}
-
-To simplify our notation, let $a_{i,j}$ denote
-
+Since 
 \[
 q\xr_j\left(\sum_{s=0}^i \xr_s^2\right)^{q/2-1} - q\xr_j\left(\sum_{s=0}^{i-1}
-\xr_s^2 \right)^{q/2-1}
-\]
-
-Now we sum this across all $i$ to get the overall cost, and group by
-$\Delta(\xr)_i$ for fixed i. This gives us:
+\xr_s^2 \right)^{q/2-1}\]
+is always non-negative (only when $q \leq 2$), we get that the absolute value of
+Expression~\ref{eq:flow-cost-on-edge} is bounded above by:
 \begin{align}
-&a_{0,0} \Delta(\xr)_0 + a_{1,0} \Delta(\xr_0) + \ldots + a_{k, 0}
-\Delta(\xr_0)
-&+a_{1,1} \Delta(\xr_1) + \ldots + a_{k, 1} \Delta(\xr_1)
+\begin{split}
+\label{eq:flow-cost-upper-bound}
+&
+\left(q\xr_0 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
+q\xr_0\left(\sum_{s=1}^{i-1} \xr_s^2 \right)^{q/2-1} \right)
+|\Delta(\xr)_0|
 \\
-&+ \ldots 
+&+
+\left(q\xr_1 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
+q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1} \right) |\Delta(\xr)_1|
 \\
-&+ a_{k,k} \Delta{\xr_k}.
+&+ \ldots
+\\
+&+
+\left(q\xr_{i-1} \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
+q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1}
+\right)|\Delta(\xr)_{i-1}|
+\\
+&+
+\left(q\xr_i \left(\sum_{s=1}^i \xr_s^2
+\right)^{q/2-1}\right)|\Delta(\xr)_i|,
+\end{split}
 \end{align}
 
-This sum is upper bounded by:
-
+Expression~\ref{eq:flow-cost-upper-bound} is an upper bound on the cost of
+a flow along edge $\vr_i\vr_{i+1}$\tim{Is this the right indexing for
+edges?} induced by a path from $x$ to $x+\Delta(x)$. Now we sum this across all $i$ to get an overall cost upper bound, and group by
+$\Delta(\xr)_i$ for fixed i. The sum telescopes beautifully, and we get:
 \begin{align}
-|a_{0, 0} + a_{1, 0} + \ldots + a_{k, 0}| |\Delta(\xr_0)|
-+ \ldots
-|a_{k, k}| |\Delta(\xr_k)|
-\end{align}
-Which equals
-\begin{align}
-&|q\xr_0\left(\sum_{s=1}^k \xr_s^2)^{q/2-1}\right)| \Delta(\xr)_0
-//&+
-|q\xr_1\left(\sum_{s=1}^k \xr_s^2)^{q/2-1}\right)| \Delta(\xr)_1
+&\left(q\xr_0\left(\sum_{s=1}^k \xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_0|
+\\&+
+|q\xr_1\left(\sum_{s=1}^k \left(\xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_1|
 \ldots
-//& +
-|q\xr_k\left(\sum_{s=1}^k \xr_s^2)^{q/2-1}\right)| \Delta(\xr)_k
+\\& +
+|q\xr_k\left(\sum_{s=1}^k (\xr_s^2)^{q/2-1}\right)| \Delta(\xr)_k|
 \end{align}
 This expression, by Cauchy Schwarz, is upper bounded by
 \[
