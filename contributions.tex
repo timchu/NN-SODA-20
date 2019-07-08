@@ -1,80 +1,87 @@
-\subsection{Contributions}
-Our paper has three main theorems.
+\section{Our Results}
+\subsection{Core Contributions}
+Our primary results are Theorems~\ref{thm:NN} and~\ref{thm:q-NN} on the
+computing the Nearest Neighbor and $q$-Nearest Neighbor metrics
+respectively, which rely
+on fairly intricate and novel mathematical proof techniques. Both of these
+use a minimum cost flow generated from a conservative vector field to keep
+track of the $q$-NN path length, and rely on the geometry of a special
+simplex called the
+$q$-screw simplex. Our proof techniques, theoretically, can prove
+approximations between metrics as well as exact equalities, and may be
+uesful for other more general metrics based on data points. This is the
+first result we know of whose proof combines
+conservative vector fields, simplex geometry, Lipschitz extensions in
+geometry, and minimum cost flows on a graph. It is also the first result we
+know of that eschews calculus of variations for exact manifold metric
+computation.
 
- \input{theorems}
+Our secondary results are Theorems~\ref{thm:ER} and~\ref{thm:l1}, which are
+isometric embeding results that emerge from studying the geometry of the
+$q$-screw simplex. 
+Theorem~\ref{thm:ER} is one of the few results on isometrically embedding a
+geometric simplex into effective resistance, where the underlying
+electrical network is not apparent. It also establishes links between
+$q$-screw simplices and the considerably large field of spectral graph theory,
+which we hope sets the stage for fertile future work.
+Theorem~\ref{thm:l1} generalizes the $q$-screw simplex embeddability result
+of Schoenbreg and Von Neumann, and mirrors a famous theorem of Schoenberg.
+To the author's knowledge, this theorem was not known or even guessed
+before.
 
-Theorem~\ref{thm:NN} considerably strengthens a result from
-in~\cite{cohen15approximating}, which showed $\dist_2$
-is a $3$-approximation of $\dist_N$. Our theorem finds $\dist_N$
-exactly, and lets us
-compute the persistent homology of $\dist_N$.
-$\dist_N$ is defined on all points in space,
-and is thus a metric extension~\cite{Naor15} of the edge-squared
-metric
-and of negative type distances~\cite{Deza1997} to the
-entire space.
+\subsection{Other Contributions}
+Besides for these contributions, we also tackle a range of problems
+significant for any metric on a data set.  Some of the most important
+problems on any metric are: how to $(1+\eps)$ approximate them efficiently
+using sparse data structures, and how the metric behaves in the limit as
+the point set is a large number of points drawn from a probability
+distribution. The former is important to compute the metrics in practice.
+The latter is important since it is highly desirable that
+this limit converge to a metric that has desirable properties, or else
+clustering with such a metric may generate non-intelligible results for
+large datasets.  Persistent homology of metrics space is also a central
+tool in topological data analysis, among other fields~\cite{}, and many
+papers have devoted themselves to computing such homologies ofr a wide
+variety of metrics. Finally, it is important to relate metrics
+like the Nearest Neighbor metric to famous, well-established metrics like
+$l_2$, inverse min-cut distance, or
+the maximum edge length among a path in an MST.
+We will show that the
+Nearest Neighbor metric is in fact one of a suite of simple metrics (the
+$q$-edge power metrics) which naturally generalize both maximum-edge MST
+distance and Euclidean distance, the latter of which covers inverse min-cut
+idstances via the Gomory Hu tree.  This helps put our metrics in a broader
+and more interpretable context.
 
-Theorem~\ref{thm:general-spanner} proves that a $(1+\eps)$-spanner of the edge-squared metric with points in constant dimension is sparser and can be computed more quickly than the Euclidean spanners of
-Callahan and
-Kosaraju~\cite{Callahan1993}. The latter spanners have
-$O(n\eps^{-d})$ edges and are computable in $O(n \log n +
-n\eps^{-d})$ time. To the authors' knowledge, these are the
-sparsest quickly-constructable Euclidean spanners in terms of
-$\eps$ dependence. Later works on
-spanners have focused on bounding diameter,
-degree, or total edge weight~\cite{arya95euclid, Elkin2013}.
-We give a size
-lower bound for $(1+\eps)$-Euclidean spanners, which is close
-to the sparsity of our $(1+\eps)$ spanner of the edge-squared
-metric.
-Previously, sparse spanners of the edge-squared metric were shown to exist in two
-dimensions via Yao graphs and Gabriel graphs~\cite{LiWan2001}.
+In this paper, we present significant progress all of these problems. Our
+spanner and convergence results hold assuming constan dimension, and our
+persistent homology results and our link to more famous metrics hold for
+$n$ points in any dimension. While the proofs of these results range from
+the standard to the intricate, we hope that the sheer number of results
+that can be stated (as well as their quality) inspires future researchers
+to further study density-based distances and their related geometric objects.
 
-Theorem~\ref{thm:distribution-spanner} proves that a $1$-spanner of
-the edge-squared metric can be found assuming points are samples from a
-probability density, by using a $k$-$NN$ graph for
-appropriate $k$. Our result is tight when $d$ is constant. This
-is not possible for Euclidean distance, as a $1$-spanner is almost
-surely the complete graph. Without the probability density
-assumption, there are point sets in $\mathbb{R}^4$ where
-$1$-spanners
-of the edge-squared metric require $\Omega(n^2)$ edges.
-Finally, we show that spanners of $p$-power metrics, which are
-edge-squared metrics but with powers of $p$ instead of $2$, generalize
-Euclidean spanners and Euclidean MSTs. $p$-power metrics were
-considered in~\cite{LiWan2001}.
+Our spanner theorems are as follows:
 
-%% Old outline: check this outline before submitting.
-%% \begin{enumerate}
-%% \item Definition of edge-squared.
-%% \item Preliminaries
-%% \item Outline/Overview/Previous Work
-%% \item Interpretations based on known Machine Learning tools.
-%% \begin{enumerate}
-%% \item Gaussian Kernel similarity.
-%% \item Generalization of Level-Set and Single-Linkage clustering. (\tim{This
-%%     is not a very good point.})
-%% \item Interpretation as $l_2$ on paths?
-%% \end{enumerate}
-%% \item Equality to a natural geodesic distance.
-%% \begin{enumerate}
-%% \item Define NN-metric.
-%% \item Core Proof.
-%% \item NN has a fast sparse spanner. Any spanner of the NN metric is a
-%% spanner of edge-squared. (This result is theoretically
-%%     superseded by our later result, but is of independent interest).
-%% \item Persistent homology of the Nearest Neighbor metric can be
-%% computed.
-%% \end{enumerate}
-%% \item Fast practical spanners for points in a distribution. ($k$-NN
-%%     graph for $k = O( \log n)$.
-%% \item Theoretically sparse, fast spanners for points in low dimension.  \tim{Low intrinsic dimension? Can cover trees do this for me?}
-%% \item Remaining open questions.
-%% \item Appendix:
-%% \begin{enumerate}
-%% \item Persistent homology can be put here, maybe.
-%% \item Links to Heirarchies of Metrics: Edge-Squared is a natural
-%% extension of negative type metrics, with potentially high doubling dimension.
-%% \end{enumerate}
-%%
-%% \end{enumerate}
+ \input{spanner-theorems}
+
+Theorem~\ref{thm:ditsribution-spanner} tackles a common setting in machine
+learning, where points are assumed to be from a well-behaved ditsribution.
+These assumption is foundational to the field of machine learning.
+Although the restrictions on the distribution seem fairly limiting (and
+naively, do not even cover the case of a simple Gaussian), they turn out to
+be far more flexible than they seem, and are common in the machine learning
+literature. They can be modified to gain information on most relevant
+distributions (for example, they cover the
+case of a Gaussian where the thin tail is removed, which turns out to
+contain most of the information of a Gaussian).
+Theorem~\ref{thm:general-spanner} generalizes the results of Cohen et. al.
+in~\cite{cohen15approximating}, who showed nearly linear size spanners in
+nearly linear time, but with significantly worse $\eps$ dependence. Note
+that these spanners can be computed even faster than the optimal known
+Euclidean spanner, indicating that density-sensitive metrics like the
+Nearest Neighbor metric may have interesting algorithmic possibilities that
+standard distances like $l_2$ and $l_1$ don't have.
+
+Results on the geodesics, etc. will be presented in their appropriate
+section.

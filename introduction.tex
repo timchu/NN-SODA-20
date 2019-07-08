@@ -14,11 +14,12 @@ methods such as $k$-NN graph methods, manifold learning, level-set methods,
 single-linkage clustering, and Euclidean MST-based clustering (See Appendix
 ~\ref{} for details). The construction of appropriate density-sensitive
 metrics is an active area of research in machine learning. We consider a
-simple density-sensitive metric with an underlying manifold structure,
-whose close variants have been studied by multiple researchers. This metric
-is called the Nearest Neighbor Metric.  In this paper, we show how to
+simple density-sensitive metric with an underlying manifold structure.
+This metric is called the Nearest Neighbor Metric, and it and its close
+variants have been studied in the past by multiple researchers. 
+In this paper, we show how to
 compute the Nearest Neighbor metric exactly for any dimension, which solves
-one of the most important and challenging problem on any manifold-based
+one of the most important and challenging problem for any manifold-based
 metric.
 
 To define the nearest neighbor metric, we first define the notion of a
@@ -115,7 +116,8 @@ different costs.
 In this paper, we solve both problems: we exactly compute the Nearest
 Neighbor metric in all cases, and we $(1+\eps)$ approximate it quickly.
 Our approach is
-based on conservative vector fields, Lipschitz extensions, and minimum cost
+based on conservative vector fields, contractive embeddings, Lipschitz
+extensions, and minimum cost
 flows on a graph. We combine these tools to prove that the nearest neighbor
 metric is exactly equal to a shortest path distance on a geometric graph,
 the so-called edge-squared metric, in all cases. This allows us to compute
@@ -144,40 +146,40 @@ least four reasons:
 \begin{enumerate}
 
 \item The optimal nearest neighbor path for two points not in the dataset
-	is generally piecewise hyperbolic. This holds true even when the
-		dataset is a single point, and was established by~\cite{}
-		using tools in Riemannian surfaces and the complex plane.
-		Meanwhile, Theorem~\ref{} implies an optimal nearest
-		neighbor path for two data points is piecewise linear!
+is generally piecewise hyperbolic. This holds true even when the
+dataset is a single point, and was established by~\cite{}
+using tools in Riemannian surfaces and the complex plane.
+Meanwhile, Theorem~\ref{} implies an optimal nearest
+neighbor path for two data points is piecewise linear!
 
 \item There are simple and natural variants of the Nearest Neighbor metric,
-	for which no analog of Theorem~\ref{thm:NN} is known nor suspected.
-		These variants are known as the $q$-Nearest Neighbor
-		metric, for $1 < q < 2$, and we will formally define these
-		metrics later in the introduction. When $q=2$, these
-		metrics coincide with the Nearest Neighbor metric.
-%This
-%		gives us a natural suite of metrics that smoothly converge
-%		to the Nearest Neighbor metric, for which no theorem like
-%		Theorem~\ref{thm:NN} is known.
+for which no analog of Theorem~\ref{thm:NN} is known nor suspected.
+These variants are known as the $q$-Nearest Neighbor
+metric, for $1 < q < 2$, and we will formally define these
+metrics later in the introduction. When $q=2$, these
+metrics coincide with the Nearest Neighbor metric.
+This
+gives us a natural suite of metrics that smoothly converge
+to the Nearest Neighbor metric, for which no theorem like
+Theorem~\ref{thm:NN} is known.
 
 \item Even for just three points in a right triangle configuration, there
-	exist an uncountable suite of optimal-cost paths between the two
-		endpoints of the hypotenuse. Each path in this uncountable
-		suite is piecewise hyperbolic, but, surprisingly, they all
-		have the exact same cost as the edge-squared distance. In
-		fact, the union of these paths is the entire right
-		triangle. Thus, lowering the Nearest Neighbor function
-		anywhere inside the triangle and using this to build a new
+exist an uncountable suite of optimal-cost paths between the two
+endpoints of the hypotenuse. Each path in this uncountable
+suite is piecewise hyperbolic, but, surprisingly, they all
+have the exact same cost as the edge-squared distance. In
+fact, the union of these paths is the entire right
+triangle. Thus, lowering the Nearest Neighbor function
+anywhere inside the triangle and using this to build a new
 density-based distance will break
-		Theorem~\ref{thm:NN}. This establishes that the equality in
-		Theorem~\ref{thm:NN} is fairly tight.
+Theorem~\ref{thm:NN}. This establishes that the equality in
+Theorem~\ref{thm:NN} is fairly tight.
 
 \item This theorem holds for any compact point set, whether its $n$ points
-	in $n-1$ dimensional space or a finite union of compact geometric
-		blobs in countably infinite dimension. The geometry of both
-		can be quite complicated, and it is generally hard to prove
-		these types of results on arbitrary point sets.
+in $n-1$ dimensional space or a finite union of compact geometric
+blobs in countably infinite dimension. The geometry of both
+can be quite complicated, and it is generally hard to prove
+these types of results on arbitrary point sets.
 
 \end{enumerate}
 
