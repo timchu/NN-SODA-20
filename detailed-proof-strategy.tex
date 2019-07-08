@@ -19,7 +19,7 @@ To lower bound the cost of the $q$-NN metric with a unit flow, we aim to build
 a potential function $\Conv:\mathbb{R}^n \rightarrow \mathbb{R}^{2^n}$ such
 that $\Conv(p)$ is a vector whose entries sum to one, supported on the $ V(G')$ (the vertices of
 $G'$). Here, $\Conv(p)$
-represents a convex combination of the vertices of $G’$. We construct $\Conv$
+represents a convex combination of the vertices of $G'$. We construct $\Conv$
 such that $\Conv(v_S) = e_S$, where $e_S$ represents the unit vector with $1$
 in the coordinate indexed by $S$, and $0$ elsewhere. Additionally, we would
 like $\Conv$ to have
@@ -33,7 +33,7 @@ unit flow from $v_0$ to $v_n$.
 the $q$-NN cost of a path from $x_0$ to $x_n$ with the shortest path in $G'$.
 
 Therefore, we are primarily devoted to two tasks: first,
-constructing a $G’$, and constructing a function
+constructing a $G'$, and constructing a function
 $\Conv$ satisfying the properties listed above.  Later, we will see how to
 go from $G'$ to the $q$-edge power graph for all $n$ when $q=2$, and for $
 n\leq 4$ when $q > 2$. These combined will prove Theorems~\ref{thm:NN}
