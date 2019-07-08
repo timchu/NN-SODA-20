@@ -56,10 +56,10 @@ diagrams or Delaunay triangulation as intermediate data structures.
 \begin{definition} Given any finite set $P\subset \R^k$, there is a
 real-valued function $\distto_P: \R^k\to \R$ defined as
 $\distto_P(z) = \min_{x\in p} \|x-z\|$.  The \textbf{Nearest Neighbor Cost}
-of a path $\gamma$ is $2 \cdot \len_{\distto_P}$, which we will shorthand to
+of a path $\gamma$ is $\len_{2 \distto_P}$, which we will shorthand to
 $\len_N$.  
 The \textbf{Nearest Neighbor Metric} between two points is
-defined as $\dist_{\distto_P}$, which we short-hand as $\dist_N$.
+defined as $\dist_{2 \distto_P}$, which we short-hand as $\dist_N$.
 
 The factor of $2$ in the definition of the Nearest Neighbor Cost is a
 normalizing constant.

@@ -1,0 +1,221 @@
+\subsection{Construction of $B'$}
+
+In this section, we prove we Lemma~\ref{lem:flow}. We construct a function
+$\Conv:\mathbb{R}^n \rightarrow \mathbb{R}^{2^n}$ assigning every point in
+Euclidean space to a vector, representing a convex combination of vertices
+in $G'$.
+
+Define $\pr, \xr, \Rr, \Br$ here. Points $\pr$ numbered from $0$ to $k-1$.
+Here, $\xr$ is numbered $1$ through $k-1$. $B$ is $0$ through $k-1$
+indexed.
+
+\textbf{LEGEND}: $p$ are points in the screw simplex, $u$ are initial
+points on the line generating the screw simplex, $x$ is the point inside
+the screw simplex, and $v$ are the vertices of the graph.
+
+Our general strategy is to create $\Conv$ piecewise, where we define it on
+each Voronoi subdivision bounded by the vertices $ p_{a_0a_1\ldots a_t}$
+for all $0 \leq t \leq k$. By the construction of these points,
+$p_{a_0}p_{a_0a_1}$ is perpendicular to $p_{a_0a_1}p_{a_0a_1a_2}$, and so
+forth.
+
+To simplify our notation, we will denote $p_{a_0a_1\ldots a_t}$ as $\pr_t$,
+for any $0 \leq t \leq k$. This is to simplify our notation. Thus, we can
+now say the line $\pr_{i}\pr_{i+1}$ is perpendicular to
+$\pr_{i+1}\pr_{i+2}$. These lines define a natural coordinate axis. Thus,
+for any $\xr$ in the convex hull of $\pr_i$, we can write $\xr$ in
+coordinates $(\xr_0, \xr_1, \ldots \xr_k)$, where the $i^{th}$ coordinate
+axis is parallel to $\pr_i \pr_{i+1}$. Now we define $\Br$ the $i^{th}$
+coordinate of $\Br$:
+
+\begin{align}
+\Br(\xr)_i = \frac{
+\left(\sum_{s=1}^i {\xr_s}^2\right)^{q/2} -\left(\sum_{s=1}^{i-1}
+{\xr_s}^2\right)^{q/2}
+}
+{
+\Rr_i^q - \Rr_{i-1}^q
+} - \sum_{i < j < k} \Br(\xr)_j
+\end{align}
+
+for all $1 \leq i \leq k-1$, and
+
+\[ \Br(\xr)_0 = 1 - \sum_{1 \leq j < k} \Br(\xr)_j
+\]
+
+The key feature about $\Br$ is that
+
+\[\sum_{j=i}^k \Br(\xr)_j= \frac{
+\left(\sum_{s=1}^i {\xr_s}^2\right)^{q/2} -\left(\sum_{s=1}^{i-1}
+{\xr_s}^2\right)^{q/2}
+}
+{
+\Rr_i^q - \Rr_{i-1}^q
+}\]
+
+for all $i > 0$, and for $i = 0$ the LHS evaluates to $1$.
+
+Since we defined this function piecewise, we need to check that this
+function is piecewise continuous.
+
+\begin{lemma} If $\xr$ is on a face of $\pr_0, \ldots \pr_n$, then
+$\Br(\xr)$ has non-zero coordinates only on that face. Furthermore, the
+coordinates depend only on SOMETHING.
+
+\end{lemma}
+
+\begin{proof}
+
+\end{proof}
+
+Now we are ready to prove our core lemma:
+
+\begin{lemma} For $x$ and $x+\Delta(x)$ in the convex hull of $\pr_1,
+\ldots \pr_k$, the distance:
+
+\[ \|x-\pr_1\|^{q-1} \cdot \|\Delta(x)\| \geq
+F\left(\Br(x+\Delta(x))-\Br(x)\right)\]
+
+where $F(d)$ is the unique cost of a flow satisfying demand $d \in
+\mathbb{R}^k$ on $\Gr$.
+
+\end{lemma}
+
+Here, the left hand side represents the $q$-NN cost of a path piece from
+$x$ to $x+\Delta(x)$, and the right hand side is the unique cost of the
+induced flow on graph $G'$, with the restriction that the flow is only
+nonzero on the vertices $\pr_i\pr_{i+1}$ for any $0 \leq i < k$. This flow
+is unique since we forced our flow to be non-zero only on the edges
+$\pr_i\pr_{i+1}$, which form a line graph; and for any set of demands on
+vertices of a line, there is a unique flow satisfying those demands.
+
+\begin{proof} For any edge $\pr_i\pr_{i+1}$, the cost of a flow (satisfying
+some set of demands whose sum is $0$) on that edge is the absolute value of
+the sum of the demands on vertices $\pr_{i+1} \pr_{i+2}, \ldots \pr_k$,
+multiplied by the cost of the edge from $\pr_i$ to $\pr_{i+1}$. This
+quantity comes out to be:
+
+\begin{align} &\left(\Rr_{i+1}^q-\Rr_{i}^q \right) \sum_{j=i+1} \Br(\xr)_j
+\\
+\label{eq:flow-cost}
+&=\left(\sum_{s=1}^i {\xr_s}^2\right)^{q/2} -\left(\sum_{s=1}^{i-1}
+{\xr_s}^2\right)^{q/2}.
+\end{align}
+
+As $\Delta(x)$ goes to $0$, the change in Expression~\ref{eq:flow-cost} is
+
+\begin{align}
+\left(q\xr_0 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} –
+q\xr_0\left(\sum_{s=1}^{i-1} \xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_0
++
+\left(q\xr_1 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} –
+q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_1
++ \ldots
++
+\left(q\xr_{i-1} \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} –
+q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1}
+\right)\Delta(\xr)_{i-1}
++
+\left(q\xr_i \left(\sum_{s=1}^i \xr_s^2
+\right)^{q/2-1}\right)\Delta(\xr)_i,
+\end{align}
+
+To simplify our notation, let $a_{i,j}$ denote
+
+\[
+q\xr_j\left(\sum_{s=0}^i \xr_s^2\right) \ 3\xr_j\left(\sum_{s=0}^{i-1}
+\xr_s^2 \right)
+\]
+
+Now we sum this across all $i$ to get the overall cost, and group by
+$\Delta(\xr)_i$ for fixed i. This gives us:
+\[
+a_{0,0} \Delta(\xr)_0 + a_{1,0} \Delta(\xr_0) + \ldots + a_{k, 0}
+\Delta(\xr_0)
++ \ldots
+a{1,1} \Delta(\xr_1) + \ldots + a_{k, 1} \Delta(\xr_1)
++ \ldots
++ a{k,k} \Delta{\xr_k}.
+\]
+
+This sum is upper bounded by:
+
+\[
+|a_{0, 0} + a_{1, 0} + ldots + a{k, 0}| |\Delta(\xr_0)|
++ \ldots
+|a_{k, k}| |\Delta(\xr_k)|
+\]
+Which equals
+\[
+|q\xr_0\left(\sum_{s=1}^k \xr_s^2)^{q/2-1}\right)| \Delta(\xr)_0
++
+|q\xr_1\left(\sum_{s=1}^k \xr_s^2)^{q/2-1}\right)| \Delta(\xr)_1
+\ldots
++
+|q\xr_k\left(\sum_{s=1}^k \xr_s^2)^{q/2-1}\right)| \Delta(\xr)_k
+\]
+This expression, by Cauchy Schwarz, is upper bounded by
+\[
+\sqrt{\sum_{s=0}^k \Delta(\xr)_s^2} \cdot \left(q\sqrt{\sum_{s=0}^k
+\xr_s^{q-1}}\right)
+\]
+Which is exactly the $q$-NN distance.
+
+\end{proof}
+
+Note that this function is piecewise continuous on the boundary. Therefore,
+we have shown that the $q$-NN cost of any path piece is less than the
+min-cost flow on $G’$ satisfying
+$\Conv\left(x+\Delta(x)\right)-\Conv\left(x\right)$ for infinitesimal
+$\Delta(x)$, as desired.
+
+So far, the only property our flow construction used is that the points
+$x_0, x_1, \ldots x_n$ have Voronoi subdivisions defined by $\pr_{a_0}$,
+$\pr_{a_0a_1}$, \ldots $\pr_{a_0a_1\ldots a_k}$, for some $a_0, ldots a_k
+\subset \{0, 1, \ldots n\}$. (DOES THIS WORK FOR ANY GEOMETRY, OR DO I NEED
+THE INTERIOR CIRCUMCENTER PROPERTY?).
+
+Thus, we have proven a core lemma:
+
+\begin{lemma} ~\label{lem:qNN-G’}
+
+The $q$-NN distance between two points in a point set is lower bounded by
+the shortest path between the two corresponding points in $G’$. Here, $G’$
+is constructed as in Definition~\ref{def:G’}
+
+\end{lemma}
+
+We now prove the following two lemmas, completing our proof of
+Theorem~\ref{thm:NN} and Theorem~\ref{thm:qNN} respectively.
+
+\begin{lemma}\label{lem:edge-squared-G’} Let $G$ be the edge-squared graph
+(DEFINE), and let $G’$ be defined as in Definition~\ref{def:G’} for $q=2$.
+The shortest path in $G’$ is the same as the shortest path in $G$, when the
+initial point set generating $G$ and $G’$ is a $2$-screw simplex.
+
+\end{lemma}
+
+\begin{lemma}\label{lem:q-edge-power-G’} Let $q > 2$. Let $G$ be the
+$q$-edge power graph, and $G’$ be defined as in Definition~\ref{def:G’}
+(MAKE SURE THE DEFINITION IS Q DEPENDENT). The shortest path in $G’$ is the
+same as the shortest path in $G$, when the initial point set generating $G$
+and $G’$ is a $q$-screw simplex with $4$ points.
+
+\end{lemma}
+
+Combined with Theorem~\ref{thm:screw-simplex-reduction},
+Lemmas~\ref{edge-squared-G’} and~\ref{q-edge-power-G’} prove
+Theorems~\ref{thm:NN} and~\ref{thm:qNN} respectively. Moreover, we make the
+following conjecture, which we have some computational evidence for (See
+Appendix~\ref{} for details):
+
+\begin{conjecture}\label{conj:qNN}
+
+For $q>2$, let $G$ and $G’$ be defined as in
+Lemma~\ref{lem:q-edge-power-G’}. Then the shortest path in $G’$ is the same
+as the shortest path in $G$.
+
+\end{conjecture}
+
+If this were true, it would prove that the $q$-edge power metric and the
+$q$-NN metric were equal for all $q>2$.
