@@ -13,9 +13,17 @@ subdivision. \tim{define circumcentric/barycentric subdivision}
 
 Let $p_{S}$ be the circumcenter of points $\{p_s | s \in S\}$ when $S
 \subset \{1, 2, \ldots n\}$. A simplicial cell in the circumcentric subdivision is
-defined by a set $a_0, a_1, \ldots a_{n-1}$ as follows: let
+defined by a permutation $a_0, a_1, \ldots a_{n-1}$ of $\{0, 1, \ldots
+n-1\}$ as follows: let
 $A_i = \{a_0, a_1, \ldots a_{i}\}$. Then the vertices $\{p_{A_i} | 0 \leq i
-< n\}$ are the vertices of the simplicial cell.  \tim{Move this definition upwards somewhere?}
+< n\}$ are the vertices of the simplicial cell.  \tim{Move this definition
+upwards somewhere?} Each Voronoi cell is the disjoint~\tim{not exactly
+disjoint} union of some of
+these cells, and the cells partition the simplex \tim{This isn't quite
+true: its only true for special geometry cells, but we don't particularly
+care... how can I make this point clear?}. Our general strategy is to
+create $\Conv$ on each simplicial cell, and show that is piecewise
+continuous across the boundaries of simplicial cells.
 
 To simplify our notation, we define $\pr_i$ to be $p_{A_i}$. \tim{Make sure
 all points are $p$, not $x$. $\xr_k$ is later used to coordinate-wise split
@@ -36,7 +44,8 @@ for any $0 \leq t \leq k$.
 
 By the construction of circumcentric subdivisions, 
 the line $\pr_{i}\pr_{i+1}$ is perpendicular to
-$\pr_{i+1}\pr_{i+2}$. These lines define a natural coordinate axis. Thus,
+$\pr_{i+1}\pr_{i+2}$ for all $i$. These lines define a natural
+orthonormal coordinate axis. Thus,
 for any $\xr$ in the convex hull of $\pr_i$, we can write $\xr$ in
 coordinates $(\xr_0, \xr_1, \ldots \xr_k)$, where the $i^{th}$ coordinate
 axis is parallel to $\pr_i \pr_{i+1}$.
@@ -122,17 +131,17 @@ As $\Delta(x)$ goes to $0$, the change in Expression~\ref{eq:flow-cost} is
 
 \begin{align}
 &
-\left(q\xr_0 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} –
+\left(q\xr_0 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
 q\xr_0\left(\sum_{s=1}^{i-1} \xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_0
 \\
 &+
-\left(q\xr_1 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} –
+\left(q\xr_1 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
 q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_1
 \\
 &+ \ldots
 \\
 &+
-\left(q\xr_{i-1} \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} –
+\left(q\xr_{i-1} \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
 q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1}
 \right)\Delta(\xr)_{i-1}
 \\
