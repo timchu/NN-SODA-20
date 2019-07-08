@@ -8,21 +8,33 @@ $q=2$, and noting that the proof generalizes naturally for any $q > 2$.
   Pick any \emph{source} point $s\in P$.
   Order the points of $P$ as $p_1,\ldots ,p_n$ so that
   \[
-    \dist_2(s,p_1) \le \cdots \le \dist_2(s, p_n).
+    \dist_q(s,p_1) \le \cdots \le \dist_q(s, p_n).
   \]
   This will imply that $p_1 = s$.
   It will suffice to show that for all $p_i\in P$, we have $\dist_2(s,p_i) = \dist_N(s,p_i)$.
   There are three main steps:
   \begin{enumerate}
-    \item We first show that when $P$ is a subset of the vertices of an axis-aligned box, $\dist = \dist_N$.  In this case, shortest paths for $\dist$ are single edges and shortest paths for $\dist_N$ are straight lines.
-		\item We then show how to lift the points from $\R^d$ to $\R^n$ by a
+  \item We first show that the theorem holds for $2$-screw simplices, and
+for $q$-screw simplices when $q > 2$.
+\begin{enumerate}
+  \item We will construct a graph $G'$ on the points $x_0, x_1, \ldots x_n$
+of the $q$-screw simplex, and prove that the $q$-NN distance between $p_1$
+and $p_n$ is bounded above by the shortest path distance between
+corresponding vertices on $G'$.
+	\item We show that the shortest path on $G'$ and the shortest path
+on $G$ coincide when $q=2$, and for $4$ point sets when $q>2$.  
+\end{enumerate}
+  \item We then show how to lift the points from $\R^d$ to $\R^n$ by a
 Lipschitz map $m$ that places all the points on the vertices of a $q$-screw
-simplex, and preserves preserves $\dist_2(s,p)$ for all $p\in P$.
-		\item Finally, we show how the Lipschitz extension of $m$ is also
-Lipschitz as a function between nearest neighbor geodesics.  We combine
-these pieces to show that $\dist \le \dist_N$.  As $\dist \ge \dist_N$
-(Lemma~\ref{lem:dist_N_le_dist}), this will conclude the proof that $\dist
-= \dist_N$.
+simplex, and preserves $\dist_q(s,p)$ for all $p\in
+P$\tim{define $\dist_q$}
+  \item We show how the Lipschitz extension of $m$ is also
+Lipschitz as a function between $q$-power Nearest Neighbor metrics. 
+We combine these pieces to show that $\dist_2 \le \dist_N$.  As $\dist_2
+\ge \dist_N$ (Lemma~\ref{lem:dist_N_le_dist}), this will conclude the proof
+that $\dist_2 = \dist_N$. The analagous result holds for $4$ point sets in
+the $q$-NN metric, which concludes the proof that $\dist_q = \dist_{qN}$
+for all $q>2$ for $4$ point sets.
   \end{enumerate}
   
   \input{boxes}
