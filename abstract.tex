@@ -14,11 +14,18 @@ manifold. This makes exactly
 computing the Nearest Neighbor metric challenging, even for a fixed
 set of four points in two dimensions. In this paper, we overcome this
 challenge by equating the Nearest Neighbor metric to a shortest-path
-distance on a simple geometric graph, in all cases. This
-considerably strengthens the work of Cohen et al. We then
+distance on a simple geometric graph, in all cases. We then
 exactly compute a generalization of the Nearest Neighbor metric, called the
 $q$-Nearest Neighbor metric, for small point sets.  Our tools include
-conservative vector fields, Lipschitz extensions, minimum cost flows, and barycentric subdivisions, all applied to a geometric object we call the $q$-screw simplex.
+conservative vector fields, Lipschitz extensions, minimum cost flows, and
+barycentric subdivisions, all applied to a geometric object we call the
+$q$-screw simplex. Our work considerably strengthens the work of Cohen et.
+al., and shows the first non-trivial manifold metric that can be computed
+exactly with discrete techniques. We can use our results to solve a range
+of problems important to metrics, on the Nearest Neighbor metric: efficient
+spanner computation, persistent homology, and behavior in the limit. We
+further show links between this metric and notable problems like Euclidean
+MST and single-linkage clustering.
 
 The key geometric object in our proof, the $q$-screw simplex, was first
 discovered by John Von Neumann and Issai Schoenberg. This simplex is
@@ -33,7 +40,4 @@ can be approximated efficiently using a Laplacian determinant estimator and
 Laplacian system solver respectively. We also show that any finite $l_1$
 metric raised to the $1/q$ power is isometrically embeddable into $l_1$,
 mirroring a famous theorem by Schoenberg on $l_2$. 
-
-Finally, we compute sparse spanners for the Nearest Neighbor metric and show links to existing problems ranging from persistent homology, geodesic approximation, density-based clustering, and Euclidean MST.
-
 \end{abstract}
