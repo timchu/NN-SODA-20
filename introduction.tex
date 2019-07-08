@@ -87,19 +87,6 @@ geometry, Lie theory, calculus of variations, algebraic geometry, and
 topology.  
 
 One of the most significant problems on any manifold geodesic is how to
-compute it exactly. This problem's study dates back for four centuries, and
-has spawned off entire fields of mathematics including the celebrated
-calculus of variations. Historically, mathematicians place strong emphasis
-on exact computation as opposed to constant factor approximations.  Another
-problem of algorithmic importance is to $(1+\epsilon)$ approximate these
-metrics efficiently.  The core difficulty in the first problem is that a
-manifold metric is the minimum cost path over uncountably many paths that
-can go 'anywhere' through a manifold. This makes exactly computing these
-metrics challenging, even in the case of the Nearest Neighbor metric for
-just four fixed points in two dimensions (the authors are unaware of any
-easy method for this simplified task). 
-
-One of the most significant problems on any manifold geodesic is how to
 compute it exactly. Exact computation of manifold metrics is considered a
 fundamental problem in mathematics and physics, dating back for four
 centuries: entire fields of mathematics, including the celebrated calculus
@@ -128,14 +115,14 @@ different costs.
 
 In this paper, we solve both problems: we exactly compute the Nearest
 Neighbor metric in all cases, and we $(1+\eps)$ approximate it quickly.
-This makes the Nearest Neighbor metric is the \textit{only} known example
-of a density-based distance that can be computed exactly.  Our approach is
+Our approach is
 based on conservative vector fields, Lipschitz extensions, and minimum cost
 flows on a graph. We combine these tools to prove that the nearest neighbor
 metric is exactly equal to a shortest path distance on a geometric graph,
 the so-called edge-squared metric, in all cases. This allows us to compute
 the nearest-neighbor metric exactly for any given point set in polynomial
-time.
+time, and it is the only known (non-trivial) density-based distance that can be computed
+discretely.
 
 
 \begin{definition} Given points in Euclidean space, the
