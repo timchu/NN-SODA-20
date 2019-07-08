@@ -1,8 +1,10 @@
 \begin{abstract}
-In the machine learning setting, distances between two datapoints in
-Euclidean space should depend highly on the geometry of the point set.
-Distances between two points in a dense cluster of datapoints should be
-considered close, even if their Euclidean distance is long.
+A foundational hypothesis in mcahine learning is that datapoints can be
+embedded into Euclidean space, and metrics can be generated on the
+datapoints to solve a wide range of tasks. It is widely believed that these
+metrics should have the
+property that two points in the same dense cluster of datapoints should be
+considered close, even if their Euclidean distance is far.
 One simple metric with
 this property is the Nearest neighbor metric. This metric is a
 mainfold-based metric, and it and its
@@ -16,8 +18,10 @@ manifold. This makes exactly
 computing the Nearest Neighbor metric challenging, even for a fixed
 set of four points in two dimensions. In this paper, we overcome this
 challenge by equating the Nearest Neighbor metric to a shortest-path
-distance on a simple geometric graph, in all cases. This theorem holds even
-if the point set is the countable union of compact geometric objects. We
+distance on a simple geometric graph, in all cases. Remarkably, this
+equality holds even
+if the point set is the countable union of compact geometric objects, which
+are not necessarily convex or even simply connected. We
 then compute a generalization of this metric, which we call the $q$-power
 Nearest Neighbor metric, and compute it for point sets that are the union
 of 4 compact, path-connected geometric objects in arbitrary dimension.
@@ -25,7 +29,7 @@ of 4 compact, path-connected geometric objects in arbitrary dimension.
 Our proof uses conservative vector fields,
 Lipschitz extensions, minimum cost flows, and
 barycentric subdivisions, all applied to a geometric object we call the
-$q$-screw simplex. Our work considerably strengthens the work of Cohen et.
+$q$-screw simplex. This work considerably strengthens the work of Cohen et.
 al., and shows the first non-trivial manifold metric that can be computed
 exactly with discrete techniques. When the point set is finite, we can use
 our results to solve a range of classical metric problems for our metric:
