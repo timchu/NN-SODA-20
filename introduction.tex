@@ -155,10 +155,11 @@ least four reasons:
 		These variants are known as the $q$-Nearest Neighbor
 		metric, for $1 < q < 2$, and we will formally define these
 		metrics later in the introduction. When $q=2$, these
-		metrics coincide with the Nearest Neighbor metric. %This
-		gives us a natural suite of metrics that smoothly converge
-		to the Nearest Neighbor metric, for which no theorem like
-		Theorem~\ref{thm:NN} is known.
+		metrics coincide with the Nearest Neighbor metric.
+%This
+%		gives us a natural suite of metrics that smoothly converge
+%		to the Nearest Neighbor metric, for which no theorem like
+%		Theorem~\ref{thm:NN} is known.
 
 \item Even for just three points in a right triangle configuration, there
 	exist an uncountable suite of optimal-cost paths between the two
@@ -167,19 +168,16 @@ least four reasons:
 		have the exact same cost as the edge-squared distance. In
 		fact, the union of these paths is the entire right
 		triangle. Thus, lowering the Nearest Neighbor function
-		anywhere inside the triangle and using this function to
-		build a density-based distance will necessarily break
-		Theorem~\ref{thm:NN} on these points. This establishes that
-		Theorem~\ref{thm:NN} is fairly tight, and won't work for
-		any cost function meaningfully less than the Nearest
-		Neighbor function on the right triangle point set.
+		anywhere inside the triangle and using this to build a new
+density-based distance will break
+		Theorem~\ref{thm:NN}. This establishes that the equality in
+		Theorem~\ref{thm:NN} is fairly tight.
 
 \item This theorem holds for any compact point set, whether its $n$ points
 	in $n-1$ dimensional space or a finite union of compact geometric
 		blobs in countably infinite dimension. The geometry of both
 		can be quite complicated, and it is generally hard to prove
-		these types of results on arbitrary point sets (TIM:CHECK
-		AND MAKE SURE THE PROOF WORKS)
+		these types of results on arbitrary point sets.
 
 \end{enumerate}
 
@@ -284,6 +282,7 @@ Schoenberg’s theorem (on the embeddability of the $q$-screw simplex):
 
 \begin{theorem}~\label{thm:l1} For points $p_1, \ldots p_n \in
 \mathbb{R}^n$ and any $q > 1$, the metric $D(p_i, p_j) = |p_i-p_j|_1^{1/q}$
-is isometrically embeddable into $l_1$.\end{theorem} This mirrors
+is isometrically embeddable into $l_1$.\end{theorem}
+This mirrors
 Schoenberg's famous theorem that any finite $l_2$ metric, raised to the
 $1/q$ power for $q > 1$, is isometrically embeddable in $l_2$.
