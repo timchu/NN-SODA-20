@@ -1,4 +1,3 @@
-\subsection{Construction of $\Conv$}
 \begin{lemma}\label{lem:flow} There exists a function $\Conv$ such that for
 any
 path piece $\phi$ running from $x$ and $x+\Delta(x)$, $\len_{qN}(\phi) \geq
@@ -7,25 +6,3 @@ MCF_{G'}(B'(x+\Delta(x))-B'(x))$. Here, $MCF_{G'}(d)$ for $d \in
 $d$ on the vertices of $G'$.
 
 \end{lemma}
-
-\begin{proof}
-\end{proof}
-
-\begin{proof}
-
-The distance from $v_0$ to $v_{\{0,n-1\}}$ on the graph is equal to
-$u_{n-1}-u_0$ (NORMALIZE THINGS PROPERLY, INDEX THINGS PROPER, SET COMMON
-VARIABLE NAMES), and the distance from $v_{\{0, n-1\}}$ to $v_{n-1}$ is the
-same. Thus, this path from $v_0$ to $v_n$ equals $SP_G(x_0, x_n)$, as the
-latter is trivially equal to $u_{n-1} - u_0$.
-
-\end{proof}
-
-Thus, it suffices to prove that
-
-\[ SP_{G'}(v_0, v_n) \geq SP_G(x_0, x_n) \]
-
-%%%% GAP
-
-\input{potential-construction}
-
