@@ -3,49 +3,65 @@
 In this section, we prove we Lemma~\ref{lem:flow}. We construct a function
 $\Conv:\mathbb{R}^n \rightarrow \mathbb{R}^{2^n}$ assigning every point in
 Euclidean space to a vector, representing a convex combination of vertices
-in $G'$.
+in $G'$. We will build $\Conv$ separately for each Voronoi cell, and show
+it is piecewise continuous across boundaries of Voronoi cells. 
+However, to simplify our arguments, we further divide up each Voronoi cell
+into simplices similar to the dissection in a barycentric subdivision.
+However, rather than barycenters, we use circumcenters, so we are
+more-precisely dividing up the $q$-screw simplex with a circumcentric
+subdivision. \tim{define circumcentric/barycentric subdivision}
 
-Define $\pr, \xr, \Rr, \Br$ here. Points $\pr$ numbered from $0$ to $k-1$.
-Here, $\xr$ is numbered $1$ through $k-1$. $B$ is $0$ through $k-1$
-indexed.
+Let $p_{S}$ be the circumcenter of points $\{p_s | s \in S\}$ when $S
+\subset \{1, 2, \ldots n\}$. A simplicial cell in the circumcentric subdivision is
+defined by a set $a_0, a_1, \ldots a_{n-1}$ as follows: let
+$A_i = \{a_0, a_1, \ldots a_{i}\}$. Then the vertices $\{p_{A_i} | 0 \leq i
+< n\}$ are the vertices of the simplicial cell.  \tim{Move this definition upwards somewhere?}
 
-\textbf{LEGEND}: $p$ are points in the screw simplex, $u$ are initial
-points on the line generating the screw simplex, $x$ is the point inside
-the screw simplex, and $v$ are the vertices of the graph.
+To simplify our notation, we define $\pr_i$ to be $p_{A_i}$. \tim{Make sure
+all points are $p$, not $x$. $\xr_k$ is later used to coordinate-wise split
+up $x$}.
 
+%Define $\pr, \xr, \Rr, \Convr$ here. Points $\pr$ numbered from $0$ to $k-1$.
+%Here, $\xr$ is numbered $1$ through $k-1$. $B$ is $0$ through $k-1$
+%indexed.
+
+\tim{Cut this next paragraph?}
 Our general strategy is to create $\Conv$ piecewise, where we define it on
 each Voronoi subdivision bounded by the vertices $ p_{a_0a_1\ldots a_t}$
 for all $0 \leq t \leq k$. By the construction of these points,
 $p_{a_0}p_{a_0a_1}$ is perpendicular to $p_{a_0a_1}p_{a_0a_1a_2}$, and so
 forth.
-
 To simplify our notation, we will denote $p_{a_0a_1\ldots a_t}$ as $\pr_t$,
-for any $0 \leq t \leq k$. This is to simplify our notation. Thus, we can
-now say the line $\pr_{i}\pr_{i+1}$ is perpendicular to
+for any $0 \leq t \leq k$. 
+
+By the construction of circumcentric subdivisions, 
+the line $\pr_{i}\pr_{i+1}$ is perpendicular to
 $\pr_{i+1}\pr_{i+2}$. These lines define a natural coordinate axis. Thus,
 for any $\xr$ in the convex hull of $\pr_i$, we can write $\xr$ in
 coordinates $(\xr_0, \xr_1, \ldots \xr_k)$, where the $i^{th}$ coordinate
-axis is parallel to $\pr_i \pr_{i+1}$. Now we define $\Br$ the $i^{th}$
-coordinate of $\Br$:
+axis is parallel to $\pr_i \pr_{i+1}$.
+
+Next, we introduce how $\Convr$ is defined on the vertices $\pr_{i}$. Here,
+$\Convr_i$ is shorthand for the value of $\Convr$ on $\pr_{i}$.
 
 \begin{align}
-\Br(\xr)_i = \frac{
+\Convr(\xr)_i = \frac{
 \left(\sum_{s=1}^i {\xr_s}^2\right)^{q/2} -\left(\sum_{s=1}^{i-1}
 {\xr_s}^2\right)^{q/2}
 }
 {
 \Rr_i^q - \Rr_{i-1}^q
-} - \sum_{i < j < k} \Br(\xr)_j
+} - \sum_{i < j < k} \Convr(\xr)_j
 \end{align}
 
 for all $1 \leq i \leq k-1$, and
 
-\[ \Br(\xr)_0 = 1 - \sum_{1 \leq j < k} \Br(\xr)_j
+\[ \Convr(\xr)_0 = 1 - \sum_{1 \leq j < k} \Convr(\xr)_j
 \]
 
-The key feature about $\Br$ is that
+The key feature about $\Convr$ is that
 
-\[\sum_{j=i}^k \Br(\xr)_j= \frac{
+\[\sum_{j=i}^k \Convr(\xr)_j= \frac{
 \left(\sum_{s=1}^i {\xr_s}^2\right)^{q/2} -\left(\sum_{s=1}^{i-1}
 {\xr_s}^2\right)^{q/2}
 }
@@ -59,7 +75,7 @@ Since we defined this function piecewise, we need to check that this
 function is piecewise continuous.
 
 \begin{lemma} If $\xr$ is on a face of $\pr_0, \ldots \pr_n$, then
-$\Br(\xr)$ has non-zero coordinates only on that face. Furthermore, the
+$\Convr(\xr)$ has non-zero coordinates only on that face. Furthermore, the
 coordinates depend only on SOMETHING.
 
 \end{lemma}
@@ -74,7 +90,7 @@ Now we are ready to prove our core lemma:
 \ldots \pr_k$, the distance:
 
 \[ \|x-\pr_1\|^{q-1} \cdot \|\Delta(x)\| \geq
-F\left(\Br(x+\Delta(x))-\Br(x)\right)\]
+F\left(\Convr(x+\Delta(x))-\Convr(x)\right)\]
 
 where $F(d)$ is the unique cost of a flow satisfying demand $d \in
 \mathbb{R}^k$ on $\Gr$.
@@ -95,7 +111,7 @@ the sum of the demands on vertices $\pr_{i+1} \pr_{i+2}, \ldots \pr_k$,
 multiplied by the cost of the edge from $\pr_i$ to $\pr_{i+1}$. This
 quantity comes out to be:
 
-\begin{align} &\left(\Rr_{i+1}^q-\Rr_{i}^q \right) \sum_{j=i+1} \Br(\xr)_j
+\begin{align} &\left(\Rr_{i+1}^q-\Rr_{i}^q \right) \sum_{j=i+1} \Convr(\xr)_j
 \\
 \label{eq:flow-cost}
 &=\left(\sum_{s=1}^i {\xr_s}^2\right)^{q/2} -\left(\sum_{s=1}^{i-1}
@@ -105,17 +121,22 @@ quantity comes out to be:
 As $\Delta(x)$ goes to $0$, the change in Expression~\ref{eq:flow-cost} is
 
 \begin{align}
+&
 \left(q\xr_0 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} –
 q\xr_0\left(\sum_{s=1}^{i-1} \xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_0
-+
+\\
+&+
 \left(q\xr_1 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} –
 q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_1
-+ \ldots
-+
+\\
+&+ \ldots
+\\
+&+
 \left(q\xr_{i-1} \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} –
 q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1}
 \right)\Delta(\xr)_{i-1}
-+
+\\
+&+
 \left(q\xr_i \left(\sum_{s=1}^i \xr_s^2
 \right)^{q/2-1}\right)\Delta(\xr)_i,
 \end{align}
@@ -129,31 +150,35 @@ q\xr_j\left(\sum_{s=0}^i \xr_s^2\right) \ 3\xr_j\left(\sum_{s=0}^{i-1}
 
 Now we sum this across all $i$ to get the overall cost, and group by
 $\Delta(\xr)_i$ for fixed i. This gives us:
-\[
-a_{0,0} \Delta(\xr)_0 + a_{1,0} \Delta(\xr_0) + \ldots + a_{k, 0}
+\begin{align}
+&a_{0,0} \Delta(\xr)_0 + a_{1,0} \Delta(\xr_0) + \ldots + a_{k, 0}
 \Delta(\xr_0)
-+ \ldots
-a{1,1} \Delta(\xr_1) + \ldots + a_{k, 1} \Delta(\xr_1)
-+ \ldots
-+ a{k,k} \Delta{\xr_k}.
-\]
+\\
+&+ \ldots
+\\
+&a{1,1} \Delta(\xr_1) + \ldots + a_{k, 1} \Delta(\xr_1)
+\\
+&+ \ldots
+\\
+&+ a{k,k} \Delta{\xr_k}.
+\end{align}
 
 This sum is upper bounded by:
 
-\[
+\begin{align}
 |a_{0, 0} + a_{1, 0} + ldots + a{k, 0}| |\Delta(\xr_0)|
 + \ldots
 |a_{k, k}| |\Delta(\xr_k)|
-\]
+\end{align}
 Which equals
-\[
-|q\xr_0\left(\sum_{s=1}^k \xr_s^2)^{q/2-1}\right)| \Delta(\xr)_0
-+
+\begin{align}
+&|q\xr_0\left(\sum_{s=1}^k \xr_s^2)^{q/2-1}\right)| \Delta(\xr)_0
+//&+
 |q\xr_1\left(\sum_{s=1}^k \xr_s^2)^{q/2-1}\right)| \Delta(\xr)_1
 \ldots
-+
+//& +
 |q\xr_k\left(\sum_{s=1}^k \xr_s^2)^{q/2-1}\right)| \Delta(\xr)_k
-\]
+\end{align}
 This expression, by Cauchy Schwarz, is upper bounded by
 \[
 \sqrt{\sum_{s=0}^k \Delta(\xr)_s^2} \cdot \left(q\sqrt{\sum_{s=0}^k
