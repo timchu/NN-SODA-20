@@ -1,6 +1,7 @@
 
-\begin{lemma}\label{lem:flow}There exists a function $B'$, such that for any
-path piece $\phi$ running from $x$ and $x+\Delta(x)$, $q-NN(\phi) \geq
+\begin{lemma}\label{lem:flow} There exists a function $\Conv$ such that for
+any
+path piece $\phi$ running from $x$ and $x+\Delta(x)$, $\len_{qN}(\phi) \geq
 MCF_{G'}(B'(x+\Delta(x))-B'(x))$. Here, $MCF_{G'}(d)$ for $d \in
 \mathbb{R}^{2^n}$ represents the minimum cost flow on $G'$ satisfying demands
 $d$ on the vertices of $G'$.
@@ -9,7 +10,9 @@ $d$ on the vertices of $G'$.
 
 \begin{lemma}\label{lem:radius} Let $S = s_1 < s_2 < \ldots s_{|S|}$, and $T =
 t_1 < \ldots \leq t_{|T|}$, where $S, T \subset \{0,1,\ldots n-1\}$ and $S$ and
-$T$ differ by exactly one element. If
+$T$ differ by exactly one element. Let $R_S$ denote the circumradius of the
+$q$-screw simplex formed by $s_1, s_2, \ldots s_n$. ~\tim{Define what
+'being formed by' means.} If
 
 \begin{align}\label{eq:radius} |(R_{S})^q-(R_{T})^q| \geq
 |(s_{|S|}-s_1)/2^q-(t_{|T|}-t_1)/2^q|, \end{align}

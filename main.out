@@ -6,6 +6,6 @@
 \BOOKMARK [1][-]{section.4}{Exactly Computing Nearest Neighbor Metrics, and q-NN metrics on small point sets}{}% 6
 \BOOKMARK [2][-]{subsection.4.1}{Detailed Proof Strategy}{section.4}% 7
 \BOOKMARK [2][-]{subsection.4.2}{Construction of G’}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.3}{Construction of B'}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.4}{Construction of B'}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Construction of C}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.4}{Construction of C}{section.4}% 10
 \BOOKMARK [1][-]{section.5}{Fractional Laplacian}{}% 11
