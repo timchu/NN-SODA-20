@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 10:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 10:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -400,9 +400,6 @@ e 80.
 
 [6]) (./outline.tex
 
-LaTeX Warning: Reference `sec:main' on page 7 undefined on input line 6.
-
-
 LaTeX Warning: Reference `thm:q-NN' on page 7 undefined on input line 7.
 
 
@@ -421,7 +418,8 @@ LaTeX Warning: Reference `sec:homology' on page 7 undefined on input line 23.
 LaTeX Warning: Reference `sec:spanner' on page 7 undefined on input line 25.
 
 
-LaTeX Warning: Reference `sec:limit' on page 7 undefined on input line 30.
+LaTeX Warning: Reference `sec:limit-behavior' on page 7 undefined on input line
+ 30.
 
 
 LaTeX Warning: Reference `sec:conclusion' on page 7 undefined on input line 35.
@@ -741,8 +739,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
  6313 strings out of 494440
- 89780 string characters out of 6173197
- 178004 words of memory out of 5000000
+ 89800 string characters out of 6173197
+ 178109 words of memory out of 5000000
  9429 multiletter control sequences out of 15000+600000
  16411 words of font info for 63 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
@@ -767,10 +765,10 @@ onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on main.pdf (17 pages, 303726 bytes).
+Output written on main.pdf (17 pages, 303719 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 259 compressed objects within 3 object streams
+ 303 PDF objects out of 1000 (max. 8388607)
+ 260 compressed objects within 3 object streams
  68 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
