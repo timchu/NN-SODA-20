@@ -143,7 +143,7 @@ q\xr_1\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1}
 \right)\Delta(\xr)_{i-1}
 \\
 &+
-\left(q\xr_i \left(\sum_{s=0}^{i-1} \xr_s^2
+\left(q\xr_{i-1} \left(\sum_{s=0}^{i-1} \xr_s^2
 \right)^{q/2-1}\right)\Delta(\xr)_i,
 \end{split}
 \end{align}
@@ -173,7 +173,7 @@ q\xr_1\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1}
 \right)|\Delta(\xr)_{i-1}|
 \\
 &+
-\left(q\xr_i \left(\sum_{s=0}^{i-1} \xr_s^2
+\left(q\xr_{i-1} \left(\sum_{s=0}^{i-1} \xr_s^2
 \right)^{q/2-1}\right)|\Delta(\xr)_i|,
 \end{split}
 \end{align}
@@ -183,16 +183,16 @@ a flow along edge $\vr_i\vr_{i+1}$\tim{Is this the right indexing for
 edges?} induced by a path from $x$ to $x+\Delta(x)$. Now we sum this across all $i$ to get an overall cost upper bound, and group by
 $\Delta(\xr)_i$ for fixed i. The sum telescopes beautifully, and we get:
 \begin{align}
-&\left(q\xr_0\left(\sum_{s=0}^n \xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_0|
+&\left(q\xr_0\left(\sum_{s=0}^{n-2} \xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_0|
 \\&+
-|q\xr_1\left(\sum_{s=0}^n \left(\xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_1|
+\left(q\xr_1\left(\sum_{s=0}^{n-2} \xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_1|
 \ldots
 \\& +
-|q\xr_k\left(\sum_{s=0}^n (\xr_s^2)^{q/2-1}\right)| \Delta(\xr)_k|
+\left(q\xr_{n-1}\left(\sum_{s=0}^{n-2} \xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_{n-1}|
 \end{align}
 This expression, by Cauchy Schwarz, is upper bounded by
 \[
-\sqrt{\sum_{s=0}^n \Delta(\xr)_s^2} \cdot \left(q\sqrt{\sum_{s=0}^n
+\sqrt{\sum_{s=0}^{n-2} \Delta(\xr)_s^2} \cdot \left(q\sqrt{\sum_{s=0}^{n-2}
 \xr_s^{q-1}}\right)
 \]
 Which is exactly the $q$-NN distance.
