@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 09:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 09:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -366,42 +366,51 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 ) (./past-work.tex) (./contributions.tex
 
-LaTeX Warning: Reference `thm:q-NN' on page 5 undefined on input line 3.
+LaTeX Warning: Reference `thm:q-NN' on page 5 undefined on input line 2.
 
 
-LaTeX Warning: Reference `thm:ER' on page 5 undefined on input line 19.
+LaTeX Warning: Reference `thm:ER' on page 5 undefined on input line 18.
 
 
-LaTeX Warning: Reference `thm:ER' on page 5 undefined on input line 22.
+LaTeX Warning: Reference `thm:ER' on page 5 undefined on input line 21.
 
 [5] (./spanner-theorems.tex)
 
 LaTeX Warning: Reference `thm:ditsribution-spanner' on page 6 undefined on inpu
-t line 70.
+t line 69.
 
 
 LaTeX Warning: Citation `cohen15approximating' on page 6 undefined on input lin
-e 81.
+e 80.
 
 [6]) (./outline.tex
 
-LaTeX Warning: Reference `sec:NN' on page 7 undefined on input line 6.
+LaTeX Warning: Reference `sec:main' on page 7 undefined on input line 6.
 
 
-LaTeX Warning: Reference `sec:general-spanner' on page 7 undefined on input lin
-e 11.
+LaTeX Warning: Reference `thm:q-NN' on page 7 undefined on input line 7.
 
 
-LaTeX Warning: Reference `sec:distribution-spanner' on page 7 undefined on inpu
-t line 16.
+LaTeX Warning: Reference `sec:isometry' on page 7 undefined on input line 11.
 
 
-LaTeX Warning: Reference `sec:edge-power' on page 7 undefined on input line 18.
+LaTeX Warning: Reference `thm:ER' on page 7 undefined on input line 13.
 
 
+LaTeX Warning: Reference `sec:relating' on page 7 undefined on input line 15.
 
-LaTeX Warning: Reference `sec:conclusions' on page 7 undefined on input line 27
-.
+
+LaTeX Warning: Reference `sec:homology' on page 7 undefined on input line 23.
+
+
+LaTeX Warning: Reference `sec:spanner' on page 7 undefined on input line 25.
+
+
+LaTeX Warning: Reference `sec:limit' on page 7 undefined on input line 30.
+
+
+LaTeX Warning: Reference `sec:conclusion' on page 7 undefined on input line 35.
+
 
 ) (./flows.tex
 
@@ -413,16 +422,16 @@ LaTeX Warning: Reference `' on page 7 undefined on input line 3.
 
 LaTeX Warning: Reference `' on page 7 undefined on input line 20.
 
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
 [7]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -552,6 +561,7 @@ Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
+ [12]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
@@ -560,12 +570,11 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
 
-LaTeX Warning: Citation `' on page 12 undefined on input line 31.
+LaTeX Warning: Citation `' on page 13 undefined on input line 31.
 
 
-LaTeX Warning: Citation `' on page 12 undefined on input line 31.
+LaTeX Warning: Citation `' on page 13 undefined on input line 31.
 
-[12]
 
 LaTeX Warning: Reference `sec:frac-lap-eigenvector' on page 13 undefined on inp
 ut line 39.
@@ -592,97 +601,46 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
 (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: E7424391455F51B2F019530493D857D3;561.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 15DBFF9437226C1E5DD4EE8E3882843F;584
-(rerunfilecheck)             After:  244EEE1552AF86C5B954B3E53FB7C669;629.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 6293 strings out of 494440
- 89470 string characters out of 6173197
+ 6280 strings out of 494440
+ 89282 string characters out of 6173197
  177953 words of memory out of 5000000
- 9420 multiletter control sequences out of 15000+600000
+ 9422 multiletter control sequences out of 15000+600000
  14854 words of font info for 57 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 29i,11n,31p,237b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{equation.5.7} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.5.6} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.4.8} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.4.4} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.4.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.4.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.4.1} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.2.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.2.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msbm10.pfb>
-Output written on main.pdf (14 pages, 288877 bytes).
+ 29i,11n,31p,237b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/symbols/msbm10.pfb>
+Output written on main.pdf (14 pages, 288672 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
+ 265 PDF objects out of 1000 (max. 8388607)
+ 225 compressed objects within 3 object streams
+ 54 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
