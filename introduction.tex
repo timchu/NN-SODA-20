@@ -211,8 +211,19 @@ can be useful for other metric computations and approximations.
 Besides for this contribution, we also generalize the Nearest Neighbor
 Metric to the $q$-Nearest Neighbor metric (abbreviated $q$-NN for short),
 and exactly compute this metric for all small point sets for all $q>2$. We
-do this by equating it to the $q$-edge power metrics, which we will define
-later. We then use Theorem~\ref{thm:NN} to compute the persistent homology
+do this by equating it to the $q$-edge power metrics. Both the $q$-NN and
+$q$-edge power metrics will be defined later.
+\begin{theorem} \label{thm:qNN}
+For point sets of up to $4$ points, the $q$-NN metric is exactly equal to
+the $q$-edge power metric when $q>2$. This equality is false for all $q <
+2, q\not=1$.
+\end{theorem}
+\begin{conjecture}\label{conj:qNN}
+For any $n$ points, the $q$-NN metric is exactly equal to the $q$-edge
+poewr metric when $q>2$.
+\end{conjecture}
+
+\tim{Move to contributions section?} We then use Theorem~\ref{thm:NN} to compute the persistent homology
 of the Nearest Neighbor metric, a task important in computational geometry.
 Additionally, we study the behavior of the Nearest Neighbor metric when the
 points are drawn from a well-behaved distribution, as the number of points
