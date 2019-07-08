@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 12:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 12:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -385,26 +385,26 @@ Missing character: There is no ™ in font cmr10!
 ) (./past-work.tex) (./contributions.tex [5] (./spanner-theorems.tex)
 
 LaTeX Warning: Reference `thm:ditsribution-spanner' on page 6 undefined on inpu
-t line 58.
+t line 61.
 
 
 LaTeX Warning: Citation `cohen15approximating' on page 6 undefined on input lin
-e 69.
+e 72.
 
 [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 79.
+(hyperref)                removing `math shift' on input line 82.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 79.
+(hyperref)                removing `math shift' on input line 82.
 
 
-LaTeX Warning: Reference `thm:ER' on page 7 undefined on input line 80.
+LaTeX Warning: Reference `thm:ER' on page 7 undefined on input line 83.
 
 
-LaTeX Warning: Reference `thm:ER' on page 7 undefined on input line 86.
+LaTeX Warning: Reference `thm:ER' on page 7 undefined on input line 89.
 
 ) (./definitions.tex
 
@@ -775,10 +775,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (19 pages, 310620 bytes).
+Output written on main.pdf (19 pages, 310747 bytes).
 PDF statistics:
- 353 PDF objects out of 1000 (max. 8388607)
- 308 compressed objects within 4 object streams
+ 356 PDF objects out of 1000 (max. 8388607)
+ 311 compressed objects within 4 object streams
  79 named destinations out of 1000 (max. 500000)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -27,7 +27,7 @@ distribution. The former is important to compute the metrics in practice.
 The latter is important since it is highly desirable that
 this limit converge to a metric that has desirable properties, or else
 clustering with such a metric may generate non-intelligible results for
-large datasets.  Persistent homology of metrics space is also a central
+large datasets.  Besides for these, persistent homology of metrics space is also a central
 tool in topological data analysis, among other fields~\cite{}, and many
 papers have devoted themselves to computing such homologies ofr a wide
 variety of metrics. Finally, it is important to relate metrics
@@ -43,13 +43,16 @@ and more interpretable context, and ensures that clustering with these
 $q$-power metrics is a generalization of more traditional clustering
 techniques including $k$-means, $k$-centers, and level set methods.
 
-In this paper, we present significant progress all of these problems. Our
+In this paper, we present novel results all of these problems. Our
 spanner and convergence results hold assuming constan dimension, and our
 persistent homology results and our relation to more famous metrics hold for
-$n$ points in any dimension. While the proofs of these results range from
-the standard to the intricate, we hope that the sheer number of results
-that can be stated (as well as their quality) inspires future researchers
-to further study density-based distances and their related geometric objects.
+$n$ points in any dimension. The proofs of these results are mostly
+simpler than our proofs of Theorem~\ref{thm:NN}, and thus should be
+appreciated mostly for the result statement rather than the complexity or
+intricacy of their proofs. They all hinge on Theorem~\ref{thm:NN}, and are
+largely included to show that
+density-sensitive manifold metrics, like the NN metric, can be very
+flexible when Theorems like Theorem~\ref{thm:NN} hold.
 
 Our spanner theorems are as follows:
 
