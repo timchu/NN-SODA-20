@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 14:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -519,7 +519,7 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
 
-LaTeX Warning: Reference `def:GPrime' on page 14 undefined on input line 228.
+LaTeX Warning: Reference `def:GPrime' on page 14 undefined on input line 220.
 
 [14]
 Missing character: There is no â in font cmr10!
@@ -527,7 +527,7 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
 
-LaTeX Warning: Reference `def:GPrime' on page 15 undefined on input line 236.
+LaTeX Warning: Reference `def:GPrime' on page 15 undefined on input line 228.
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -539,7 +539,7 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-LaTeX Warning: Reference `def:GPrime' on page 15 undefined on input line 243.
+LaTeX Warning: Reference `def:GPrime' on page 15 undefined on input line 235.
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -549,18 +549,18 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
 LaTeX Warning: Reference `thm:screw-simplex-reduction' on page 15 undefined on 
-input line 250.
+input line 242.
 
 
 LaTeX Warning: Reference `edge-squared-GPrime' on page 15 undefined on input li
-ne 251.
+ne 243.
 
 
 LaTeX Warning: Reference `q-edge-power-GPrime' on page 15 undefined on input li
-ne 251.
+ne 243.
 
 
-LaTeX Warning: Reference `' on page 15 undefined on input line 254.
+LaTeX Warning: Reference `' on page 15 undefined on input line 246.
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -644,11 +644,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
 Here is how much of TeX's memory you used:
  6369 strings out of 494440
  90596 string characters out of 6173197
- 185679 words of memory out of 5000000
+ 184679 words of memory out of 5000000
  9452 multiletter control sequences out of 15000+600000
  16579 words of font info for 64 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 29i,16n,31p,258b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,16n,31p,258b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
@@ -669,7 +669,7 @@ fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (17 pages, 310946 bytes).
+Output written on main.pdf (17 pages, 309926 bytes).
 PDF statistics:
  350 PDF objects out of 1000 (max. 8388607)
  306 compressed objects within 4 object streams

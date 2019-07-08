@@ -33,21 +33,13 @@ up $x$}.
 %Here, $\xr$ is numbered $1$ through $k-1$. $B$ is $0$ through $k-1$
 %indexed.
 
-\tim{Cut this next paragraph?}
-Our general strategy is to create $\Conv$ piecewise, where we define it on
-each Voronoi subdivision bounded by the vertices $ p_{a_0a_1\ldots a_t}$
-for all $0 \leq t \leq k$. By the construction of these points,
-$p_{a_0}p_{a_0a_1}$ is perpendicular to $p_{a_0a_1}p_{a_0a_1a_2}$, and so
-forth.
-To simplify our notation, we will denote $p_{a_0a_1\ldots a_t}$ as $\pr_t$,
-for any $0 \leq t \leq k$. 
 
 By the construction of circumcentric subdivisions, 
 the line $\pr_{i}\pr_{i+1}$ is perpendicular to
 $\pr_{i+1}\pr_{i+2}$ for all $i$. These lines define a natural
 orthonormal coordinate axis. Thus,
 for any $\xr$ in the convex hull of $\pr_i$, we can write $\xr$ in
-coordinates $(\xr_0, \xr_1, \ldots \xr_k)$, where the $i^{th}$ coordinate
+coordinates $(\xr_0, \xr_1, \ldots \xr_{n-2})$, where the $i^{th}$ coordinate
 axis is parallel to $\pr_i \pr_{i+1}$.
 
 Next, we introduce how $\Convr$ is defined on the vertices $\pr_{i}$. Here,
@@ -55,7 +47,7 @@ $\Convr_i$ is shorthand for the value of $\Convr$ on $\pr_{i}$.
 
 \begin{align}
 \Convr(\xr)_i = \frac{
-\left(\sum_{s=1}^i {\xr_s}^2\right)^{q/2} -\left(\sum_{s=1}^{i-1}
+\left(\sum_{s=0}^{i-1} {\xr_s}^2\right)^{q/2} -\left(\sum_{s=0}^{i-2}
 {\xr_s}^2\right)^{q/2}
 }
 {
@@ -68,13 +60,13 @@ n's, and claim that you're dealing with simplices of full dimension. You
 may want to say that the proof is counterintuitive since simplices of full
 dimension are usually considered harder?}
 
-\[ \Convr(\xr)_0 = 1 - \sum_{1 \leq j < n} \Convr(\xr)_j
+\[ \Convr(\xr)_0 = 1 - \sum_{0 < j < n} \Convr(\xr)_j
 \]
 
 The key feature about $\Convr$ is that
 
-\[\sum_{j=i}^k \Convr(\xr)_j= \frac{
-\left(\sum_{s=1}^i {\xr_s}^2\right)^{q/2} -\left(\sum_{s=1}^{i-1}
+\[\sum_{j=i}^n \Convr(\xr)_j= \frac{
+\left(\sum_{s=0}^{i-1} {\xr_s}^2\right)^{q/2} -\left(\sum_{s=0}^{i-2}
 {\xr_s}^2\right)^{q/2}
 }
 {
@@ -105,7 +97,7 @@ Now we are ready to prove our core lemma:
 F\left(\Convr(x+\Delta(x))-\Convr(x)\right)\]
 
 where $F(d)$ is the unique cost of a flow satisfying demand $d \in
-\mathbb{R}^k$ on $\Gr$.
+\mathbb{R}^n$ on $\Gr$.
 
 \end{lemma}
 
@@ -119,14 +111,14 @@ vertices of a line, there is a unique flow satisfying those demands.
 
 \begin{proof} For any edge $\pr_i\pr_{i+1}$, the cost of a flow (satisfying
 some set of demands whose sum is $0$) on that edge is the absolute value of
-the sum of the demands on vertices $\pr_{i+1} \pr_{i+2}, \ldots \pr_k$,
+the sum of the demands on vertices $\pr_{i+1} \pr_{i+2}, \ldots \pr_n$,
 multiplied by the cost of the edge from $\pr_i$ to $\pr_{i+1}$. This
 quantity comes out to be:
 
-\begin{align} &\left(\Rr_{i+1}^q-\Rr_{i}^q \right) \sum_{j=i+1} \Convr(\xr)_j
+\begin{align} &\left(\Rr_{i+1}^q-\Rr_{i}^q \right) \sum_{j=i+1}^n \Convr(\xr)_j
 \\
 \label{eq:flow-cost}
-&=\left(\sum_{s=1}^i {\xr_s}^2\right)^{q/2} -\left(\sum_{s=1}^{i-1}
+&=\left(\sum_{s=0}^{i-1} {\xr_s}^2\right)^{q/2} -\left(\sum_{s=0}^{i-2}
 {\xr_s}^2\right)^{q/2}.
 \end{align}
 
@@ -136,28 +128,28 @@ As $\Delta(x)$ goes to $0$, the change in Expression~\ref{eq:flow-cost} is
 \begin{split}
 \label{eq:flow-cost-on-edge}
 &
-\left(q\xr_0 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
-q\xr_0\left(\sum_{s=1}^{i-1} \xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_0
+\left(q\xr_0 \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
+q\xr_0\left(\sum_{s=0}^{i-2} \xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_0
 \\
 &+
-\left(q\xr_1 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
-q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_1
+\left(q\xr_1 \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
+q\xr_1\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_1
 \\
 &+ \ldots
 \\
 &+
-\left(q\xr_{i-1} \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
-q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1}
+\left(q\xr_{i-1} \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
+q\xr_1\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1}
 \right)\Delta(\xr)_{i-1}
 \\
 &+
-\left(q\xr_i \left(\sum_{s=1}^i \xr_s^2
+\left(q\xr_i \left(\sum_{s=0}^{i-1} \xr_s^2
 \right)^{q/2-1}\right)\Delta(\xr)_i,
 \end{split}
 \end{align}
 Since 
 \[
-q\xr_j\left(\sum_{s=0}^i \xr_s^2\right)^{q/2-1} - q\xr_j\left(\sum_{s=0}^{i-1}
+q\xr_j\left(\sum_{s=0}^{i-1} \xr_s^2\right)^{q/2-1} - q\xr_j\left(\sum_{s=0}^{i-2}
 \xr_s^2 \right)^{q/2-1}\]
 is always non-negative (only when $q \leq 2$), we get that the absolute value of
 Expression~\ref{eq:flow-cost-on-edge} is bounded above by:
@@ -165,23 +157,23 @@ Expression~\ref{eq:flow-cost-on-edge} is bounded above by:
 \begin{split}
 \label{eq:flow-cost-upper-bound}
 &
-\left(q\xr_0 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
-q\xr_0\left(\sum_{s=1}^{i-1} \xr_s^2 \right)^{q/2-1} \right)
+\left(q\xr_0 \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
+q\xr_0\left(\sum_{s=0}^{i-2} \xr_s^2 \right)^{q/2-1} \right)
 |\Delta(\xr)_0|
 \\
 &+
-\left(q\xr_1 \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
-q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1} \right) |\Delta(\xr)_1|
+\left(q\xr_1 \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
+q\xr_1\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1} \right) |\Delta(\xr)_1|
 \\
 &+ \ldots
 \\
 &+
-\left(q\xr_{i-1} \left(\sum_{s=1}^i \xr_s^2 \right)^{q/2-1} -
-q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1}
+\left(q\xr_{i-1} \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
+q\xr_1\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1}
 \right)|\Delta(\xr)_{i-1}|
 \\
 &+
-\left(q\xr_i \left(\sum_{s=1}^i \xr_s^2
+\left(q\xr_i \left(\sum_{s=0}^{i-1} \xr_s^2
 \right)^{q/2-1}\right)|\Delta(\xr)_i|,
 \end{split}
 \end{align}
@@ -191,16 +183,16 @@ a flow along edge $\vr_i\vr_{i+1}$\tim{Is this the right indexing for
 edges?} induced by a path from $x$ to $x+\Delta(x)$. Now we sum this across all $i$ to get an overall cost upper bound, and group by
 $\Delta(\xr)_i$ for fixed i. The sum telescopes beautifully, and we get:
 \begin{align}
-&\left(q\xr_0\left(\sum_{s=1}^k \xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_0|
+&\left(q\xr_0\left(\sum_{s=0}^n \xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_0|
 \\&+
-|q\xr_1\left(\sum_{s=1}^k \left(\xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_1|
+|q\xr_1\left(\sum_{s=0}^n \left(\xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_1|
 \ldots
 \\& +
-|q\xr_k\left(\sum_{s=1}^k (\xr_s^2)^{q/2-1}\right)| \Delta(\xr)_k|
+|q\xr_k\left(\sum_{s=0}^n (\xr_s^2)^{q/2-1}\right)| \Delta(\xr)_k|
 \end{align}
 This expression, by Cauchy Schwarz, is upper bounded by
 \[
-\sqrt{\sum_{s=0}^k \Delta(\xr)_s^2} \cdot \left(q\sqrt{\sum_{s=0}^k
+\sqrt{\sum_{s=0}^n \Delta(\xr)_s^2} \cdot \left(q\sqrt{\sum_{s=0}^n
 \xr_s^{q-1}}\right)
 \]
 Which is exactly the $q$-NN distance.
