@@ -153,8 +153,8 @@ q\xr_1\left(\sum_{s=1}^{i-1}\xr_s^2 \right)^{q/2-1}
 To simplify our notation, let $a_{i,j}$ denote
 
 \[
-q\xr_j\left(\sum_{s=0}^i \xr_s^2\right) \ 3\xr_j\left(\sum_{s=0}^{i-1}
-\xr_s^2 \right)
+q\xr_j\left(\sum_{s=0}^i \xr_s^2\right)^{q/2-1} - q\xr_j\left(\sum_{s=0}^{i-1}
+\xr_s^2 \right)^{q/2-1}
 \]
 
 Now we sum this across all $i$ to get the overall cost, and group by
@@ -162,12 +162,9 @@ $\Delta(\xr)_i$ for fixed i. This gives us:
 \begin{align}
 &a_{0,0} \Delta(\xr)_0 + a_{1,0} \Delta(\xr_0) + \ldots + a_{k, 0}
 \Delta(\xr_0)
+&+a{1,1} \Delta(\xr_1) + \ldots + a_{k, 1} \Delta(\xr_1)
 \\
-&+ \ldots
-\\
-&a{1,1} \Delta(\xr_1) + \ldots + a_{k, 1} \Delta(\xr_1)
-\\
-&+ \ldots
+&+ \ldots 
 \\
 &+ a{k,k} \Delta{\xr_k}.
 \end{align}
@@ -175,7 +172,7 @@ $\Delta(\xr)_i$ for fixed i. This gives us:
 This sum is upper bounded by:
 
 \begin{align}
-|a_{0, 0} + a_{1, 0} + ldots + a{k, 0}| |\Delta(\xr_0)|
+|a_{0, 0} + a_{1, 0} + \ldots + a{k, 0}| |\Delta(\xr_0)|
 + \ldots
 |a_{k, k}| |\Delta(\xr_k)|
 \end{align}
