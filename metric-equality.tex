@@ -1,13 +1,12 @@
 \section{Exactly Computing Nearest Neighbor Metrics for all point sets, and $q$-NN metrics on
 small point sets}\label{sec:metric-equality}
 
-In this section, we prove our main theorems, Theorem~\ref{} and~\ref{},
-wihch shows how to exactly compute Nearest Neighbor metrics and $q$-NN
-metrics for small point sets.
+In this section, we prove our main theorems, Theorem~\ref{} and~\ref{}.
 We prove that the edge-squared metric exactly equals the nearest neighbor
 metric on any point set, and that the $q$-edge power metric equals the $q$-NN
 metric for any set of four points or less. We also conjecture that the $q$-edge
-power metric always equals the $q$-NN metric. Even though the number of points
+power metric always equals the $q$-NN metric, and provide a discrete
+inequality that would imply our larger conjecture. Even though the number of points
 we handle for the general $q$-edge power metric is quite small, this still
 represents progress; exactly computing the NN or $q$-NN metric even for four
 points in two dimensions requires dealing with uncountably number of paths
@@ -25,8 +24,7 @@ metric. This can be done by purely considering Nearest Neighbor paths that
 are piecewise linear and go straight from data point to data point. The
 analagous result holds for $q$-Nearest Neighbor metrics. Therefore, we only
 need to prove that the Nearest Neighbor cost is lower bounded by the
-edge-squared metric.
-
+edge-squared metric.  
 To do this, we build a graph $G'$ from our point set, which can
 conceptually be thought of as the edge-squared graph with additional
 Steiner points. We will show using conservative vector fields and flows

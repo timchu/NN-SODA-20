@@ -1,19 +1,20 @@
-\subsection{Detailed Proof Strategy}
+\subsection{Proof Overview}
 
 Given points $x_0, x_1, \ldots x_n$, our strategy is to build a graph $G'$ with
-vertices $v_0, v_1, \ldots v_{n-1}$, and $v_S$ for any subset $S$ of
+vertices $v_S$ for any subset $S$ of
 $\{0,1,2,3,4 \ldots n-1 \}$. Here, $v_S$ is a vertex representing the
 circumcenter of the vertex set $\{x_s: s \in S\}$. Graph $G'$ then has some
-edges (connected in a fashion to be detailed later), and costs on these edges.
-Graph $G'$ is similar to the barycentric subdivision on a graph, used
+edges, connected in a fashion to be detailed later, and costs on these edges.
+Graph $G'$ is related to the barycentric subdivision on a graph, used
 in~\cite{}.
 
-Tto lower bound any nearest neighbor path in our original point set, we will
-lower bound it by some unit flow (DFEINE) from $v_0$ to $v_n$ in $G'$. However,
-note that the unit flow from $v_0$ to $v_n$ is lower bounded by the shortest
-path (where lengths of edges are the same as their costs) from $v_0$ to $v_n$
-in $G'$. If the shortest path in $G'$ is equal to the $q$-edge power cost of
-going from $x_0$ to $x_n$, then we have completed our proof.
+Tto lower bound the nearest neighbor cost of any path on our original point
+set, we will lower bound it by some unit flow (DFEINE) from $v_0$ to $v_n$
+in $G'$. However, note that the unit flow from $v_0$ to $v_n$ is lower
+bounded by the shortest path (where lengths of edges are the same as their
+costs) from $v_0$ to $v_n$ in $G'$. If the shortest path in $G'$ is equal
+to the $q$-edge power cost of going from $x_0$ to $x_n$, then we have
+completed our proof.
 
 To lower bound the cost of the $q$-NN metric with a unit flow, we aim to build
 a potential function $\Conv:\mathbb{R}^n \rightarrow \mathbb{R}^{2^n}$ such
