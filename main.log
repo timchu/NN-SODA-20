@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 15:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 16:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -271,6 +271,45 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 Package color Info: Driver file: pdftex.def on input line 143.
 ) (./main.aux
 
+LaTeX Warning: Label `sec:reduction-to-screw' multiply defined.
+
+
+LaTeX Warning: Label `sec:boxes' multiply defined.
+
+
+LaTeX Warning: Label `eq:distto_bded_by_ris' multiply defined.
+
+
+LaTeX Warning: Label `eq:ri_as_min' multiply defined.
+
+
+LaTeX Warning: Label `eq:gamma_decomposed' multiply defined.
+
+
+LaTeX Warning: Label `sec:lifting' multiply defined.
+
+
+LaTeX Warning: Label `eq:defn_of_m' multiply defined.
+
+
+LaTeX Warning: Label `lem:m_and_dist' multiply defined.
+
+
+LaTeX Warning: Label `prop:m_is_good' multiply defined.
+
+
+LaTeX Warning: Label `sec:lip_extension' multiply defined.
+
+
+LaTeX Warning: Label `lem:dist_N_lipschitz' multiply defined.
+
+
+LaTeX Warning: Label `eq:curves_shorten' multiply defined.
+
+
+LaTeX Warning: Label `thm:equality' multiply defined.
+
+
 LaTeX Warning: Label `conj:qNN' multiply defined.
 
 )
@@ -349,109 +388,144 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./abstract.tex)
 [0
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(./reduction-to-screw.tex
 
-LaTeX Warning: Reference `' on page 1 undefined on input line 15.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
 
-<Figures/example1.pdf, id=91, 482.76181pt x 304.88123pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+(./boxes.tex [1
+
+]) (./lifting.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+[2]) (./lip_extension.tex
+
+LaTeX Warning: Citation `Kirszbraun1934' on page 3 undefined on input line 4.
+
+
+LaTeX Warning: Citation `Valentine1945' on page 3 undefined on input line 4.
+
+
+LaTeX Warning: Citation `brehm1981' on page 3 undefined on input line 4.
+
+[3])) (./introduction.tex
+
+LaTeX Warning: Reference `' on page 4 undefined on input line 15.
+
+[4] <Figures/example1.pdf, id=237, 482.76181pt x 304.88123pt>
 File: Figures/example1.pdf Graphic file (type pdf)
 
 <use Figures/example1.pdf>
 Package pdftex.def Info: Figures/example1.pdf used on input line 46.
 (pdftex.def)             Requested size: 140.92793pt x 88.99945pt.
- [1
+ [5 <./Figures/example1.pdf>]
 
- <./Figures/example1.pdf>] [2]
+LaTeX Warning: Reference `' on page 6 undefined on input line 166.
 
-LaTeX Warning: Reference `' on page 3 undefined on input line 166.
+[6] [7]
 
-[3]
+LaTeX Warning: Reference `' on page 8 undefined on input line 264.
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 264.
-
-[4]
+[8]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-) (./past-work.tex) (./contributions.tex [5] (./spanner-theorems.tex)
+) (./past-work.tex) (./contributions.tex [9] (./spanner-theorems.tex)
 
-LaTeX Warning: Reference `thm:ditsribution-spanner' on page 6 undefined on inpu
-t line 61.
+LaTeX Warning: Reference `thm:ditsribution-spanner' on page 10 undefined on inp
+ut line 61.
 
 
-LaTeX Warning: Citation `cohen15approximating' on page 6 undefined on input lin
-e 72.
-
-[6]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 82.
+LaTeX Warning: Citation `cohen15approximating' on page 10 undefined on input li
+ne 72.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 82.
 
 
-LaTeX Warning: Reference `thm:ER' on page 7 undefined on input line 83.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 82.
 
 
-LaTeX Warning: Reference `thm:ER' on page 7 undefined on input line 89.
-
-) (./definitions.tex [7]
-
-LaTeX Warning: Citation `cohen15approximating' on page 8 undefined on input lin
-e 48.
+LaTeX Warning: Reference `thm:ER' on page 10 undefined on input line 83.
 
 
-LaTeX Warning: Citation `Chew1986' on page 8 undefined on input line 105.
+LaTeX Warning: Reference `thm:ER' on page 10 undefined on input line 89.
+
+) (./definitions.tex [10]
+
+LaTeX Warning: Citation `cohen15approximating' on page 11 undefined on input li
+ne 48.
+
+[11]
+
+LaTeX Warning: Citation `Chew1986' on page 12 undefined on input line 105.
 
 
-LaTeX Warning: Citation `Vaidya1991' on page 8 undefined on input line 105.
+LaTeX Warning: Citation `Vaidya1991' on page 12 undefined on input line 105.
 
 
-LaTeX Warning: Citation `Callahan1993' on page 8 undefined on input line 105.
+LaTeX Warning: Citation `Callahan1993' on page 12 undefined on input line 105.
 
 
-LaTeX Warning: Citation `HarPeled13' on page 8 undefined on input line 105.
+LaTeX Warning: Citation `HarPeled13' on page 12 undefined on input line 105.
 
 
-LaTeX Warning: Citation `Dong11' on page 8 undefined on input line 116.
+LaTeX Warning: Citation `Dong11' on page 12 undefined on input line 116.
 
 
-LaTeX Warning: Citation `Chen11' on page 8 undefined on input line 116.
+LaTeX Warning: Citation `Chen11' on page 12 undefined on input line 116.
 
 
-LaTeX Warning: Citation `vL09' on page 8 undefined on input line 116.
+LaTeX Warning: Citation `vL09' on page 12 undefined on input line 116.
 
 
-LaTeX Warning: Citation `tenenbaum00global' on page 8 undefined on input line 1
-16.
-
-[8]
-
-LaTeX Warning: Citation `SridharMaster' on page 9 undefined on input line 123.
+LaTeX Warning: Citation `tenenbaum00global' on page 12 undefined on input line 
+116.
 
 
-LaTeX Warning: Citation `SridharMaster' on page 9 undefined on input line 124.
+LaTeX Warning: Citation `SridharMaster' on page 12 undefined on input line 123.
+
+
+
+LaTeX Warning: Citation `SridharMaster' on page 12 undefined on input line 124.
+
 
 ) (./outline.tex
 
-LaTeX Warning: Reference `thm:ER' on page 9 undefined on input line 14.
+LaTeX Warning: Reference `thm:ER' on page 12 undefined on input line 14.
 
 
-LaTeX Warning: Reference `sec:relation-to-MST' on page 9 undefined on input lin
-e 19.
+LaTeX Warning: Reference `sec:relation-to-MST' on page 12 undefined on input li
+ne 19.
+
+[12]
+
+LaTeX Warning: Reference `sec:limit-behavior' on page 13 undefined on input lin
+e 36.
 
 
-LaTeX Warning: Reference `sec:limit-behavior' on page 9 undefined on input line
- 36.
+LaTeX Warning: Reference `' on page 13 undefined on input line 40.
 
 
-LaTeX Warning: Reference `' on page 9 undefined on input line 40.
-
-
-LaTeX Warning: Reference `sec:conclusion' on page 9 undefined on input line 44.
-
+LaTeX Warning: Reference `sec:conclusion' on page 13 undefined on input line 44
+.
 
 ) (./metric-equality.tex
 
@@ -462,27 +536,44 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
 
-(./metric-equality-summary.tex
-
-LaTeX Warning: Reference `' on page 9 undefined on input line 1.
-
-
-LaTeX Warning: Reference `' on page 9 undefined on input line 1.
-
-[9]) (./proof-overview.tex
+(./metric-equality-summary.tex [13]) (./proof-overview.tex
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [10]) (./reduction-to-screw.tex
+)
+(./reduction-to-screw.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2.
+(hyperref)                removing `math shift' on input line 1.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2.
+(hyperref)                removing `math shift' on input line 1.
 
-) (./Gprime.tex
+[14] (./boxes.tex [15]) (./lifting.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+[16]) (./lip_extension.tex
+
+LaTeX Warning: Citation `Kirszbraun1934' on page 17 undefined on input line 4.
+
+
+LaTeX Warning: Citation `Valentine1945' on page 17 undefined on input line 4.
+
+
+LaTeX Warning: Citation `brehm1981' on page 17 undefined on input line 4.
+
+[17])) (./Gprime.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -500,7 +591,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[11] [12] [13]
+[18] [19] [20]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -512,27 +603,15 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
 
-LaTeX Warning: Reference `def:GPrime' on page 14 undefined on input line 220.
+LaTeX Warning: Reference `def:GPrime' on page 21 undefined on input line 220.
 
-[14]
+[21]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
 
-LaTeX Warning: Reference `def:GPrime' on page 15 undefined on input line 228.
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-
-LaTeX Warning: Reference `def:GPrime' on page 15 undefined on input line 235.
+LaTeX Warning: Reference `def:GPrime' on page 22 undefined on input line 228.
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -540,20 +619,32 @@ Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
 
-LaTeX Warning: Reference `thm:screw-simplex-reduction' on page 15 undefined on 
+LaTeX Warning: Reference `def:GPrime' on page 22 undefined on input line 235.
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+LaTeX Warning: Reference `thm:screw-simplex-reduction' on page 22 undefined on 
 input line 242.
 
 
-LaTeX Warning: Reference `edge-squared-GPrime' on page 15 undefined on input li
+LaTeX Warning: Reference `edge-squared-GPrime' on page 22 undefined on input li
 ne 243.
 
 
-LaTeX Warning: Reference `q-edge-power-GPrime' on page 15 undefined on input li
+LaTeX Warning: Reference `q-edge-power-GPrime' on page 22 undefined on input li
 ne 243.
 
 
-LaTeX Warning: Reference `' on page 15 undefined on input line 246.
+LaTeX Warning: Reference `' on page 22 undefined on input line 246.
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -583,7 +674,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [15]
+ [22]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
@@ -592,17 +683,17 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
 
-LaTeX Warning: Citation `' on page 16 undefined on input line 31.
+LaTeX Warning: Citation `' on page 23 undefined on input line 31.
 
 
-LaTeX Warning: Citation `' on page 16 undefined on input line 31.
+LaTeX Warning: Citation `' on page 23 undefined on input line 31.
 
 
-LaTeX Warning: Reference `sec:frac-lap-eigenvector' on page 16 undefined on inp
+LaTeX Warning: Reference `sec:frac-lap-eigenvector' on page 23 undefined on inp
 ut line 39.
 
 
-LaTeX Warning: Reference `' on page 16 undefined on input line 48.
+LaTeX Warning: Reference `' on page 23 undefined on input line 48.
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -611,20 +702,58 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 
-LaTeX Warning: Reference `' on page 16 undefined on input line 54.
+LaTeX Warning: Reference `' on page 23 undefined on input line 54.
 
 
-LaTeX Warning: Reference `thm:embed' on page 16 undefined on input line 60.
+LaTeX Warning: Reference `thm:embed' on page 23 undefined on input line 60.
 
-)) (./spanner.tex) (./homology.tex) (./relation-to-MST.tex) [16]
+)) (./spanner.tex) (./homology.tex [23]
+
+LaTeX Warning: Citation `edelsbrunner02topological' on page 24 undefined on inp
+ut line 15.
+
+
+LaTeX Warning: Citation `chazal08towards' on page 24 undefined on input line 19
+.
+
+
+LaTeX Warning: Citation `chazal13persistence' on page 24 undefined on input lin
+e 21.
+
+
+LaTeX Warning: Citation `aanjaneya12metric' on page 24 undefined on input line 
+21.
+
+[24]
+
+LaTeX Warning: Citation `edelsbrunner02topological' on page 25 undefined on inp
+ut line 70.
+
+
+LaTeX Warning: Citation `adamszek16nerve' on page 25 undefined on input line 77
+.
+
+
+LaTeX Warning: Citation `gasparovic17complete' on page 25 undefined on input li
+ne 77.
+
+
+LaTeX Warning: Citation `borsuk48imbedding' on page 25 undefined on input line 
+83.
+
+
+LaTeX Warning: Citation `chazal08towards' on page 25 undefined on input line 83
+.
+
+) (./relation-to-MST.tex) [25]
 No file main.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
 (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7A7D986F2E18E74A502E58B27ABA4E18;1370.
+(rerunfilecheck)             Checksum: 2923803162A5A7A01B4D732BFB83B697;1912.
 
 
 LaTeX Warning: There were undefined references.
@@ -632,16 +761,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 83.
  ) 
 Here is how much of TeX's memory you used:
- 6371 strings out of 494440
- 90675 string characters out of 6173197
- 184784 words of memory out of 5000000
- 9455 multiletter control sequences out of 15000+600000
- 16411 words of font info for 63 fonts, out of 8000000 for 9000
+ 6464 strings out of 494440
+ 91966 string characters out of 6173197
+ 184286 words of memory out of 5000000
+ 9486 multiletter control sequences out of 15000+600000
+ 17066 words of font info for 65 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 29i,16n,31p,363b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,16n,31p,363b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
@@ -650,21 +779,23 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (17 pages, 357777 bytes).
+lic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb>
+Output written on main.pdf (26 pages, 413177 bytes).
 PDF statistics:
- 433 PDF objects out of 1000 (max. 8388607)
- 353 compressed objects within 4 object streams
- 73 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 676 PDF objects out of 1000 (max. 8388607)
+ 486 compressed objects within 5 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 214 words of extra memory for PDF output out of 10000 (max. 10000000)
 

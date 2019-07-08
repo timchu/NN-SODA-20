@@ -16,23 +16,43 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces In this figure we have a collection of convex bodies in black. The length or cost of the green curve between the two blue points is the integral along the curve scaled by the distance to the nearest body. A curve may traverse a body at no cost.}}{1}{figure.1}}
-\newlabel{fig:example}{{1}{1}{In this figure we have a collection of convex bodies in black. The length or cost of the green curve between the two blue points is the integral along the curve scaled by the distance to the nearest body. A curve may traverse a body at no cost}{figure.1}{}}
-\newlabel{thm:NN}{{1.4}{3}{}{theorem.1.4}{}}
-\newlabel{thm:qNN}{{1.5}{4}{}{theorem.1.5}{}}
-\newlabel{conj:qNN}{{1.6}{4}{}{theorem.1.6}{}}
-\newlabel{thm:l1}{{1.8}{5}{}{theorem.1.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Past Work}{5}{subsection.1.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Our Results}{5}{section.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1}Reduction to $q$-screw simplex}{1}{subsection.0.1}}
+\newlabel{sec:reduction-to-screw}{{0.1}{1}{Reduction to $q$-screw simplex}{subsection.0.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {0.1.1}Boxes}{1}{subsubsection.0.1.1}}
+\newlabel{sec:boxes}{{0.1.1}{1}{Boxes}{subsubsection.0.1.1}{}}
+\newlabel{eq:distto_bded_by_ris}{{1}{1}{Boxes}{equation.0.1}{}}
+\newlabel{eq:ri_as_min}{{2}{1}{Boxes}{equation.0.2}{}}
+\newlabel{eq:gamma_decomposed}{{3}{1}{Boxes}{equation.0.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {0.1.2}Lifting the points to $\mathbb  {R}^n$}{2}{subsubsection.0.1.2}}
+\newlabel{sec:lifting}{{0.1.2}{2}{Lifting the points to $\R ^n$}{subsubsection.0.1.2}{}}
+\newlabel{eq:defn_of_m}{{4}{2}{Lifting the points to $\R ^n$}{equation.0.4}{}}
+\newlabel{lem:m_and_dist}{{0.1}{2}{}{theorem.0.1}{}}
+\citation{Kirszbraun1934}
+\citation{Valentine1945}
+\citation{brehm1981}
+\newlabel{prop:m_is_good}{{0.2}{3}{}{theorem.0.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {0.1.3}The Lipschitz Extension}{3}{subsubsection.0.1.3}}
+\newlabel{sec:lip_extension}{{0.1.3}{3}{The Lipschitz Extension}{subsubsection.0.1.3}{}}
+\newlabel{lem:dist_N_lipschitz}{{0.3}{3}{}{theorem.0.3}{}}
+\newlabel{eq:curves_shorten}{{5}{4}{The Lipschitz Extension}{equation.0.5}{}}
+\newlabel{thm:equality}{{0.4}{4}{}{theorem.0.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{4}{section.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces In this figure we have a collection of convex bodies in black. The length or cost of the green curve between the two blue points is the integral along the curve scaled by the distance to the nearest body. A curve may traverse a body at no cost.}}{5}{figure.1}}
+\newlabel{fig:example}{{1}{5}{In this figure we have a collection of convex bodies in black. The length or cost of the green curve between the two blue points is the integral along the curve scaled by the distance to the nearest body. A curve may traverse a body at no cost}{figure.1}{}}
+\newlabel{thm:NN}{{1.4}{6}{}{theorem.1.4}{}}
+\newlabel{thm:qNN}{{1.5}{8}{}{theorem.1.5}{}}
+\newlabel{conj:qNN}{{1.6}{8}{}{theorem.1.6}{}}
+\newlabel{thm:l1}{{1.8}{9}{}{theorem.1.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Past Work}{9}{subsection.1.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Our Results}{9}{section.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Other Contributions}{9}{subsection.2.1}}
 \citation{cohen15approximating}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Other Contributions}{6}{subsection.2.1}}
-\newlabel{thm:general-spanner}{{2.1}{6}{}{theorem.2.1}{}}
-\newlabel{thm:distribution-spanner}{{2.2}{6}{}{theorem.2.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Properties of the $q$-screw simplex, and related results}{7}{subsection.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Definitions and Preliminaries}{7}{subsection.2.3}}
-\newlabel{sec:definitions}{{2.3}{7}{Definitions and Preliminaries}{subsection.2.3}{}}
+\newlabel{thm:general-spanner}{{2.1}{10}{}{theorem.2.1}{}}
+\newlabel{thm:distribution-spanner}{{2.2}{10}{}{theorem.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Properties of the $q$-screw simplex, and related results}{10}{subsection.2.2}}
 \citation{cohen15approximating}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Definitions and Preliminaries}{11}{subsection.2.3}}
+\newlabel{sec:definitions}{{2.3}{11}{Definitions and Preliminaries}{subsection.2.3}{}}
 \citation{Chew1986}
 \citation{Vaidya1991}
 \citation{Callahan1993}
@@ -41,38 +61,65 @@
 \citation{Chen11}
 \citation{vL09}
 \citation{tenenbaum00global}
-\newlabel{lem:dist_N_le_dist}{{2.5}{8}{}{theorem.2.5}{}}
 \citation{SridharMaster}
 \citation{SridharMaster}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Outline}{9}{section.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Exactly Computing Nearest Neighbor Metrics for all point sets, and $q$-NN metrics on small point sets}{10}{section.4}}
-\newlabel{sec:metric-equality}{{4}{10}{Exactly Computing Nearest Neighbor Metrics for all point sets, and $q$-NN metrics on small point sets}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Proof Overview}{10}{subsection.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Reduction to the $q$-screw simplex}{11}{subsection.4.2}}
-\newlabel{sec:reduction-to-screw}{{4.2}{11}{Reduction to the $q$-screw simplex}{subsection.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Construction of $G'$}{11}{subsection.4.3}}
-\newlabel{lem:flow}{{4.1}{11}{}{theorem.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Construction of $\mathcal  {C}$}{11}{subsection.4.4}}
-\newlabel{eq:flow-cost}{{3}{13}{Construction of $\Conv $}{equation.4.3}{}}
-\newlabel{eq:flow-cost-on-edge}{{4}{13}{Construction of $\Conv $}{equation.4.4}{}}
-\newlabel{eq:flow-cost-upper-bound}{{5}{14}{Construction of $\Conv $}{equation.4.5}{}}
-\newlabel{lem:qNN-GPrime}{{4.4}{15}{}{theorem.4.4}{}}
-\newlabel{lem:edge-squared-GPrime}{{4.5}{15}{}{theorem.4.5}{}}
-\newlabel{lem:q-edge-power-GPrime}{{4.6}{15}{}{theorem.4.6}{}}
-\newlabel{conj:qNN}{{4.7}{15}{}{theorem.4.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Proof of Theorem\nobreakspace  {}\ref  {thm:NN} and\nobreakspace  {}\ref  {thm:qNN}}{15}{section.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Counterexamples to Theorem\nobreakspace  {}\ref  {thm:NN} when $q < 2$}{15}{subsection.5.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Isometries from the $q$-Screw Simplex}{15}{section.6}}
-\newlabel{sec:isometry}{{6}{15}{Isometries from the $q$-Screw Simplex}{section.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Fractional Laplacian}{15}{section.7}}
+\newlabel{lem:dist_N_le_dist}{{2.5}{12}{}{theorem.2.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Outline}{12}{section.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Exactly Computing Nearest Neighbor Metrics for all point sets, and $q$-NN metrics on small point sets}{13}{section.4}}
+\newlabel{sec:metric-equality}{{4}{13}{Exactly Computing Nearest Neighbor Metrics for all point sets, and $q$-NN metrics on small point sets}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Proof Overview}{14}{subsection.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Reduction to $q$-screw simplex}{14}{subsection.4.2}}
+\newlabel{sec:reduction-to-screw}{{4.2}{14}{Reduction to $q$-screw simplex}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Boxes}{15}{subsubsection.4.2.1}}
+\newlabel{sec:boxes}{{4.2.1}{15}{Boxes}{subsubsection.4.2.1}{}}
+\newlabel{eq:distto_bded_by_ris}{{6}{15}{Boxes}{equation.4.6}{}}
+\newlabel{eq:ri_as_min}{{7}{15}{Boxes}{equation.4.7}{}}
+\newlabel{eq:gamma_decomposed}{{8}{15}{Boxes}{equation.4.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Lifting the points to $\mathbb  {R}^n$}{16}{subsubsection.4.2.2}}
+\newlabel{sec:lifting}{{4.2.2}{16}{Lifting the points to $\R ^n$}{subsubsection.4.2.2}{}}
+\newlabel{eq:defn_of_m}{{9}{16}{Lifting the points to $\R ^n$}{equation.4.9}{}}
+\newlabel{lem:m_and_dist}{{4.1}{16}{}{theorem.4.1}{}}
+\newlabel{prop:m_is_good}{{4.2}{16}{}{theorem.4.2}{}}
+\citation{Kirszbraun1934}
+\citation{Valentine1945}
+\citation{brehm1981}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}The Lipschitz Extension}{17}{subsubsection.4.2.3}}
+\newlabel{sec:lip_extension}{{4.2.3}{17}{The Lipschitz Extension}{subsubsection.4.2.3}{}}
+\newlabel{lem:dist_N_lipschitz}{{4.3}{17}{}{theorem.4.3}{}}
+\newlabel{eq:curves_shorten}{{10}{17}{The Lipschitz Extension}{equation.4.10}{}}
+\newlabel{thm:equality}{{4.4}{18}{}{theorem.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Construction of $G'$}{18}{subsection.4.3}}
+\newlabel{lem:flow}{{4.5}{18}{}{theorem.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Construction of $\mathcal  {C}$}{18}{subsection.4.4}}
+\newlabel{eq:flow-cost}{{13}{20}{Construction of $\Conv $}{equation.4.13}{}}
+\newlabel{eq:flow-cost-on-edge}{{14}{20}{Construction of $\Conv $}{equation.4.14}{}}
+\newlabel{eq:flow-cost-upper-bound}{{15}{21}{Construction of $\Conv $}{equation.4.15}{}}
+\newlabel{lem:qNN-GPrime}{{4.8}{22}{}{theorem.4.8}{}}
+\newlabel{lem:edge-squared-GPrime}{{4.9}{22}{}{theorem.4.9}{}}
+\newlabel{lem:q-edge-power-GPrime}{{4.10}{22}{}{theorem.4.10}{}}
+\newlabel{conj:qNN}{{4.11}{22}{}{theorem.4.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Proof of Theorem\nobreakspace  {}\ref  {thm:NN} and\nobreakspace  {}\ref  {thm:qNN}}{22}{section.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Counterexamples to Theorem\nobreakspace  {}\ref  {thm:NN} when $q < 2$}{22}{subsection.5.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Isometries from the $q$-Screw Simplex}{22}{section.6}}
+\newlabel{sec:isometry}{{6}{22}{Isometries from the $q$-Screw Simplex}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Fractional Laplacian}{22}{section.7}}
 \citation{}
 \citation{}
-\newlabel{eq:screw-embedding}{{9}{16}{Fractional Laplacian}{equation.7.9}{}}
-\newlabel{eq:step}{{10}{16}{Fractional Laplacian}{equation.7.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Spanner Results}{16}{section.8}}
-\newlabel{sec:spanner}{{8}{16}{Spanner Results}{section.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Persistent Homology of the Nearest Neighbor Metric}{16}{section.9}}
-\newlabel{sec:homology}{{9}{16}{Persistent Homology of the Nearest Neighbor Metric}{section.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {10}Relation to MST distances, and other distances in Geometry}{16}{section.10}}
+\newlabel{eq:screw-embedding}{{19}{23}{Fractional Laplacian}{equation.7.19}{}}
+\newlabel{eq:step}{{20}{23}{Fractional Laplacian}{equation.7.20}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Spanner Results}{23}{section.8}}
+\newlabel{sec:spanner}{{8}{23}{Spanner Results}{section.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Persistent Homology of the Nearest Neighbor Metric}{23}{subsection.8.1}}
+\newlabel{sec:homology}{{8.1}{23}{Persistent Homology of the Nearest Neighbor Metric}{subsection.8.1}{}}
+\citation{edelsbrunner02topological}
+\citation{chazal08towards}
+\citation{chazal13persistence}
+\citation{aanjaneya12metric}
+\citation{edelsbrunner02topological}
+\citation{adamszek16nerve}
+\citation{gasparovic17complete}
+\citation{borsuk48imbedding}
+\citation{chazal08towards}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Relation to MST distances, and other distances in Geometry}{25}{section.9}}
 \bibstyle{alpha}
 \bibdata{Bibtex/NNbibtex,Bibtex/bibtex}
