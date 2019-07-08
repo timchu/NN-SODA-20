@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 09:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 10:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -269,7 +269,23 @@ Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 143.
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `eq:flow-cost' multiply defined.
+
+
+LaTeX Warning: Label `lem:qNN-Gâ€™' multiply defined.
+
+
+LaTeX Warning: Label `lem:edge-squared-Gâ€™' multiply defined.
+
+
+LaTeX Warning: Label `lem:q-edge-power-Gâ€™' multiply defined.
+
+
+LaTeX Warning: Label `conj:qNN' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -286,8 +302,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
 \scratchdimen=\dimen118
@@ -412,17 +427,29 @@ LaTeX Warning: Reference `sec:limit' on page 7 undefined on input line 30.
 LaTeX Warning: Reference `sec:conclusion' on page 7 undefined on input line 35.
 
 
-) (./flows.tex
+) (./metric-equality.tex
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 3.
-
-
-LaTeX Warning: Reference `' on page 7 undefined on input line 3.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2.
 
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 20.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2.
+
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 4.
+
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 4.
 
 [7]
+
+LaTeX Warning: Reference `thm:qNN' on page 8 undefined on input line 50.
+
+
+LaTeX Warning: Reference `thm:qNN' on page 8 undefined on input line 53.
+
+(./detailed-proof-strategy.tex
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -440,26 +467,16 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 62.
+LaTeX Warning: Reference `' on page 8 undefined on input line 38.
 
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 64.
+LaTeX Warning: Reference `' on page 8 undefined on input line 40.
 
+) (./Gprime.tex
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 67.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 67.
-
-
-LaTeX Warning: Reference `thm:general' on page 8 undefined on input line 103.
-
-[8] (./potential-construction.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -468,7 +485,20 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[9]
+) (./flows.tex [8]
+
+LaTeX Warning: Reference `thm:general' on page 9 undefined on input line 30.
+
+(./potential-construction.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+[9] [10]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
@@ -492,7 +522,6 @@ Overfull \hbox (436.23436pt too wide) in paragraph at lines 121--121
 [] 
  []
 
-[10]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -502,7 +531,6 @@ Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-
 
 LaTeX Warning: Reference `def:Gâ€™' on page 11 undefined on input line 184.
 
@@ -521,11 +549,13 @@ Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
+[11]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-LaTeX Warning: Reference `def:Gâ€™' on page 11 undefined on input line 199.
+
+LaTeX Warning: Reference `def:Gâ€™' on page 12 undefined on input line 199.
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -534,22 +564,22 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-LaTeX Warning: Reference `thm:screw-simplex-reduction' on page 11 undefined on 
+LaTeX Warning: Reference `thm:screw-simplex-reduction' on page 12 undefined on 
 input line 206.
 
 
-LaTeX Warning: Reference `edge-squared-Gâ€™' on page 11 undefined on input line
+LaTeX Warning: Reference `edge-squared-Gâ€™' on page 12 undefined on input line
  207.
 
 
-LaTeX Warning: Reference `q-edge-power-Gâ€™' on page 11 undefined on input line
+LaTeX Warning: Reference `q-edge-power-Gâ€™' on page 12 undefined on input line
  207.
 
 
-LaTeX Warning: Reference `thm:qNN' on page 11 undefined on input line 208.
+LaTeX Warning: Reference `thm:qNN' on page 12 undefined on input line 208.
 
 
-LaTeX Warning: Reference `' on page 11 undefined on input line 210.
+LaTeX Warning: Reference `' on page 12 undefined on input line 210.
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -557,11 +587,108 @@ Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-) [11]) (./fractional-laplacian.tex
+)) (./potential-construction.tex [12]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+[13]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+
+Overfull \hbox (436.23436pt too wide) in paragraph at lines 121--121
+[] 
+ []
+
+[14]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [12]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+
+LaTeX Warning: Reference `def:Gâ€™' on page 15 undefined on input line 184.
+
+
+LaTeX Warning: Reference `thm:qNN' on page 15 undefined on input line 189.
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+LaTeX Warning: Reference `def:Gâ€™' on page 15 undefined on input line 192.
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+LaTeX Warning: Reference `def:Gâ€™' on page 15 undefined on input line 199.
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+LaTeX Warning: Reference `thm:screw-simplex-reduction' on page 15 undefined on 
+input line 206.
+
+
+LaTeX Warning: Reference `edge-squared-Gâ€™' on page 15 undefined on input line
+ 207.
+
+
+LaTeX Warning: Reference `q-edge-power-Gâ€™' on page 15 undefined on input line
+ 207.
+
+
+LaTeX Warning: Reference `thm:qNN' on page 15 undefined on input line 208.
+
+
+LaTeX Warning: Reference `' on page 15 undefined on input line 210.
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+)) (./fractional-laplacian.tex [15]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
@@ -570,17 +697,17 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
 
-LaTeX Warning: Citation `' on page 13 undefined on input line 31.
+LaTeX Warning: Citation `' on page 16 undefined on input line 31.
 
 
-LaTeX Warning: Citation `' on page 13 undefined on input line 31.
+LaTeX Warning: Citation `' on page 16 undefined on input line 31.
 
 
-LaTeX Warning: Reference `sec:frac-lap-eigenvector' on page 13 undefined on inp
+LaTeX Warning: Reference `sec:frac-lap-eigenvector' on page 16 undefined on inp
 ut line 39.
 
 
-LaTeX Warning: Reference `' on page 13 undefined on input line 48.
+LaTeX Warning: Reference `' on page 16 undefined on input line 48.
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -589,12 +716,12 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 
-LaTeX Warning: Reference `' on page 13 undefined on input line 54.
+LaTeX Warning: Reference `' on page 16 undefined on input line 54.
 
 
-LaTeX Warning: Reference `thm:embed' on page 13 undefined on input line 60.
+LaTeX Warning: Reference `thm:embed' on page 16 undefined on input line 60.
 
-) [13]
+) [16]
 No file main.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
@@ -602,21 +729,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E7424391455F51B2F019530493D857D3;561.
+(rerunfilecheck)             Checksum: 518F1095567BFC46849114B72AEA3F11;708.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 6280 strings out of 494440
- 89282 string characters out of 6173197
- 177953 words of memory out of 5000000
- 9422 multiletter control sequences out of 15000+600000
- 14854 words of font info for 57 fonts, out of 8000000 for 9000
+ 6313 strings out of 494440
+ 89780 string characters out of 6173197
+ 178004 words of memory out of 5000000
+ 9429 multiletter control sequences out of 15000+600000
+ 16411 words of font info for 63 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 29i,11n,31p,237b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,11n,31p,237b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
@@ -637,10 +767,10 @@ onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on main.pdf (14 pages, 288672 bytes).
+Output written on main.pdf (17 pages, 303726 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 259 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
