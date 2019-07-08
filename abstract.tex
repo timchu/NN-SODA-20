@@ -1,7 +1,9 @@
 \begin{abstract}
-In the machine learning setting, distances between two datapoints in a
-Euclidean point set are considered short if they are in the same data
-cluster - even if their Euclidean distance is long. A simple metric with
+In the machine learning setting, distances between two datapoints in
+Euclidean space should depend highly on the geometry of the point set.
+Distances between two points in a dense cluster of datapoints should be
+considered close, even if their Euclidean distance is long.
+One simple metric with
 this property is the Nearest neighbor metric. This metric is a
 mainfold-based metric, and it and its
 close variants have been studied in the past by multiple researchers.
@@ -14,18 +16,24 @@ manifold. This makes exactly
 computing the Nearest Neighbor metric challenging, even for a fixed
 set of four points in two dimensions. In this paper, we overcome this
 challenge by equating the Nearest Neighbor metric to a shortest-path
-distance on a simple geometric graph, in all cases. We then
-exactly compute a generalization of the Nearest Neighbor metric, called the
-$q$-Nearest Neighbor metric, for small point sets.  Our tools include
-conservative vector fields, Lipschitz extensions, minimum cost flows, and
+distance on a simple geometric graph, in all cases. This theorem holds even
+if the point set is the countable union of compact geometric objects. We
+then compute a generalization of this metric, which we call the $q$-power
+Nearest Neighbor metric, and compute it for point sets that are the union
+of 4 compact, path-connected geometric objects in arbitrary dimension.
+
+Our proof uses conservative vector fields,
+Lipschitz extensions, minimum cost flows, and
 barycentric subdivisions, all applied to a geometric object we call the
 $q$-screw simplex. Our work considerably strengthens the work of Cohen et.
 al., and shows the first non-trivial manifold metric that can be computed
-exactly with discrete techniques. We can use our results to solve a range
-of problems important to metrics, on the Nearest Neighbor metric: efficient
-spanner computation, persistent homology, and behavior in the limit. We
-further show links between this metric and notable problems like Euclidean
-MST and single-linkage clustering.
+exactly with discrete techniques. When the point set is finite, we can use
+our results to solve a range of classical metric problems for our metric:
+we can efficiently compute sparse spanners, compute persistent homology, 
+measure the behavior of the metric when the point set is a large number of
+points drawn from an underlying probability density function, and show
+links between this metrics and classic goemetric objects like Euclidean MST
+or single-linkage clustering methods.
 
 % The key geometric object in our proof, the $q$-screw simplex, was first
 % discovered by John Von Neumann and Issai Schoenberg. This simplex is
