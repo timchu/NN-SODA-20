@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 13:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 13:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -353,36 +353,43 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: Reference `' on page 1 undefined on input line 15.
 
-<Figures/example.pdf, id=91, 418.3221pt x 281.85422pt>
-File: Figures/example.pdf Graphic file (type pdf)
 
-<use Figures/example.pdf>
-Package pdftex.def Info: Figures/example.pdf used on input line 46.
-(pdftex.def)             Requested size: 140.92793pt x 94.9518pt.
- [1
+LaTeX Warning: File `Figures/example1.pdf' not found on input line 46.
 
- <./Figures/example.pdf>] [2]
 
-LaTeX Warning: Reference `' on page 3 undefined on input line 166.
+! Package pdftex.def Error: File `Figures/example1.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 ...width=0.3\textwidth]{Figures/example1.pdf}
+                                                  
+? 
+[1
+
+] [2]
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 164.
 
 [3]
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 264.
+LaTeX Warning: Reference `' on page 4 undefined on input line 262.
 
 [4]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-) (./past-work.tex) (./contributions.tex [5] (./spanner-theorems.tex)
+) (./past-work.tex) (./contributions.tex [5] (./spanner-theorems.tex
+[6])
 
-LaTeX Warning: Reference `thm:ditsribution-spanner' on page 6 undefined on inpu
+LaTeX Warning: Reference `thm:ditsribution-spanner' on page 7 undefined on inpu
 t line 61.
 
 
-LaTeX Warning: Citation `cohen15approximating' on page 6 undefined on input lin
+LaTeX Warning: Citation `cohen15approximating' on page 7 undefined on input lin
 e 72.
 
-[6]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 82.
@@ -414,20 +421,20 @@ LaTeX Warning: Citation `Callahan1993' on page 8 undefined on input line 105.
 
 LaTeX Warning: Citation `HarPeled13' on page 8 undefined on input line 105.
 
+[8]
 
-LaTeX Warning: Citation `Dong11' on page 8 undefined on input line 116.
-
-
-LaTeX Warning: Citation `Chen11' on page 8 undefined on input line 116.
+LaTeX Warning: Citation `Dong11' on page 9 undefined on input line 116.
 
 
-LaTeX Warning: Citation `vL09' on page 8 undefined on input line 116.
+LaTeX Warning: Citation `Chen11' on page 9 undefined on input line 116.
 
 
-LaTeX Warning: Citation `tenenbaum00global' on page 8 undefined on input line 1
+LaTeX Warning: Citation `vL09' on page 9 undefined on input line 116.
+
+
+LaTeX Warning: Citation `tenenbaum00global' on page 9 undefined on input line 1
 16.
 
-[8]
 
 LaTeX Warning: Citation `SridharMaster' on page 9 undefined on input line 123.
 
@@ -634,13 +641,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
  ) 
 Here is how much of TeX's memory you used:
- 6374 strings out of 494440
- 90687 string characters out of 6173197
+ 6372 strings out of 494440
+ 90613 string characters out of 6173197
  178589 words of memory out of 5000000
- 9453 multiletter control sequences out of 15000+600000
- 16411 words of font info for 63 fonts, out of 8000000 for 9000
+ 9450 multiletter control sequences out of 15000+600000
+ 16579 words of font info for 64 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 29i,11n,31p,258b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,11n,31p,258b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
@@ -658,12 +665,13 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (17 pages, 351857 bytes).
+type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (17 pages, 310035 bytes).
 PDF statistics:
- 436 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
+ 353 PDF objects out of 1000 (max. 8388607)
+ 309 compressed objects within 4 object streams
  78 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
