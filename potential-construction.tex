@@ -177,26 +177,26 @@ THE INTERIOR CIRCUMCENTER PROPERTY?).
 
 Thus, we have proven a core lemma:
 
-\begin{lemma} ~\label{lem:qNN-G’}
+\begin{lemma}\label{lem:qNN-GPrime}
 
 The $q$-NN distance between two points in a point set is lower bounded by
 the shortest path between the two corresponding points in $G’$. Here, $G’$
-is constructed as in Definition~\ref{def:G’}
+is constructed as in Definition~\ref{def:GPrime}
 
 \end{lemma}
 
 We now prove the following two lemmas, completing our proof of
 Theorem~\ref{thm:NN} and Theorem~\ref{thm:qNN} respectively.
 
-\begin{lemma}\label{lem:edge-squared-G’} Let $G$ be the edge-squared graph
-(DEFINE), and let $G’$ be defined as in Definition~\ref{def:G’} for $q=2$.
+\begin{lemma}\label{lem:edge-squared-GPrime} Let $G$ be the edge-squared graph
+(DEFINE), and let $G’$ be defined as in Definition~\ref{def:GPrime} for $q=2$.
 The shortest path in $G’$ is the same as the shortest path in $G$, when the
 initial point set generating $G$ and $G’$ is a $2$-screw simplex.
 
 \end{lemma}
 
-\begin{lemma}\label{lem:q-edge-power-G’} Let $q > 2$. Let $G$ be the
-$q$-edge power graph, and $G’$ be defined as in Definition~\ref{def:G’}
+\begin{lemma}\label{lem:q-edge-power-GPrime} Let $q > 2$. Let $G$ be the
+$q$-edge power graph, and $G’$ be defined as in Definition~\ref{def:GPrime}
 (MAKE SURE THE DEFINITION IS Q DEPENDENT). The shortest path in $G’$ is the
 same as the shortest path in $G$, when the initial point set generating $G$
 and $G’$ is a $q$-screw simplex with $4$ points.
@@ -204,7 +204,7 @@ and $G’$ is a $q$-screw simplex with $4$ points.
 \end{lemma}
 
 Combined with Theorem~\ref{thm:screw-simplex-reduction},
-Lemmas~\ref{edge-squared-G’} and~\ref{q-edge-power-G’} prove
+Lemmas~\ref{edge-squared-GPrime} and~\ref{q-edge-power-GPrime} prove
 Theorems~\ref{thm:NN} and~\ref{thm:qNN} respectively. Moreover, we make the
 following conjecture, which we have some computational evidence for (See
 Appendix~\ref{} for details):
@@ -212,7 +212,7 @@ Appendix~\ref{} for details):
 \begin{conjecture}\label{conj:qNN}
 
 For $q>2$, let $G$ and $G’$ be defined as in
-Lemma~\ref{lem:q-edge-power-G’}. Then the shortest path in $G’$ is the same
+Lemma~\ref{lem:q-edge-power-GPrime}. Then the shortest path in $G’$ is the same
 as the shortest path in $G$.
 
 \end{conjecture}
