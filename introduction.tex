@@ -39,7 +39,19 @@ follows.
 We then define the \textbf{density-based distance} between two points $a, b \in
 \R^k$ as 
 \[ d_c(a,b) \inf_{\gamma\in\ourpath(a,b)} \len_c(\gamma)\]
-\end{definition} $$PICTURE$$
+\end{definition}
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.3\textwidth]{Figures/example.pdf}
+    \caption{The length of the green curve between the two blue points
+      is the integral along the curve scaled by the distance to the nearest data point.}
+  \label{fig:example}
+\end{figure}
+
+% $$PICTURE$$
+
+
 
 Conceptually, the density-based cost of a path is the weighted path length,
 where each infinitesimal path piece is weighted with cost function $c$.

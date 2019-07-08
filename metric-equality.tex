@@ -1,59 +1,12 @@
 \section{Exactly Computing Nearest Neighbor Metrics for all point sets, and $q$-NN metrics on
 small point sets}\label{sec:metric-equality}
 
-In this section, we prove our main theorems, Theorem~\ref{} and~\ref{}.
-We prove that the edge-squared metric exactly equals the nearest neighbor
-metric on any point set, and that the $q$-edge power metric equals the $q$-NN
-metric for any set of four points or less. We also conjecture that the $q$-edge
-power metric always equals the $q$-NN metric, and provide a discrete
-inequality that would imply our larger conjecture. Even though the number of points
-we handle for the general $q$-edge power metric is quite small, this still
-represents progress; exactly computing the NN or $q$-NN metric even for four
-points in two dimensions requires dealing with uncountably number of paths
-through space. Furthermore, we provide a discrete criterion for testing whether
-the $q$-NN metric equals the $q$-edge power metric, which may be useful for
-future work.
-
-Our tools for proving both theorems will be use of min-cost flows generated
-from a conservative vector field. This is the core idea that lets us surmount
-the difficulties in dealing with uncountably many paths. We hope that our ideas
-may be more generally applicable to various metrics.  
-
-Notice that the Nearest Neighbor cost is upper bounded by the edge-squared
-metric. This can be done by purely considering Nearest Neighbor paths that
-are piecewise linear and go straight from data point to data point. The
-analagous result holds for $q$-Nearest Neighbor metrics. Therefore, we only
-need to prove that the Nearest Neighbor cost is lower bounded by the
-edge-squared metric.  
-To do this, we build a graph $G'$ from our point set, which can
-conceptually be thought of as the edge-squared graph with additional
-Steiner points. We will show using conservative vector fields and flows
-that the Nearest Neighbor cost of any path from $a$ to $b$ is bounded below
-by the shortest path from $a$ to $b$ in $G'$. If the shortest path in $G'$
-were always equal to the shortest path in the edge-squraed graph $G$, then
-we'd be done.
-
-However, this is not the case in general. However, it does turn out to be
-the case always on a $2$-screw simplex. Remarkably, we show that proving
-this equality on the $2$ screw simplex is sufficient to prove it for any
-point set. We show this via the Lipschitz extension theorem and a simple
-BFS. This proves Theorem~\ref{thm:NN}
-
-All our techniques generalize to $q$-NN metrics (when being related to $q$-edge power
-metrics), except the equality
-between shortest paths on $G'$ and $G$ is less clear for $q$-screw
-simplices. We prove that this equality holds when there are four points in
-three dimension, and conjecture (with computational evidence, but no proof) that this
-equality holds for any point set. Thus, we have proven
-Theorem~\ref{thm:qNN}, and provided a discrete criterion that would imply
-Conjecture~\ref{conj:qNN} holds.
-
-The gap in Theorem~\ref{thm:NN} and~\ref{thm:qNN} is due to the simple
-geometric structure of the $2$-screw simplex, which is known to have a
-beautiful embedding into the corners of a rectangular box.
-
-\input{detailed-proof-strategy}
+\input{metric-equality-summary}
+\input{proof-overview}
+\input{reduction-to-screw}
+%% Flow World
 \input{Gprime}
 \input{flows}
 \input{potential-construction}
-
+%% Reduction to Screw Simplex
+\input{proof-on-screw}
