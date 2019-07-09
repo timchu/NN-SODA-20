@@ -1,67 +1,21 @@
 \begin{abstract}
-A foundational hypothesis in machine learning is that datapoints can be
-embedded into Euclidean space, and metrics can be generated on the
-datapoints to solve a wide range of tasks. It is widely believed that these
-metrics should have the
-property that two points in the same dense cluster of datapoints should be
-considered close, even if their Euclidean distance is far.
-One simple metric with
-this property is the Nearest neighbor metric. This metric is a
-mainfold-based metric, and it and its
-close variants have been studied in the past by multiple researchers.
 
-One key problem on manifold metrics, dating back for four centuries, is
-computing them exactly. The Nearest Neighbor metric
-is defined as the infimum cost path over an
-uncountable number of paths that can go 'anywhere' on a continuous
-manifold. This makes exactly
-computing the Nearest Neighbor metric challenging, even for a fixed
-set of four points in two dimensions. In this paper, we overcome this
-challenge by equating the Nearest Neighbor metric to a shortest-path
-distance on a simple geometric graph, in all cases. Remarkably, this
-equality holds even
-if the point set is the countable union of compact geometric objects, which
-are not necessarily convex or even simply connected. We
-then compute a generalization of this metric, which we call the $q$-power
-Nearest Neighbor metric, and prove an analagous equality for point sets
-that are the union of 4 compact, path-connected geometric objects in
-arbitrary dimension.\don{Something about Conformal change of metrics. If
-you have a manifold and want to put a new Riemannian metric on it, usually
-the Riemannian metric is a full-on metric tensor, but here we have a
-simpler case where it's isotropic, same in every direction. In some sense,
-these transformations are conformal, so this is a conformal change of
-Riemannian metric. (This is what this general idea we're doing is on.
-There's a bunch of literature on this, but almost nobody computes it.)}
+  % Basic Object and main result
+  Data-sensitive metrics adapt distances locally based the density of data points with the goal of aligning distances and some notion of similarity.
+  In this paper, we give the first exact algorithm for computing a data-sensitive metric called the Nearest Neighbor Metric.
+  In fact, we prove the surprising result that a previously published $3$-approximation is an exact algorithm.
 
-Our proof uses conservative vector fields,
-Lipschitz extensions, minimum cost flows, and
-barycentric subdivisions, all applied to a geometric object we call the
-$q$-screw simplex. This work considerably strengthens the work of Cohen et.
-al., and shows the first non-trivial manifold metric that can be computed
-exactly with discrete techniques. When the point set is finite, we can use
-our results to solve a range of classical metric problems for our metric:
-we can efficiently compute sparse spanners, compute persistent homology,
-measure the behavior of the metric when the point set is a large number of
-points drawn from an underlying probability density function, and show
-links between this metrics and classic goemetric objects like Euclidean MST
-or single-linkage clustering methods.
+  % Surprising and Hard
+  The Nearest Neighbor Metric can be viewed as a special case of a density-based distance used in machine learning, or it can be seen as an example of a manifold metric.
+  Previous computational research on such metrics despaired of computing exact distances on account of the apparent difficulty of minimizing over all continuous paths between a pair of points.
 
-% The key geometric object in our proof, the $q$-screw simplex, was first
-% discovered by John Von Neumann and Issai Schoenberg. This simplex is
-% defined by taking $n$ points on a line, applying the $1/q$ power to all
-% pairwise distances, and isometrically embedding the resulting point set
-% into Euclidean space.  We prove results on these $q$-screw simplices that
-% are of independent interest: we show that they
-% have a deep connection to fractional Laplacians, a differential operator
-% that appears in a wide variety of physics and mathematical settings, and
-% isometrically embed these simplices into effective resistance distance.
+  % ancillary results
+  We also compute a generalization of this metric, which we call the $q$-power Nearest Neighbor metric, and give an analogous graph-based metric for point sets that are the union of 4 compact, path-connected sets in arbitrary dimension.
+  We leverage the exact computation of the Nearest Neighbor Metric to compute sparse spanners and persistent homology.
+  We also explore the behavior of the metric built from point sets drawn from an underlying distribution and consider the more general case of inputs that are countable collections of compact sets.
 
-% We use
-%this connection to prove that the $q$-screw simplex embeds isometrically
-%into Effective resistance distance, and that its volume and circumcenter
-%can be approximated efficiently using a Laplacian determinant estimator and
-%Laplacian system solver respectively.
-%We also show that any finite $l_1$
-%metric raised to the $1/q$ power is isometrically embeddable into $l_1$,
-%mirroring a famous theorem by Schoenberg on $l_2$.
+  % Interesting Connections
+  The main results connect several classical theories such as the conformal change of Riemannian metrics and the screw theory of Schoenberg and Von Neumann.
+  We also develop some novel proof techniques based on minimum cost flows and Lipschitz extensions that may be of independent interest.
+
 \end{abstract}
