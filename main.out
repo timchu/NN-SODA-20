@@ -7,7 +7,7 @@
 \BOOKMARK [1][-]{section.4}{Exactly Computing Nearest Neighbor Metrics for all point sets, and q-NN metrics on small point sets}{}% 7
 \BOOKMARK [2][-]{subsection.4.1}{Proof Overview}{section.4}% 8
 \BOOKMARK [2][-]{subsection.4.2}{Reduction to q-screw simplex}{section.4}% 9
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Generating a Lipschitz embedding into Rn}{subsection.4.2}% 10
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Single Source Distance Preserving Embedding}{subsection.4.2}% 10
 \BOOKMARK [3][-]{subsubsection.4.2.2}{The Lipschitz Extension}{subsection.4.2}% 11
 \BOOKMARK [2][-]{subsection.4.3}{Construction of G'}{section.4}% 12
 \BOOKMARK [2][-]{subsection.4.4}{Construction of C}{section.4}% 13

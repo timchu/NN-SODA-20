@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 21:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 21:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -466,20 +466,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-(./lifting.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1.
-
-) (./lip_extension.tex
+(./lifting.tex) (./lip_extension.tex
 
 LaTeX Warning: Reference `prop:m_is_good' on page 10 undefined on input line 4.
 
@@ -677,7 +664,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 315B4DD3A60EDAD30D88B107A78B4402;1458.
+(rerunfilecheck)             Checksum: DE04B5371498ABFAA602F65D0E88BF57;1461.
 
 
 LaTeX Warning: There were undefined references.
@@ -714,7 +701,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (19 pages, 405813 bytes).
+Output written on main.pdf (19 pages, 405799 bytes).
 PDF statistics:
  550 PDF objects out of 1000 (max. 8388607)
  422 compressed objects within 5 object streams
