@@ -1,0 +1,29 @@
+\subsection{Reduction to $q$-screw simplex} % (fold)
+\label{sec:reduction-to-screw}
+In this section, we prove that it suffices to prove Theorem~\ref{thm:NN}
+and~\ref{thm:qNN} on the $q$-screw simplex. 
+
+Let $P\subset \R^d$ be a set of $n$ points.
+  Pick any \emph{source} point $s\in P$.
+  Order the points of $P$ as $p_1,\ldots ,p_n$ so that
+  \[
+    \dist_q(s,p_1) \le \cdots \le \dist_q(s, p_n).
+  \]
+  This will imply that $p_1 = s$.
+  It will suffice to show that for all $p_i\in P$, we have $\dist_q(s,p_i)
+= \dist_{qN}(s,p_i)$.
+The core step is that we will find a Lipschitz map $m: \R \rightarrow \R^n$
+that preserves $\dist_q(s,p)$ for all $p \in P$. We will then show how the
+Lipschitz extension of $m$ is also Lipschitz as a function between $q$-NN
+metrics. If we can do this, then the $q$-NN cost of any path $\gamma$ from $s$ to
+$p_i$ on our initial point set is lower bounded by the $q$-NN cost of
+$m(\gamma)$ with respect to the point set $\{m(p_0), \ldots, m(p_{n-1})\}$.
+If the Theorem holds on this point set,
+ the $q$-NN cost of $m(\gamma)$ is lower bounded by the shortest path
+from $m(p_0)$ to $m(p_{n-1})$, which is equal to the shortest path from
+$p_0$ to $p_{n-1}$. This completes our reduction.
+  
+  \input{lifting}
+  \input{lip_extension}
+  
+% section the_proof (end)

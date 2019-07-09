@@ -1,0 +1,91 @@
+\section{Fast, Sparse Spanner for the Edge-Squared
+Metric}
+\label{sec:general-spanner}
+
+Now we outline a proof for Theorem~\ref{thm:general-spanner}, which shows that one can
+construct a $(1+\eps)$ edge-squared spanner of size $O(n \eps^{-d/2})$ in
+time $O\left(n \log n + n \eps^{-d/2} \log \left(\frac{1}{\eps}\right)\right)$, 
+for points in constant dimensional space. The full proof is in
+Appendix~\ref{ap:general-spanner}. By Theorem~\ref{thm:NN}, this
+spanner is also a good spanner of the nearest-neighbor geodesic distance.
+Note that this spanner is sparser and faster in terms of epsilon dependency than the best spanner for
+Euclidean distances known to the authors
+, which has $O\left(\eps^{-d}\right)$ edges and runs in
+$O\left(n \log n +
+\eps^{-d}n\log\left(\frac{1}{\eps}\right)\right)$
+time~\cite{Callahan1993}. We rely extensively on well-separated pair decompositions
+(WSPDs),
+and this outline assumes familiarity with that notation.
+For a comprehensive set of definitions and notations on well separated
+pairs, refer to any of \cite{Callahan1995, Arya2016, Callahan1993,
+arya95euclid}.  
+Our proof consists of three parts.
+\begin{enumerate}
+\item Showing that connecting a $(1+O(\delta^2))$-approximate shortest edge
+in a $1/\delta$ well separated pair for all the pairs in the decomposition
+gives a $1+O(\delta^2)$ edge-squared spanner.
+The processing for this step takes $O(n \log n + \delta^{-d}n)$ time.
+\item Previous work contains an algorithm computing
+  $1+O(\delta^2)$-approximate shortest edge in a $1/\delta$ well
+    separated pair for all the pairs in a WSPD, and takes
+    $O(1)$ time per pair. The pre-processing for this step will be
+    bounded by $O(\delta^{-d}n\log\left(\frac{1}{\delta}\right))$ time. The $\log\left(\frac{1}{\delta}\right)$ factor goes away given a fast floor function. 
+    This procedure was first introduced in~\cite{Callahan1995}.
+
+\item Putting these two together, and setting $\epsilon = \delta^2$
+gives us a $1+\epsilon$ spanner with
+$O(\epsilon^{-d/2}n)$ edges in
+    $O(n \log n + \epsilon^{-d/2}n)$ time.
+\end{enumerate}
+Full details of this proof are contained in Appendix~\ref{ap:general-spanner}
+
+\subsection{Lower Bounds for Sparsity of Euclidean
+Spanners}\label{sec:lower-bound}
+\begin{theorem} \label{thm:euc} For constant $d$ and any fixed $\eps$, there exists a set
+of points such that any $(1+\eps)$ Euclidean spanner in $\mathbb{R}^d$
+  needs $\Omega\left(n
+  \eps^{-\floor{d/2} + 1}\right)$ edges.
+\end{theorem}
+Here, we show that our edge-squared spanner is about as sparse as the
+theoretically optimal Euclidean spanner with the same
+approximation quality. 
+The set of points is chosen adversarially for a given $\eps$.
+
+\begin{proof} (of Theorem~\ref{thm:euc})
+Take points spaced at least $4\epsilon$
+apart on the surface of the unit ball on the first $d/2$ dimensions.
+Then,
+take points spaced at least $4\epsilon$ apart on the surface of the unit
+ball on the remaining
+$d/2$ dimensions. Let the first
+set of points be $A$, and the second set of points be $B$.  
+You can pack $\Theta(\eps^{-d/2+1})$ points into both $A$ and
+$B$ this way.
+Each distance crossing from $A$ to $B$ has Euclidean distance exactly equal to $2$.
+Therefore, any edge from $A$ to $B$ must be in a
+$(1+\eps)$ spanner of the Euclidean distance. We have constructed
+a set $P := A \cup B$ with $\Theta(\eps^{-d/2+1})$ points, whose $(1+\eps)$ Euclidean spanner must have at
+least $\Theta(\eps^{-d+2})$ edges.
+This construction can have arbitrarily many points $n$, by
+  duplicating $n \eps^{d/2-1}$
+copies of $P$ arbitrarily far away from each other. The
+  result has $n$ vertices, and must have at least $\Omega(n \eps^{-d/2+1})$ edges in
+any $(1+\epsilon)$ Euclidean spanner.  
+\end{proof}
+By substituting $\sqrt{\eps}$ for $\eps$ in the construction, we
+can additionally show a lower bound for the sparsity of an
+edge-squared spanner.
+
+\begin{lemma} For constant $d$ and any fixed $\eps$, there exists a point set
+where a $(1+\eps)$
+edge-squared spanner must have at least $\Omega\left(n\eps^{-\floor{d/4}+1}\right)$
+edges. 
+\end{lemma}
+The point set is chosen adversarially for a given $\eps$.  
+By setting $d=4$ and $\eps = \frac{1}{n}$, our construction gives:
+\begin{lemma}\label{lem:n-squared}
+There exists a 
+$4$-dimensional set of points, such that any $1$-spanner of the
+  edge-squared metric has $\Omega(n^2)$ 
+edges.
+\end{lemma}

@@ -3,43 +3,27 @@
 %     edge-squared metric, are provided in
 %    Section~\ref{sec:definitions}.
 %  
-Section~\ref{sec:metric-equality} contains the proof of Theorem~\ref{thm:NN}
-and~\ref{thm:qNN}. This section contains most of the novel mathematical
-ideas in our work, including how to relate a manifold distance to min-cost
-flows on a simplex. It also establishes the centrality of the $q$-screw
-simplex in our proof techniques.
+Section~\ref{sec:NN} contains the proof of Theorem~\ref{thm:NN},
+equating the edge-squared metric and nearest-neighbor geodesic distance in
+all cases. We then
+compute the persistent homology of the nearest-neighbor
+geodesic distance.
+Section~\ref{sec:general-spanner} outlines a proof of
+Theorem~\ref{thm:general-spanner}, and compares our
+spanner to new lower bounds
+on the sparsity of $(1+\eps)$-spanners of the Euclidean metric.
+We outline a proof of Theorem~\ref{thm:distribution-spanner} in
+Section~\ref{sec:distribution-spanner} and discuss its implications.  
 
-Section~\ref{sec:isometry} shows how $q$-screw simplices relate to
-fractional Laplacians and spectral graph theory, which allows us to prove
-Theorem~\ref{thm:ER}. It also contains a new embedding of the $q$-screw
-simplex for $q>2$, proving Theorem~\ref{thm:l1}. These proofs and results
-are mostly included for independent interest, and to spur future work
-relating $q$-screw simplices to density-sensitive distances.
+Section~\ref{sec:edge-power} introduces the $p$-power metrics. We show
+that Euclidean spanners and Euclidean MSTs are special cases of
+$p$-power spanners. We show how
+clustering algorithms including $k$-means, level-set methods,
+and single linkage clustering, are special cases of
+clustering with $p$-power metrics.
 
-We show a brief proof in Section~\ref{sec:relation-to-MST} that the Nearest
-Neighbor metric, and the $q$-edge power metrics in general, generalize common
-metrics like maximum-edge Euclidean MST metrics and Euclidean distance.
-This will show how clustering algorithms using $q$-edge poewr metrics
-generalize $k$-means, level-set methods, single linkage clustering, and
-more.
 
-Persistent homology of the Nearest Neighbor metric is contained in
-Sectoin~\ref{sec:homology}.
-
-Section~\ref{sec:spanner} contains overviews of the proof for both
-Theorem~\ref{thm:general-spanner} and~\ref{thm:distribution-spanner}, as
-well as their implications. Full
-proofs are contained in the Appendix. These results are not particularly
-tricky to prove, but they nonetheless solve important questions of fast
-$(1+\eps)$ approximations of the Nearest Neighbor metric.
-
-Section~\ref{sec:limit-behavior} shows the convergence of the Nearest Neighbor
-metic, and the $q$-edge power metrics in general, to a beautiful geodesic
-on an underlying probability distribution previously studied by Hwang et.
-al. Most of the heavy lifting here was done by past researchers, such as
-Hwang et. al. and Steele~\ref{}. However, this result lets us interpret
-Nearest Neighbor metric clustering as an approximation of a very nice
-clustering on an underlying probability density function.
-
-Section~\ref{sec:conclusion} contains conclusions, a summary of work, and
-open questions for the future.
+Conclusions and open questions are in
+Section~\ref{sec:conclusions}. Full proofs for
+Theorems~\ref{thm:distribution-spanner},~\ref{thm:general-spanner}
+are contained in the Appendix.

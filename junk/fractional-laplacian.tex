@@ -1,0 +1,60 @@
+
+\section{Fractional Laplacian}
+
+In this section, we prove that the $q$-screw simplex distances arise as
+effective resistance of the Fractional Laplacian, for powers $s = -1/2-1/q  $,
+when $q > 2$. 
+
+Preliminaries: Fractional Laplacian. 
+
+We present two definitions: the first definition is based on taking the limit
+of graph Laplacians raised to the fractional power (which are known in folklore
+to be graph Laplacians themselves), and the second definition is based on
+taking fractional powers of the Laplacian differential operator when the latter
+is written in terms of its Eigenvectors, the Fourier bases.
+
+In this work, we build on Von Neumann and Schoenberg’s proof of embeddability
+of the $q$-screw simplex. Their work (slightly simplified by the authors of
+this paper) shows that the $q$-screw simplex for $q > 1$ can be embedded in
+infinite dimensional Hilbert space, by the embedding $f: mathbb{R} \rightarrow
+L_2$ defined as:
+
+\begin{align}\label{eq:screw-embedding} f(x) = \frac{e^{i\omega
+x}}{\omega^{1/2+1/q}} \end{align} Where $f(x)$ is a function in the variable
+$\omega$.
+
+The proof of their embedding hinges on the following remarkable integral
+formula: \[ \| x_1 – x_2 \|_2^{1/q} = \frac{sin^2(\omega(x_1-x_2)
+)}{\omega^{1+2/q}},  \] the left hand side of which is the norm for
+Equation~\ref{eq:screw-embedding}. This integral formula is a classical
+integral formula~\cite{}, and can be proven using Jordan’s integration theorem
+from complex analysis~\cite{,}.
+
+Notice that the step function $S_x$, which is $1$ between $-x$ and $x$ and $0$
+elsewhere, can be written in Fourier bases as: \begin{align} \label{eq:step}
+S(x) = frac{e^{i\omega x}}{\omega}.  \end{align} Equation~\ref{eq:step} is a
+classic result, dating back to the earliest days of functional analysis.
+However, this formulation compared with Equation~\ref{eq:screw-embedding}
+practically invites us to use the Fractional Laplacian, when viewed through the
+Eigenvector lens in Section~\ref{sec:frac-lap-eigenvector}.
+
+Therefore, we can write Equation~\ref{eq:screw-embedding} as: \[ f(x) =
+\Delta^{1/4-1/(2q))} Step = \Delta^{1/4-1/(2q)} (\Delta^{-1/2} \delta_{-x} -
+\delta_{x}) = \Delta^{-1/4-1/(2q)} (\delta_{-x} - \delta_{x}) \] In the above
+expression, $\delta_x$ represents the Dirac Delta function. DEFINE $\Delta$ in
+this case!!!! Here, the second part of the equation is a standard manipulation
+in differential equations, as $\Delta^{1/2}$ is conceptually similar to the
+integral operator. For more on manipulations with this fractional Laplacian
+operator, see~\ref{}.
+
+And thus $|x-y|^{2/q} = ||f(x)||_2^2$ can be written as: \begin{align}
+(\delta_{-x} - \delta_{x})^T \cdot \Delta^{-1/2-1/q} \cdot (-\delta_{-x} –
+\delta_{x}) \end{align} Which is an effective resistance distance. This can be
+seen since $\Delta^{-1/2-1/q}$ can be written as the limit of fractional graph
+Laplacians (which are in turn graph Laplacians, by Lemma~\ref{}). Given a
+finite screw simplex, our distance is thus the limit of the Schur complement of
+these graph Laplacians onto a finite point set, which is the limit of a
+sequence of graph Laplacians. It can be seen easily that such graph Laplacians
+must converge, and the limit of this convergence is a graph Laplacian whose
+effective resistance distance are the screw simplex distances. This proves
+Theorem~\ref{thm:embed}. 
