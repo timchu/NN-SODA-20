@@ -1,34 +1,22 @@
-\subsection{Contributions}
-Our paper has three main theorems.
+\subsection{Contributions and Past Work}
+Besides for exactly computing the nearest neighbor metric, we present the
+following theorems on approximate computatoin:
 
  \input{spanner-theorems}
+These theorems rely on Theorem~\ref{thm:NN} and considerably strengthen the
+spanner resluts on the Nearest Neighbor metric
+from~\cite{cohen15approximating}. Theorem~\ref{thm:NN} will also allow us
+to compute the persistent homology of $\dist_N$.
 
-Theorem~\ref{thm:NN} considerably strengthens a result from
-in~\cite{cohen15approximating}, which showed $\dist_2$
-is a $3$-approximation of $\dist_N$. Our theorem finds $\dist_N$
-exactly, and lets us
-compute the persistent homology of $\dist_N$.
-$\dist_N$ is defined on all points in space,
-and is thus a metric extension~\cite{Naor15} of the edge-squared
-metric
-and of negative type distances~\cite{Deza1997} to the
-entire space.
-
-Theorem~\ref{thm:general-spanner} proves that a $(1+\eps)$-spanner of the edge-squared metric with points in constant dimension is sparser and can be computed more quickly than the Euclidean spanners of
-Callahan and
-Kosaraju~\cite{Callahan1993}. The latter spanners have
-$O(n\eps^{-d})$ edges and are computable in $O(n \log n +
-n\eps^{-d})$ time. To the authors' knowledge, these are the
-sparsest quickly-constructable Euclidean spanners in terms of
-$\eps$ dependence. Later works on
-spanners have focused on bounding diameter,
-degree, or total edge weight~\cite{arya95euclid, Elkin2013}.
-We give a size
-lower bound for $(1+\eps)$-Euclidean spanners, which is close
-to the sparsity of our $(1+\eps)$ spanner of the edge-squared
-metric.
+Theorem~\ref{thm:general-spanner} proves that a $(1+\eps)$-spanner of the
+edge-squared metric with points in constant dimension is sparser and can be
+computed more efficiently than the theoretical optimal Euclidean
+spanner~\cite{}.  
 Previously, sparse spanners of the edge-squared metric were shown to exist in two
-dimensions via Yao graphs and Gabriel graphs~\cite{LiWan2001}.
+dimensions via Yao graphs and Gabriel graphs~\cite{LiWan2001}, but these
+did not generalize well to constant dimension: Yao
+graphs are not very efficient to compute, and Gabriel graphs can have
+quadratically many edges even in $3$ dimension.
 
 Theorem~\ref{thm:distribution-spanner} proves that a $1$-spanner of
 the edge-squared metric can be found assuming points are samples from a
@@ -39,10 +27,9 @@ surely the complete graph. Without the probability density
 assumption, there are point sets in $\mathbb{R}^4$ where
 $1$-spanners
 of the edge-squared metric require $\Omega(n^2)$ edges.
-Finally, we show that spanners of $p$-power metrics, which are
-edge-squared metrics but with powers of $p$ instead of $2$, generalize
-Euclidean spanners and Euclidean MSTs. $p$-power metrics were
-considered in~\cite{LiWan2001}.
+
+Finally, we show how the nearest neighbor metric generalizes Euclidean
+distance and maximum-edge Euclidean MST distance ~\cite{LiWan2001}.
 
 %% Old outline: check this outline before submitting.
 %% \begin{enumerate}
