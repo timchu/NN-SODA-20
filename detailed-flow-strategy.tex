@@ -1,16 +1,10 @@
 \subsection{From $q$-NN metrics to flows on a Geometric Graph $G'$}
 
-Given any points $x_0, x_1, \ldots x_n$, we build a graph $G'$ with
-vertices $v_S$ for any subset $S$ of
-$\{0,1,2,3,4 \ldots n-1 \}$. Here, $v_S$ is a vertex representing the
-circumcenter of the vertex set $\{x_s: s \in S\}$. Graph $G'$ then has some
-edges, connected in a fashion to be detailed later, and costs on these edges.
-\tim{Say something about barycentric subdivisions in the preliminaries or
-definitions}
-
+We give a brief overview of our approach on how to bound $q$-NN metrics on
+points in space, with flows on a geometric graph $G'$.  
 Tto lower bound the nearest neighbor cost of any path on our original point
 set, we will lower bound it by the cost of some unit flow from
-$v_0$ to $v_n$ in $G'$. However, note that the min-cost
+$v_0$ to $v_n$ in $G'$. Note that the min-cost
 unit flow from $v_0$ to $v_n$ is lower bounded by the shortest path (where
 lengths of edges are their costs) from $v_0$ to $v_n$ in $G'$.
 If the shortest path in $G'$ is equal to the $q$-edge power cost of going
