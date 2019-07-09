@@ -64,7 +64,7 @@ clustering, finite element methods, and any of the numerous methods that
 use Voronoi diagrams or Delaunay triangulation as intermediate data
 structures.
 
-\begin{definition} Given any finite set $P\subset \R^k$, the \textbf{nearest neighbor cost} function is $\len_N := \len_{\distto_P}$ and the \textbf{nearest neighbor metric} is $\dist_N := \dist_{\distto_P}$.
+\begin{definition} Given any finite set $P\subset \R^k$, the \textbf{nearest neighbor cost} function is $\len_N := \len_{\distto_P}$ and the \textbf{nearest neighbor metric} is $\dist_N := \dist_{\distto_P}$.  That is, it's the density-based distance with cost function $\distto_P$.
 \end{definition}
 \begin{figure}[htbp]
   \centering
@@ -134,7 +134,7 @@ This allows us to compute the nearest-neighbor metric exactly for any given poin
 
   \begin{definition}
 For $x\in \R^d$, let $\|x\|$ denote the Euclidean norm.
-  For a set of points $P\subset \R^d$: 
+  For a set of points $P\subset \R^d$:
   the \textbf{edge-squared metric} for $a,b\in P$ is
   \[
     \dist_2(a,b) = \min_{(p_0,\ldots, p_k)}\sum_{i=1}^k \|p_i - p_{i-1}\|^2,
@@ -183,7 +183,7 @@ Thus, there shortest paths may not even be unique.
 on which the nearest neighbor metric depends is poorly understood for even
 three of these bodies in two dimension.  There is no other restriction on
 the compact geometric objects, and they need not be convex or even simply
-connected. 
+connected.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.3\textwidth]{Figures/example1.pdf}
