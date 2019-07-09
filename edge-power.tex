@@ -3,7 +3,9 @@ Euclidean Spanners, and More}\label{sec:edge-power}
 The nearest neighbor metric, as seen in Theorem~\ref{thm:NN}, is equal to
 the edge-squared metric. This allows us to connect this manifold distance
 to a graph distance, which we will in turn show is a generalization of
-maximum-edge distance on minimum spanning trees.
+maximum-edge distance on minimum spanning trees. The results in this
+section are quite simple to prove, but we nonetheless believe they are important
+properties of the Nearest Neighbor metric and its variants.
 
 The edge-squared metric on a Euclidean point set, as we recall, is defined by taking the
 Euclidean distances squared and finding the shortest paths. 
@@ -74,8 +76,8 @@ Theorem~\ref{thm:1-spanner}.
     metric on that set of points contains every Euclidean MST.
   \end{theorem}
   \begin{corollary}
-    Every $1$-spanner for the edge-squared metric and/or Nearest
-    Neighbor Geodesic contains every Euclidean
+    Every $1$-spanner for the Nearest Neighbor metric
+    contains every Euclidean
     MST. 
   \end{corollary}
   \subsection{Generalizing Single Linkage Clustering, Level Sets, and k-Centers
