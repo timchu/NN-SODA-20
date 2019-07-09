@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  9 JUL 2019 15:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  9 JUL 2019 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -388,26 +388,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction.tex
 [1
 
-] <Figures/example.pdf, id=142, 418.3221pt x 281.85422pt>
+] <Figures/example.pdf, id=144, 418.3221pt x 281.85422pt>
 File: Figures/example.pdf Graphic file (type pdf)
 
 <use Figures/example.pdf>
-Package pdftex.def Info: Figures/example.pdf used on input line 71.
+Package pdftex.def Info: Figures/example.pdf used on input line 72.
 (pdftex.def)             Requested size: 140.92793pt x 94.9518pt.
  [2 <./Figures/example.pdf>]
-<Figures/example1.pdf, id=257, 482.76181pt x 304.88123pt>
+<Figures/example1.pdf, id=268, 482.76181pt x 304.88123pt>
 File: Figures/example1.pdf Graphic file (type pdf)
 
 <use Figures/example1.pdf>
-Package pdftex.def Info: Figures/example1.pdf used on input line 189.
+Package pdftex.def Info: Figures/example1.pdf used on input line 192.
 (pdftex.def)             Requested size: 140.92793pt x 88.99945pt.
  [3]) (./contributions.tex (./spanner-theorems.tex
 [4 <./Figures/example1.pdf>])) (./definitions.tex [5]) (./outline.tex)
-(./NN.tex [6] (./proof.tex
-
-LaTeX Warning: Citation `VonNeumann41' on page 7 undefined on input line 24.
-
-(./boxes.tex
+(./NN.tex [6] (./proof.tex (./boxes.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
@@ -469,17 +465,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 88.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 88.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A1EFC4F1A6E28709E7A14B4737462F52;1932.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 88.
  ) 
 Here is how much of TeX's memory you used:
- 7148 strings out of 494440
- 103617 string characters out of 6173197
- 195814 words of memory out of 5000000
- 10140 multiletter control sequences out of 15000+600000
+ 7153 strings out of 494440
+ 103692 string characters out of 6173197
+ 195926 words of memory out of 5000000
+ 10142 multiletter control sequences out of 15000+600000
  15819 words of font info for 60 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  33i,14n,31p,512b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -505,10 +497,10 @@ lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on main.pdf (24 pages, 449204 bytes).
+Output written on main.pdf (24 pages, 451360 bytes).
 PDF statistics:
- 816 PDF objects out of 1000 (max. 8388607)
- 636 compressed objects within 7 object streams
- 150 named destinations out of 1000 (max. 500000)
+ 832 PDF objects out of 1000 (max. 8388607)
+ 652 compressed objects within 7 object streams
+ 153 named destinations out of 1000 (max. 500000)
  179 words of extra memory for PDF output out of 10000 (max. 10000000)
 

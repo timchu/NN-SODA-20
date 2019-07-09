@@ -53,6 +53,11 @@ Morteza Alamgir and Ulrike von Luxburg.
 \newblock In {\em Proceedings of the 29th International Conference on Machine
   Learning}, 2012.
 
+\bibitem[BBSW05]{Balister05}
+Paul Balister, Bela Bollobas, Amites Sarkar, and Mark Walters.
+\newblock Connectivity of random k-nearest-neighbour graphs.
+\newblock {\em Advances in Applied Probability}, 37(1):1--24, 2005.
+
 \bibitem[Ber96]{bernoulli}
 Johann Bernoulli.
 \newblock Brachistochrone problem.
@@ -162,6 +167,12 @@ R.~P. Feynman.
 \newblock Space-time approach to non-relativistic quantum mechanics.
 \newblock {\em Rev. Mod. Phys}, 20(367), 1948.
 
+\bibitem[GBQ03]{Gonzales2003}
+Jose~Maria Gonzalez-Barrios and Aldofo~J. Quiroz.
+\newblock A clustering procedure based on the comparison between the k nearest
+  neighbors graph and the minimal spanning tree.
+\newblock Statistics and Probability Letters. Elsevier, 2003.
+
 \bibitem[GGP{\etalchar{+}}17]{gasparovic17complete}
 Ellen Gasparovic, Maria Gommel, Emilie Purvine, Bei Wang, Yusu Wang, and Lori
   Ziegelmeier.
@@ -224,6 +235,12 @@ Xiang-Yang Li, Peng-Jun Wan, and Yu~Wang.
 \newblock Power efficient and sparse spanner for wireless ad hoc networks.
 \newblock In {\em Proceedings Tenth International Conference on Computer
   Communications and Networks}, 2001.
+
+\bibitem[NS41]{VonNeumann41}
+J.~Von Neumann and I.~J. Schoenberg.
+\newblock Fourier integrals and metric geometry.
+\newblock {\em Transactions of the American Mathematical Society},
+  50(2):226--251, Sep 1941.
 
 \bibitem[Sch16]{Schwarzschild}
 Karl Schwarzschild.

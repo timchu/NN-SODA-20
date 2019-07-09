@@ -3,7 +3,8 @@
 The profound success of nonlinear methods in machine learning such as kernels methods, density-based distances, and neural nets reveals that although data are often represented as points in $\R^n$, the shortest path between two points is \emph{not} a straight line.
 It is widely believed that a more useful metric on the data points would
 have the property that two points in a dense cluster will be close in some
-underlying metric, even if the Euclidean distance is far~\cite{vL09,
+underlying metric, even if the Euclidean distance is
+far~\cite{alamgir12shortest,
 cohen15approximating, vincent03, bijral11semiSupLearningDBD}.
 That is, distances are scaled inversely according to the density of the data along a path between points.
 We call such a metric \textbf{data-sensitive}.
@@ -18,8 +19,8 @@ The construction of appropriate data-sensitive metrics is an active area of rese
 We consider a simple data-sensitive metric with an underlying manifold structure called the \textbf{nearest neighbor metric}.
 This metric was first introduced in~\cite{cohen15approximating}. It and its close variants have been studied in the past by
 multiple
-researchers~\cite{bijral11semiSupLearningDBD,vincent03,sajama05estimatingDBDM,
-cohen15approximating}.
+researchers~\cite{hwang2016, cohen15approximating, sajama05estimatingDBDM,
+bijral11semiSupLearningDBD,vincent03}.
 In this paper, we show how to compute the nearest neighbor metric exactly
 for any dimension, which solves one of the most important and challenging
 problems for any manifold-based metric.
@@ -84,7 +85,9 @@ length path in the manifold.  Within computer science, dozens of
 foundational papers in machine learning and surface reconstruction rely on
 manifold-based metrics to perform clustering, classification, regression,
 surface reconstruction, persistent homology, and
-more~\cite{sajama05estimatingDBDM}.  Manifold geodesics
+more~\cite{tenenbaum00global, cohen15approximating, vincent03,
+bijral11semiSupLearningDBD,  sajama05estimatingDBDM,
+edelsbrunner02topological, alamgir12shortest, vL09}.  Manifold geodesics
 predate computer science, and are the cornerstone of many fields of physics
 and mathematics.  Exactly computing geodesics is fundamental to countless
 areas of physics including: the brachistochrone and minimal-drag-bullet
