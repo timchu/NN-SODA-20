@@ -68,7 +68,7 @@ is the circumcradius of $\pr_0, \ldots \pr_{i}$.
 {\xr_s}^2\right)^{q/2}
 }
 {
-\Rr_{i-1}^q - \Rr_{i-2}^q
+\Rr_{i}^q - \Rr_{i-1}^q
 } - \sum_{i < j < n} \Convr(\xr)_j
 \end{align}
 
@@ -87,7 +87,7 @@ The key feature about $\Convr$ is that
 {\xr_s}^2\right)^{q/2}
 }
 {
-\Rr_{i-1}^q - \Rr_{i-2}^q
+\Rr_{i}^q - \Rr_{i-1}^q
 }\]
 
 for all $i > 0$, and for $i = 0$ the LHS evaluates to $1$. 
@@ -131,14 +131,14 @@ vertices of a line, there is a unique flow satisfying those demands.
 
 \begin{proof} For any edge $\pr_i\pr_{i+1}$, the cost of a flow (satisfying
 some set of demands whose sum is $0$) on that edge is the absolute value of
-the sum of the demands on vertices $\pr_{i+1} \pr_{i+2}, \ldots \pr_n$,
+the sum of the demands on vertices $\pr_{i+1}, \pr_{i+2}, \ldots, \pr_n$,
 multiplied by the cost of the edge from $\pr_i$ to $\pr_{i+1}$. This
 quantity comes out to be:
 
-\begin{align} &\left(\Rr_{i}^q-\Rr_{i-1}^q \right) \sum_{j=i+1}^{n-1} \Convr(\xr)_j
+\begin{align} &\left(\Rr_{i+1}^q-\Rr_{i}^q \right) \sum_{j=i+1}^{n-1} \Convr(\xr)_j
 \\
 \label{eq:flow-cost}
-&=\left(\sum_{s=0}^{i-1} {\xr_s}^2\right)^{q/2} -\left(\sum_{s=0}^{i-2}
+&=\left(\sum_{s=0}^{i} {\xr_s}^2\right)^{q/2} -\left(\sum_{s=0}^{i-1}
 {\xr_s}^2\right)^{q/2}.
 \end{align}
 
@@ -148,28 +148,28 @@ As $\Delta(x)$ goes to $0$, the change in Expression~\ref{eq:flow-cost} is
 \begin{split}
 \label{eq:flow-cost-on-edge}
 &
-\left(q\xr_0 \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
-q\xr_0\left(\sum_{s=0}^{i-2} \xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_0
+\left(q\xr_0 \left(\sum_{s=0}^{i} \xr_s^2 \right)^{q/2-1} -
+q\xr_0\left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_0
 \\
 &+
-\left(q\xr_1 \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
-q\xr_1\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_1
+\left(q\xr_1 \left(\sum_{s=0}^{i} \xr_s^2 \right)^{q/2-1} -
+q\xr_1\left(\sum_{s=0}^{i-1}\xr_s^2 \right)^{q/2-1} \right) \Delta(\xr)_1
 \\
 &+ \ldots
 \\
 &+
-\left(q\xr_{i-2} \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
-q\xr_{i-2}\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1}
-\right)\Delta(\xr)_{i-2}
+\left(q\xr_{i-1} \left(\sum_{s=0}^{i} \xr_s^2 \right)^{q/2-1} -
+q\xr_{i-1}\left(\sum_{s=0}^{i-1}\xr_s^2 \right)^{q/2-1}
+\right)\Delta(\xr)_{i-1}
 \\
 &+
-\left(q\xr_{i-1} \left(\sum_{s=0}^{i-1} \xr_s^2
-\right)^{q/2-1}\right)\Delta(\xr)_{i-1}.
+\left(q\xr_{i} \left(\sum_{s=0}^{i} \xr_s^2
+\right)^{q/2-1}\right)\Delta(\xr)_{i}.
 \end{split}
 \end{align}
 Since 
 \[
-q\xr_j\left(\sum_{s=0}^{i-1} \xr_s^2\right)^{q/2-1} - q\xr_j\left(\sum_{s=0}^{i-2}
+q\xr_j\left(\sum_{s=0}^{i} \xr_s^2\right)^{q/2-1} - q\xr_j\left(\sum_{s=0}^{i-1}
 \xr_s^2 \right)^{q/2-1}\]
 is always non-negative (only when $q \leq 2$), we get that the absolute value of
 Expression~\ref{eq:flow-cost-on-edge} is bounded above by:
@@ -177,38 +177,39 @@ Expression~\ref{eq:flow-cost-on-edge} is bounded above by:
 \begin{split}
 \label{eq:flow-cost-upper-bound}
 &
-\left(q\xr_0 \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
-q\xr_0\left(\sum_{s=0}^{i-2} \xr_s^2 \right)^{q/2-1} \right)
+\left(q\xr_0 \left(\sum_{s=0}^{i} \xr_s^2 \right)^{q/2-1} -
+q\xr_0\left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} \right)
 |\Delta(\xr)_0|
 \\
 &+
-\left(q\xr_1 \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
-q\xr_1\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1} \right) |\Delta(\xr)_1|
+\left(q\xr_1 \left(\sum_{s=0}^{i} \xr_s^2 \right)^{q/2-1} -
+q\xr_1\left(\sum_{s=0}^{i-1}\xr_s^2 \right)^{q/2-1} \right) |\Delta(\xr)_1|
 \\
 &+ \ldots
 \\
 &+
-\left(q\xr_{i-2} \left(\sum_{s=0}^{i-1} \xr_s^2 \right)^{q/2-1} -
-q\xr_{i-2}\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1}
-\right)|\Delta(\xr)_{i-2}|
+\left(q\xr_{i-1} \left(\sum_{s=0}^{i} \xr_s^2 \right)^{q/2-1} -
+q\xr_{i-1}\left(\sum_{s=0}^{i-1}\xr_s^2 \right)^{q/2-1}
+\right)|\Delta(\xr)_{i-1}|
 \\
 &+
-\left(q\xr_{i-1} \left(\sum_{s=0}^{i-1} \xr_s^2
-\right)^{q/2-1}\right)|\Delta(\xr)_{i-1}|,
+\left(q\xr_{i} \left(\sum_{s=0}^{i} \xr_s^2
+\right)^{q/2-1}\right)|\Delta(\xr)_{i}|,
 \end{split}
 \end{align}
 
 Therefore, we have that Expression~\ref{eq:flow-cost-upper-bound} is an upper bound on the cost of
 a flow along edge $\vr_i\vr_{i+1}$\tim{Is this the right indexing for
-edges?} induced by a path from $x$ to $x+\Delta(x)$. Now we sum this across all $i$ to get an overall cost upper bound, and group by
+edges?} induced by a path from $x$ to $x+\Delta(x)$. Now we sum this across
+all $ 0 \leq i \leq n-2$ to get an overall cost upper bound, and group by
 $\Delta(\xr)_i$ for fixed i. The sum telescopes beautifully, and we get:
 \begin{align}
 &\left(q\xr_0\left(\sum_{s=0}^{n-2} \xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_0|
 \\&+
 \left(q\xr_1\left(\sum_{s=0}^{n-2} \xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_1|
-\ldots
+\\& +\ldots
 \\& +
-\left(q\xr_{n-1}\left(\sum_{s=0}^{n-2} \xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_{n-2}|
+\left(q\xr_{n-2}\left(\sum_{s=0}^{n-2} \xr_s^2\right)^{q/2-1}\right)| \Delta(\xr)_{n-2}|
 \end{align}
 This expression, by Cauchy Schwarz, is upper bounded by
 \[
