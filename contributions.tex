@@ -1,38 +1,41 @@
 \subsection{Contributions and Past Work}
-Besides for exactly computing the nearest neighbor metric, we present the
+Our core contribution is Theorem~\ref{thm:NN}, which lets us exactly
+compute the Nearest Neighbor metric. This theorem should be considered
+quite surprising given that it equates the nearest neighbor metric with the
+edge-squared metric even for countable collections of compact,
+path-connected objects in countable dimension, given the geometric
+complexity of such objects.
+
+ Besides for exactly computing the nearest neighbor metric, we present the
 following theorems on approximate computation:
 
  \input{spanner-theorems}
 These theorems rely on Theorem~\ref{thm:NN} and considerably strengthen the
 spanner resluts on the Nearest Neighbor metric
-from~\cite{cohen15approximating}. Theorem~\ref{thm:NN} will also allow us
-to compute the persistent homology of $\dist_N$.
-
-Theorem~\ref{thm:general-spanner} proves that a $(1+\eps)$-spanner of the
-edge-squared metric with points in constant dimension is sparser and can be
-computed more efficiently than the theoretical optimal Euclidean
-spanner~\cite{}.  
+from~\cite{cohen15approximating}. They critically rely on
+Theorem~\ref{thm:NN}, which show it suffices to compute spanners of the
+edge-squared metric.
 Previously, sparse spanners of the edge-squared metric were shown to exist in two
 dimensions via Yao graphs and Gabriel graphs~\cite{LiWan2001}, but these
 did not generalize well to constant dimension: Yao
 graphs are not very efficient to compute, and Gabriel graphs can have
-quadratically many edges even in $3$ dimension.
-
+quadratically many edges even in $3$ dimension.  
 Theorem~\ref{thm:distribution-spanner} proves that a $1$-spanner of
-the edge-squared metric can be found assuming points are samples from a
+the Nearest Neighbor metric can be found assuming points are samples from a
 probability density, by using a $k$-$NN$ graph for
 appropriate $k$. Our result is tight when $d$ is constant. This
 is not possible for Euclidean distance, as a $1$-spanner is almost
-surely the complete graph. Without the probability density
-assumption, there are point sets in $\mathbb{R}^4$ where
-$1$-spanners
-of the edge-squared metric require $\Omega(n^2)$ edges.  
+surely the complete graph.
 Finally, we show how the nearest neighbor metric generalizes Euclidean
 distance and maximum-edge Euclidean MST distance ~\cite{LiWan2001}
+Theorem~\ref{thm:NN} will also allow us
+to compute the persistent homology of $\dist_N$. kh
 
-The core mathematical contribution of our work should be considered our
-proof of Theorem~\ref{thm:NN}, which we believe to be surprising for
-reasons previously mentioned.
+The core mathematical contribution of our work is the
+statement and proof of Theorem~\ref{thm:NN}.  While the techniques to prove
+our other results are simpler and mostly leverage past work, we have
+included them
+nonetheless to have a more complete picture of the Nearest Neighbor metric.
 
 %% Old outline: check this outline before submitting.
 %% \begin{enumerate}
