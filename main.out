@@ -6,15 +6,15 @@
 \BOOKMARK [2][-]{subsubsection.3.0.1}{Boxes}{section.3}% 6
 \BOOKMARK [3][-]{subsubsection.3.0.2}{Lifting the points to Rn}{subsubsection.3.0.1}% 7
 \BOOKMARK [3][-]{subsubsection.3.0.3}{The Lipschitz Extension}{subsubsection.3.0.1}% 8
-\BOOKMARK [1][-]{section.4}{Relating the Edge-Squared Metric to Euclidean MSTs, Euclidean Spanners, and More}{}% 9
-\BOOKMARK [2][-]{subsection.4.1}{Relation to the Euclidean MST problem}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.2}{Generalizing Single Linkage Clustering, Level Sets, and k-Centers clustering}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.3}{Persistent Homology of the Nearest-neighbor Geodesic Distance}{section.4}% 12
-\BOOKMARK [1][-]{section.5}{Exact-spanners of Edge-Squared Metrics in the Probability Density Setting }{}% 13
-\BOOKMARK [2][-]{subsection.5.1}{Fast, Sparse Spanner for the Edge-Squared Metric}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.2}{Lower Bounds for Sparsity of Euclidean Spanners}{section.5}% 15
-\BOOKMARK [1][-]{section.6}{Conclusions and Open Questions}{}% 16
-\BOOKMARK [1][-]{section.7}{Proving Faster and Sparser-than-Euclidean Approximate Spanners}{}% 17
-\BOOKMARK [2][-]{subsection.7.1}{1+O\(2\) spanners can be generated from a 1/ WSPD}{section.7}% 18
-\BOOKMARK [1][-]{section.8}{Spanners in the Probability Density Setting: Full Proof}{}% 19
-\BOOKMARK [1][-]{section.9}{Edge-Power Metrics relate to Single Linkage Clustering, Level Sets, and k-Centers clustering}{}% 20
+\BOOKMARK [2][-]{subsection.3.1}{Persistent Homology of the Nearest-neighbor Geodesic Distance}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Exact-spanners of Edge-Squared Metrics in the Probability Density Setting }{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{Fast, Sparse Spanner for the Edge-Squared Metric}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Lower Bounds for Sparsity of Euclidean Spanners}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Conclusions and Open Questions}{}% 13
+\BOOKMARK [1][-]{section.6}{Relating the Nearest Neighbor Metric to Euclidean MSTs, Euclidean Spanners, and More}{}% 14
+\BOOKMARK [2][-]{subsection.6.1}{Relation to the Euclidean MST problem}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.2}{Generalizing Single Linkage Clustering, Level Sets, and k-Centers clustering}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Edge-Power Metrics relate to Single Linkage Clustering, Level Sets, and k-Centers clustering}{}% 17
+\BOOKMARK [1][-]{section.8}{Proving Faster and Sparser-than-Euclidean Approximate Spanners}{}% 18
+\BOOKMARK [2][-]{subsection.8.1}{1+O\(2\) spanners can be generated from a 1/ WSPD}{section.8}% 19
+\BOOKMARK [1][-]{section.9}{Spanners in the Probability Density Setting: Full Proof}{}% 20
