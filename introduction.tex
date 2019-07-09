@@ -1,7 +1,10 @@
 \section{Introduction}
 
 The profound success of nonlinear methods in machine learning such as kernels methods, density-based distances, and neural nets reveals that although data are often represented as points in $\R^n$, the shortest path between two points is \emph{not} a straight line.
-It is widely believed that a more useful metric on the data points would have the property that two points in a dense cluster will be close in some underlying metric, even if the Euclidean distance is far.
+It is widely believed that a more useful metric on the data points would
+have the property that two points in a dense cluster will be close in some
+underlying metric, even if the Euclidean distance is far~\cite{vL09,
+cohen15approximating, vincent03, bijral11semiSupLearningDBD}.
 That is, distances are scaled inversely according to the density of the data along a path between points.
 We call such a metric \textbf{data-sensitive}.
 
@@ -13,7 +16,10 @@ Appendix~\ref{sec:edge-power} for details).
 %(See Appendix~\ref{} for details)
 The construction of appropriate data-sensitive metrics is an active area of research.
 We consider a simple data-sensitive metric with an underlying manifold structure called the \textbf{nearest neighbor metric}.
-This metric and its close variants have been studied in the past by multiple researchers~\cite{bijral11semiSupLearningDBD,vincent03,sajama05estimatingDBDM}.
+This metric was first introduced in~\cite{cohen15approximating}. It and its close variants have been studied in the past by
+multiple
+researchers~\cite{bijral11semiSupLearningDBD,vincent03,sajama05estimatingDBDM,
+cohen15approximating}.
 In this paper, we show how to compute the nearest neighbor metric exactly
 for any dimension, which solves one of the most important and challenging
 problems for any manifold-based metric.
@@ -21,9 +27,9 @@ problems for any manifold-based metric.
 The starting point will be the nearest neighbor function $\distto_P$ for
 the data set $P$:
 \[
-\distto_P(z) = 2\min_{x\in p} \|x-z\|,
+\distto_P(z) = 4\min_{x\in p} \|x-z\|,
 \]
-where the factor of $2$ normalizes and simplifies expressions later.
+where the factor of $4$ normalizes and simplifies expressions later.
 This function is also known as the distance function to the set $P$ and is the basic object of study in the critical point theory of distance functions, a generalization of Morse Theory~\cite{grove93critical}.
 This theory has found many recent uses in computational geometry~\cite{chazal08smooth,chazal09sampling} as it is a natural way to infer underlying structure from a sample of points.
 We have a similar goal of inferring underlying structure when we use $\distto_P$ as a cost function for a density-based distance defined as follows (see also Section~\ref{sec:persistence} for explicit inference results).
@@ -41,14 +47,22 @@ We then define the \textbf{density-based distance} between two points $a, b \in
 \end{definition}
 
 This is a slight simplification of the density-based distances from~\cite{sajama05estimatingDBDM} which included other requirements to facilitate approximation.
-Conceptually, the density-based cost of a path is the weighted path length, where each infinitesimal path piece is weighted according to $c$.
-The cost $c$ is usually some function of an underlying density $f$ (the natural choice would be $c(x) = f(x)^{-\frac{1}{k}}$).
-Density-based distances have been notable in the machine learning setting for over a decade~\cite{sajama05estimatingDBDM,bijral11semiSupLearningDBD}.
-To build a density-sensitive metric from density-based distances, we would like a cost function $c$ that is small when close to the data set, and large when far away.
-The nearest neighbor function $\distto_P$ is the most natural candidate, and has been traditionally used as a proximity measure between points and a data set in both the geometry and machine learning settings~\cite{bijral11semiSupLearningDBD}. It has been used as such in nearest neighbor
-(and $k$-NN) classification, $k$-means/medians/center clustering, finite
-element methods, and any of the hundreds of methods that use Voronoi
-diagrams or Delaunay triangulation as intermediate data structures.
+Conceptually, the density-based cost of a path is the weighted path length,
+where each infinitesimal path piece is weighted according to $c$.  The cost
+$c$ is usually some function of an underlying density $f$ (the natural
+choice would be $c(x) = f(x)^{-\frac{1}{k}}$).  Density-based distances
+have been notable in the machine learning setting for over a
+decade~\cite{sajama05estimatingDBDM,bijral11semiSupLearningDBD}.  To build
+a density-sensitive metric from density-based distances, we would like a
+cost function $c$ that is small when close to the data set, and large when
+far away.  The nearest neighbor function $\distto_P$ is the most natural
+candidate, and has been traditionally used as a proximity measure between
+points and a data set in both the geometry and machine learning
+settings~\cite{bijral11semiSupLearningDBD}. It has been used as such in
+nearest neighbor (and $k$-NN) classification, $k$-means/medians/center
+clustering, finite element methods, and any of the numerous methods that
+use Voronoi diagrams or Delaunay triangulation as intermediate data
+structures.
 
 \begin{definition} Given any finite set $P\subset \R^k$, the \textbf{nearest neighbor cost} function is $\len_N := \len_{\distto_P}$ and the \textbf{nearest neighbor metric} is $\dist_N := \dist_{\distto_P}$.
 \end{definition}
@@ -63,12 +77,14 @@ point.}
 \end{figure}
 
 The nearest neighbor metric, and density-based distances in general, are
-examples of manifold geodesics.  Manifold geodesics of data sets are
+examples of manifold geodesics~\cite{sajama05estimatingDBDM,
+tenenbaum00global}.  Manifold geodesics of data sets are
 defined by embedding points into a manifold and computing the infimum
 length path in the manifold.  Within computer science, dozens of
 foundational papers in machine learning and surface reconstruction rely on
 manifold-based metrics to perform clustering, classification, regression,
-surface reconstruction, persistent homology, and more.  Manifold geodesics
+surface reconstruction, persistent homology, and
+more~\cite{sajama05estimatingDBDM}.  Manifold geodesics
 predate computer science, and are the cornerstone of many fields of physics
 and mathematics.  Exactly computing geodesics is fundamental to countless
 areas of physics including: the brachistochrone and minimal-drag-bullet
@@ -116,12 +132,15 @@ Then we use a Lipschitz extension theorem to relate the lengths of the shortest 
 We combine these tools to prove that the nearest neighbor metric is exactly equal to a shortest path distance on a geometric graph, the so-called edge-squared metric, in all cases.
 This allows us to compute the nearest-neighbor metric exactly for any given point set in polynomial time, and it is the only known (non-trivial) density-based distance that can be computed by a discrete algorithm.
 
-\begin{definition}
-  Given points $P$ in Euclidean space, the \textbf{edge-squared graph} is the complete graph on vertex set $P$ with edges weighted by the squared Euclidean distances.
-  The \textbf{edge-squared metric} is half the shortest path distance between two points on this graph.
-\end{definition}
-
-Here, the factor of half in the definition is a normalizing constant.
+  \begin{definition}
+For $x\in \R^d$, let $\|x\|$ denote the Euclidean norm.
+  For a set of points $P\subset \R^d$: 
+  the \textbf{edge-squared metric} for $a,b\in P$ is
+  \[
+    \dist_2(a,b) = \min_{(p_0,\ldots, p_k)}\sum_{i=1}^k \|p_i - p_{i-1}\|^2,
+  \]
+  where the minimum is over sequences of points $p_0,\ldots, p_k\in P$ with $p_0 = a$ and $p_k = b$.
+  \end{definition}
 
 \begin{theorem}\label{thm:NN} The nearest neighbor metric and edge squared
 metric are equivalent for any set $P$ in arbitrary dimension that is the
@@ -130,7 +149,10 @@ finite collection of compact path-connected sets.
 
 This in particular covers the case of $n$ points in $n-1$ dimension. The exact equality is realized when the nearest neighbor path is piecewise
 linear, traveling straight from data point to data point.
-The edge squared metric has been previously studied by multiple researchers in machine learning and power-efficient wireless networks, but previously has only been linked to the nearest neighbor metric by a fairly weak 3-approximation.
+The edge squared metric has been previously studied by multiple researchers
+in machine learning and power-efficient wireless networks, but previously
+has only been linked to the nearest neighbor metric by a fairly weak
+3-approximation~\cite{cohen15approximating}.
 There are several reasons why it is surprising that these metrics are equal:
 
 \begin{enumerate}
@@ -138,7 +160,7 @@ There are several reasons why it is surprising that these metrics are equal:
 \item The optimal nearest neighbor path for two points not in the dataset
 is generally composed of hyperbolic arcs.
 This holds true even when the dataset is a single point, and was established by~\cite{cohen15approximating} using tools in Riemannian surfaces and the complex plane.
-Meanwhile, Their Theorem implies an optimal nearest neighbor path for two data points is piecewise linear!
+Meanwhile, our Theorem implies an optimal nearest neighbor path for two data points is piecewise linear!
 
 \item There are simple and natural variants of the nearest neighbor metric, for which no analog of Theorem~\ref{thm:NN} is known nor suspected.
 For example, if one considers powers (other than one) of the distance function as a cost, a corresponding graph-based metric is known to exist only for sets of size at most two.
@@ -158,7 +180,7 @@ Thus, there shortest paths may not even be unique.
 
  \item The finite union of compact path-connected geometric bodies in arbitrary
  dimension can have extremely complicated geometry, and the Voronoi diagram
-on which the nearest neighbor metric depends is ill-understood for even
+on which the nearest neighbor metric depends is poorly understood for even
 three of these bodies in two dimension.  There is no other restriction on
 the compact geometric objects, and they need not be convex or even simply
 connected. 

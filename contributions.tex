@@ -1,6 +1,7 @@
 \subsection{Contributions and Past Work}
 Our primary contribution is Theorem~\ref{thm:NN}, which lets us exactly
-compute the Nearest Neighbor metric. This theorem should be considered
+compute the nearest neighbor metric. This significantly strengthens a core
+result of Cohen et al~\cite{cohen15approximating}. This theorem should be considered
 quite surprising: it equates the nearest neighbor metric with the
 edge-squared metric, even when the point set is a collections of compact,
 path-connected objects in arbitrarily large dimension. There are no
@@ -13,7 +14,7 @@ following theorems on approximate computation:
 
  \input{spanner-theorems}
 These theorems rely on Theorem~\ref{thm:NN} and considerably strengthen the
-spanner resluts on the Nearest Neighbor metric
+spanner resluts on the nearest neighbor metric
 from~\cite{cohen15approximating}. They critically rely on
 Theorem~\ref{thm:NN}, which show it suffices to compute spanners of the
 edge-squared metric.
@@ -24,14 +25,14 @@ graphs are not very efficient to compute, and Gabriel graphs can have
 quadratically many edges even in $3$ dimension.  
 
 Theorem~\ref{thm:distribution-spanner} proves that a $1$-spanner of
-the Nearest Neighbor metric can be found assuming points are samples from a
+the nearest neighbor metric can be found assuming points are samples from a
 probability density, by using a $k$-$NN$ graph for
 appropriate $k$. Our result is tight when $d$ is constant. This
 is not possible for Euclidean distance, as a $1$-spanner is almost
 surely the complete graph. Although the restrictions on the probability
 density may seem limiting,
 they are in fact quite flexible and standard in
-machine learning theory and practice~\cite{}. For example, although they do not cover the case
+machine learning theory and practice~\cite{alamgir12shortest}. For example, although they do not cover the case
 of a Gaussian (unbounded support), they do cover the case of a Gaussian
 where the very thin tail is cut off, and this recovers most of the relevant
 data in a Gaussian distribution.
@@ -40,13 +41,13 @@ Finally, we show how the nearest neighbor metric generalizes Euclidean
 distance and maximum-edge Euclidean MST distance ~\cite{LiWan2001}
 Theorem~\ref{thm:NN} will also allow us
 to compute the persistent homology of $\dist_N$, a task useful for
-topological data analysis~\cite{}. 
+topological data analysis~\cite{edelsbrunner02topological}. 
 
 The core mathematical contribution of our work is the
 statement and proof of Theorem~\ref{thm:NN}.  The techniques to prove
 our other results are simpler and mostly leverage past work. We have
 included them
-nonetheless to provide a more complete picture of the Nearest Neighbor
+nonetheless to provide a more complete picture of the nearest neighbor
 metric and possible directions for future work.
 
 %% Old outline: check this outline before submitting.
@@ -68,7 +69,7 @@ metric and possible directions for future work.
 %% \item NN has a fast sparse spanner. Any spanner of the NN metric is a
 %% spanner of edge-squared. (This result is theoretically
 %%     superseded by our later result, but is of independent interest).
-%% \item Persistent homology of the Nearest Neighbor metric can be
+%% \item Persistent homology of the nearest neighbor metric can be
 %% computed.
 %% \end{enumerate}
 %% \item Fast practical spanners for points in a distribution. ($k$-NN
