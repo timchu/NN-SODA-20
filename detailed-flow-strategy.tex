@@ -5,12 +5,12 @@ vertices $v_S$ for any subset $S$ of
 $\{0,1,2,3,4 \ldots n-1 \}$. Here, $v_S$ is a vertex representing the
 circumcenter of the vertex set $\{x_s: s \in S\}$. Graph $G'$ then has some
 edges, connected in a fashion to be detailed later, and costs on these edges.
-Graph $G'$ is related to the barycentric subdivision on a graph, used
-in~\cite{}.
+\tim{Say something about barycentric subdivisions in the preliminaries or
+definitions}
 
 Tto lower bound the nearest neighbor cost of any path on our original point
 set, we will lower bound it by the cost of some unit flow from
-$v_0$ to $v_n$ in $G'$. However, note that the cost of any uncapacitated
+$v_0$ to $v_n$ in $G'$. However, note that the min-cost
 unit flow from $v_0$ to $v_n$ is lower bounded by the shortest path (where
 lengths of edges are their costs) from $v_0$ to $v_n$ in $G'$.
 If the shortest path in $G'$ is equal to the $q$-edge power cost of going
@@ -29,15 +29,15 @@ $x+\Delta(x) \in \mathbb{R}^n$ for small $\Delta(x)$ is
 bounded below by the min-cost flow on $G’$ satisfying demands
 $\Conv(x+\Delta(x)) - \Conv(x)$. If we can construct such a function $\Conv$,
 then the $q$-NN path from $v_0$ to $v_n$ is thus lower bounded by the min-cost
-unit flow from $v_0$ to $v_n$, which is exactly the shortest path from
-$v_0$ to $v_n$ in $G'$!
+unit flow from $v_0$ to $v_n$, as desired.
  Therefore, building $\Conv$ implies that we can lower bound the
 the $q$-NN cost of a path from $x_0$ to $x_n$ with the shortest path in $G'$.
 
 This bound holds for any initial point set $x_0, x_1, \ldots x_n$. However,
 in general the shortest path on $G'$ and the shortest path on $G$ are not
-the same, where $G$ is the $q$-edge power graph.  However, it is always
-true on $2$-screw simplices (when $q=2$) and for four point $q$-screw
+the same, where $G$ is the $q$-edge power graph of the initial point set.
+However, these shortest paths are the same
+on $2$-screw simplices (when $q=2$) and for four point $q$-screw
 simplices. By our results from Section~\ref{sec:reduction}, this suffices
 to prove our relevant theorems.
 
