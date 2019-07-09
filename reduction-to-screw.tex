@@ -21,7 +21,8 @@ $p_i$ on our initial point set is lower bounded by the $q$-NN cost of the
 image of the path under $m$, from $m(s)$ to $m(p_i)$ (since the map is Lipschitz as a function
 between $q$-NN metrics). If the Theorem holds on $m(p_1), m(p_2), \ldots
 m(p_{n-1})$, then this $q$-NN cost is lower bounded by the shortest path
-from $p_0$ to $p_{n-1}$, as desired.
+from $m(p_0)$ to $m(p_{n-1})$, which is equal to the shortest path from
+$p_0$ to $p_{n-1}$. This completes our reduction.
   
   \input{lifting}
   \input{lip_extension}
