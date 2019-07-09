@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 23:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  8 JUL 2019 23:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -420,6 +420,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
 
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
 Overfull \hbox (17.3847pt too wide) in paragraph at lines 3--10
 \OT1/cmr/m/n/10.95 Given any points $\OML/cmm/m/it/10.95 x[]; x[]; [] x[]$\OT1/
 cmr/m/n/10.95 , we build a graph $\OML/cmm/m/it/10.95 G[]$ \OT1/cmr/m/n/10.95 w
@@ -644,7 +652,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B7F5E6EF216C8AC3A8C3341E4E3B2261;1138.
+(rerunfilecheck)             Checksum: 12AC45ADF14253471FDA489EFC2E8D50;1149.
 
 
 LaTeX Warning: There were undefined references.
@@ -676,7 +684,7 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (11 pages, 254986 bytes).
+Output written on main.pdf (11 pages, 255007 bytes).
 PDF statistics:
  243 PDF objects out of 1000 (max. 8388607)
  202 compressed objects within 3 object streams
