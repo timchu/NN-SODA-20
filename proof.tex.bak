@@ -38,7 +38,7 @@ box, and the remainder of our theorem proof goes through unchanged.
 This result is rather remarkable: path-connected compact sets in high
 dimensional space can have extremely convoluted geometry, and the Voronoi diagrams
 on these collections (on which the nearest neighbor metric depends) can be
-massively complex.  The key is that our Lipschitz map is robust enough to
+massively complex.  The key is htat our Lipschitz map is robust enough to
 handle objects of considerable geometric complexity.
   
   
