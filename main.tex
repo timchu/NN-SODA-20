@@ -7,7 +7,7 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{graphicx}
 \usepackage{hyperref}	
-
+\usepackage[title]{appendix}
 
 \DeclareMathOperator{\vol}{Vol}
 \DeclareMathOperator{\kNN}{kNN}
@@ -61,8 +61,12 @@ graph}
 \input{edge-power}
 % Kicked edge-power to appendix
 \input{spanner}
-  \input{conclusions}
+\input{conclusions}
+
+\begin{appendices}
 \input{appendix}
+\end{appendices}
+
    % \input{definitions} %% now in introduction
   %% \input{NN}
   %% \input{general-spanner}
