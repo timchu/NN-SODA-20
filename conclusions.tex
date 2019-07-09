@@ -1,0 +1,77 @@
+\section{Conclusions and Open Questions}\label{sec:conclusions}
+
+
+We examined a
+graph-based distance on Euclidean point sets, showed it equaled a
+special density-based distance, and built sparser and faster
+spanners
+on this metric than is known for Euclidean distances.
+Such sparse data structures may be
+surprising given that the metric can have high doubling dimension.
+Many problems remain open.
+
+Is there a generalization of Theorem~\ref{thm:NN} to $p$-power
+metrics? This would
+require defining a new version of the Nearest Neighbor Metric distance. Separately, are the
+proof techniques for Theorem~\ref{thm:NN} of use for computing
+or approximating other density-based distances?
+Can non-spanner data
+structures for clustering with the edge-squared metric be
+computed efficiently?
+Such data structures include core-sets and
+distance oracles~\cite{Badoiu02, Sohler18, Thorup05}.
+
+Can we efficiently compute $o(\log n)$-spanners of the $p$-power metric in
+high dimension with a
+nearly linear number of edges?
+The existence of such spanners has been studied for Euclidean metrics in~\cite{HarPeled13}, where the stretch
+obtained is $\sqrt{\log n}$.
+Good constructions for $(1+\eps)$-spanners of the
+normalized $\infty$-power metric are known: many (but not all) approximate Euclidean MST constructions are
+$(1+\eps)$-spanners of this metric~\cite{Callahan1995, Yaro2017}.
+Can high-dimensional
+approximate Euclidean MST algorithms~\cite{Alman2016, Yaro2017, Andoni2014}
+be adapted to
+create efficient $p$-power spanners?
+Any spanner for high-dimensional
+edge-squared metrics must
+give the same quality spanner for negative type
+distances~\cite{Schoenberg1937, Deza1997},
+which include $l_2$ and $l_1$.
+
+Does computing $k$-NN graphs with approximate nearest neighbor methods give $1$-spanners of the
+edge-squared metric with high probability?
+Approximate nearest neighbors have been studied extensively
+~\cite{kNNsurvey, Chen11, Dong11}, including locality-sensitive
+hashing for high dimensional point sets~\cite{LSH} and
+more~\cite{Laarhoven2018}.
+Recent work by Andoni et al.~\cite{Andoni2018} showed how to compute
+approximate nearest neighbors for any non-Euclidean norm.  Perhaps there
+is a rigorous theory about density-sensitive metrics generated from any such
+norm? Similar to
+how the edge-squared metric is generated from the Euclidean distance.
+
+It remains an open question how well clustering or
+classification with
+edge-squared metrics and Nearest Neighbor Metric distances performs on real-world
+data.
+Experiments have been done by Bijral, Ratliff, and
+Srebro in~\cite{bijral11semiSupLearningDBD}.
+Theorem~\ref{thm:distribution-spanner} implies that future experiments
+can be done using any
+k-nearest-neighbor graph.
+
+
+%%   We believe that the interest in alternative metrics on euclidean data will continue to be a rich source of interesting problems.
+%%   We showed that the class of metrics that can be represented in this way is quite large, including all negative-type metrics and more.
+%%   There is no constant upper bound on the doubling dimension of such metrics even for point sets in the plane.
+%%   Theorem~\ref{thm:equality} extends these results immediately to density-based distances.
+%%   Although there is such rich structure in these metrics, they still maintain some of the advantages of low-dimensional euclidean metrics, and this is exploited to generate sparse spanners.
+%%   We also use the Euclidean structure to compute the persistent homology of the nearest neighbor distance in both the ambient sense and the intrinsic sense.
+%%
+%%   Many interesting problems remain open.
+%%   One of the most compelling is the generalization of Theorem~\ref{thm:equality} to higher power metrics.
+%%   It seems possible that integrating higher powers of the distance function could correspond exactly to higher power metrics.
+%%   However, the proof techniques of this paper do not easily extend to that case.
+%%   It does seem that as the power goes to infinity, shortest paths converge to the minimum spanning tree.
+%%   For other powers in between $2$ and $\infty$, this question remains open.

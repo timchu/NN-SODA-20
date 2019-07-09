@@ -1,81 +1,67 @@
-\section{Our Results}
-Our primary results are Theorems~\ref{thm:NN} and~\ref{thm:qNN} on the
-computing the Nearest Neighbor and $q$-Nearest Neighbor metrics
-respectively, which rely
-on fairly intricate and novel mathematical proof techniques. Both of these
-use a minimum cost flow generated from a conservative vector field to keep
-track of the $q$-NN path length, and rely on the geometry of a special
-simplex called the
-$q$-screw simplex. Our proof techniques, theoretically, can prove
-approximations between metrics as well as exact equalities, and may be
-uesful for other more general metrics based on data points. This is the
-first result we know of whose proof combines
-conservative vector fields, simplex geometry, Lipschitz extensions in
-geometry, and minimum cost flows on a graph. It is also the first result we
-know of that eschews calculus of variations for exact manifold metric
-computation.
-
-These results form the core mathemtaical contribution of our paper.
-
-\subsection{Other Contributions}
-Besides for these contributions, we also tackle a range of problems
-significant for any metric on a data set.  Some of the most important
-problems on any metric are: how to $(1+\eps)$ approximate them efficiently
-using sparse data structures, and how the metric behaves in the limit as
-the point set is a large number of points drawn from a probability
-distribution. The former is important to compute the metrics in practice.
-The latter is important since it is highly desirable that
-this limit converge to a metric that has desirable properties, or else
-clustering with such a metric may generate non-intelligible results for
-large datasets.  Besides for these, persistent homology of metrics space is also a central
-tool in topological data analysis, among other fields~\cite{}, and many
-papers have devoted themselves to computing such homologies ofr a wide
-variety of metrics. Finally, it is important to relate metrics
-like the Nearest Neighbor metric to famous, well-established metrics like
-$l_2$, inverse min-cut distance, or
-the maximum edge length among a path in an MST.
-We will show that the
-Nearest Neighbor metric is in fact one of a suite of simple metrics (the
-$q$-edge power metrics) which naturally generalize both maximum-edge MST
-distance and Euclidean distance, the latter of which covers inverse min-cut
-idstances via the Gomory Hu tree.  This helps put our metrics in a broader
-and more interpretable context, and ensures that clustering with these
-$q$-power metrics is a generalization of more traditional clustering
-techniques including $k$-means, $k$-centers, and level set methods.
-
-In this paper, we present novel results all of these problems. Our
-spanner and convergence results hold assuming constan dimension, and our
-persistent homology results and our relation to more famous metrics hold for
-$n$ points in any dimension. The proofs of these results are mostly
-simpler than our proofs of Theorem~\ref{thm:NN}, and thus should be
-appreciated mostly for the result statement rather than the complexity or
-intricacy of their proofs. They all hinge on Theorem~\ref{thm:NN}, and are
-largely included to show that
-density-sensitive manifold metrics, like the NN metric, can be very
-flexible when Theorems like Theorem~\ref{thm:NN} hold.
-
-Our spanner theorems are as follows:
+\subsection{Contributions and Past Work}
+Besides for exactly computing the nearest neighbor metric, we present the
+following theorems on approximate computatoin:
 
  \input{spanner-theorems}
+These theorems rely on Theorem~\ref{thm:NN} and considerably strengthen the
+spanner resluts on the Nearest Neighbor metric
+from~\cite{cohen15approximating}. Theorem~\ref{thm:NN} will also allow us
+to compute the persistent homology of $\dist_N$.
 
-Theorem~\ref{thm:ditsribution-spanner} tackles a common setting in machine
-learning, where points are assumed to be from a well-behaved ditsribution.
-These assumption is foundational to the field of machine learning.
-Although the restrictions on the distribution seem fairly limiting (and
-naively, do not even cover the case of a simple Gaussian), they turn out to
-be far more flexible than they seem, and are common in the machine learning
-literature. They can be modified to gain information on most relevant
-distributions (for example, they cover the
-case of a Gaussian where the thin tail is removed, which turns out to
-contain most of the information of a Gaussian).
-Theorem~\ref{thm:general-spanner} generalizes the results of Cohen et. al.
-in~\cite{cohen15approximating}, who showed nearly linear size spanners in
-nearly linear time, but with significantly worse $\eps$ dependence. Note
-that these spanners can be computed even faster than the optimal known
-Euclidean spanner, indicating that density-sensitive metrics like the
-Nearest Neighbor metric may have interesting algorithmic possibilities that
-standard distances like $l_2$ and $l_1$ don't have.
+Theorem~\ref{thm:general-spanner} proves that a $(1+\eps)$-spanner of the
+edge-squared metric with points in constant dimension is sparser and can be
+computed more efficiently than the theoretical optimal Euclidean
+spanner~\cite{}.  
+Previously, sparse spanners of the edge-squared metric were shown to exist in two
+dimensions via Yao graphs and Gabriel graphs~\cite{LiWan2001}, but these
+did not generalize well to constant dimension: Yao
+graphs are not very efficient to compute, and Gabriel graphs can have
+quadratically many edges even in $3$ dimension.
 
-Results on the geodesics, etc. will be presented in their appropriate
-section.
+Theorem~\ref{thm:distribution-spanner} proves that a $1$-spanner of
+the edge-squared metric can be found assuming points are samples from a
+probability density, by using a $k$-$NN$ graph for
+appropriate $k$. Our result is tight when $d$ is constant. This
+is not possible for Euclidean distance, as a $1$-spanner is almost
+surely the complete graph. Without the probability density
+assumption, there are point sets in $\mathbb{R}^4$ where
+$1$-spanners
+of the edge-squared metric require $\Omega(n^2)$ edges.
 
+Finally, we show how the nearest neighbor metric generalizes Euclidean
+distance and maximum-edge Euclidean MST distance ~\cite{LiWan2001}.
+
+%% Old outline: check this outline before submitting.
+%% \begin{enumerate}
+%% \item Definition of edge-squared.
+%% \item Preliminaries
+%% \item Outline/Overview/Previous Work
+%% \item Interpretations based on known Machine Learning tools.
+%% \begin{enumerate}
+%% \item Gaussian Kernel similarity.
+%% \item Generalization of Level-Set and Single-Linkage clustering. (\tim{This
+%%     is not a very good point.})
+%% \item Interpretation as $l_2$ on paths?
+%% \end{enumerate}
+%% \item Equality to a natural geodesic distance.
+%% \begin{enumerate}
+%% \item Define NN-metric.
+%% \item Core Proof.
+%% \item NN has a fast sparse spanner. Any spanner of the NN metric is a
+%% spanner of edge-squared. (This result is theoretically
+%%     superseded by our later result, but is of independent interest).
+%% \item Persistent homology of the Nearest Neighbor metric can be
+%% computed.
+%% \end{enumerate}
+%% \item Fast practical spanners for points in a distribution. ($k$-NN
+%%     graph for $k = O( \log n)$.
+%% \item Theoretically sparse, fast spanners for points in low dimension.  \tim{Low intrinsic dimension? Can cover trees do this for me?}
+%% \item Remaining open questions.
+%% \item Appendix:
+%% \begin{enumerate}
+%% \item Persistent homology can be put here, maybe.
+%% \item Links to Heirarchies of Metrics: Edge-Squared is a natural
+%% extension of negative type metrics, with potentially high doubling dimension.
+%% \end{enumerate}
+%%
+%% \end{enumerate}

@@ -1,0 +1,23 @@
+%\subsection{Equivalence} % (fold)
+\label{sec:the_proof}
+
+  Let $P\subset \R^d$ be a set of $n$ points.
+  Pick any \emph{source} point $s\in P$.
+  Order the points of $P$ as $p_1,\ldots ,p_n$ so that
+  \[
+    \dist_2(s,p_1) \le \cdots \le \dist_2(s, p_n).
+  \]
+  This will imply that $p_1 = s$.
+  It will suffice to show that for all $p_i\in P$, we have $\dist_2(s,p_i) = \dist_N(s,p_i)$.
+  There are three main steps:
+  \begin{enumerate}
+    \item We first show that when $P$ is a subset of the vertices of an axis-aligned box, $\dist = \dist_N$.  In this case, shortest paths for $\dist$ are single edges and shortest paths for $\dist_N$ are straight lines.
+    \item We then show how to lift the points from $\R^d$ to $\R^n$ by a Lipschitz map $m$ that places all the points on the vertices of a box and preserves $\dist_2(s,p)$ for all $p\in P$.
+    \item Finally, we show how the Lipschitz extension of $m$ is also Lipschitz as a function between Nearest Neighbor Metric distances.  We combine these pieces to show that $\dist \le \dist_N$.  As $\dist \ge \dist_N$ (Lemma~\ref{lem:dist_N_le_dist}), this will conclude the proof that $\dist = \dist_N$.
+  \end{enumerate}
+  
+  \input{boxes}
+  \input{lifting}
+  \input{lip_extension}
+  
+% section the_proof (end)
