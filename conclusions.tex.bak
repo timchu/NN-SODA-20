@@ -3,12 +3,12 @@
 
 We examined the nearest neighbor metric and showed how to compute it
 exactly, as well as find sparse data structures efficiently for approximate
-computation in practice.  Many problems remain open.
+computatoin in practice.  Many problems remain open.
 
 First: are there generalizations of these metrics, for which our proof techniques
 will still hold? The nearest neighbor metric has many natural
-generalizations, including the $k^{th}$ nearest neighbor or powers of the
-nearest neighbor function.
+generalizatoins, including the $k^{th}$ nearest neighbor or powers of the
+nearest neighbor functoin.
 
 Can we efficiently compute $o(\log n)$-spanners of the nearest neighbor
 metric in high dimension, such the the spanners have a nearly linear number of edges?
