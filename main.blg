@@ -4,6 +4,10 @@ The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: Bibtex/NNbibtex.bib
 Database file #2: Bibtex/bibtex.bib
+Repeated entry---line 306 of file Bibtex/bibtex.bib
+ : @article{chazelle94selecting
+ :                             ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 317 of file Bibtex/bibtex.bib
  : @inproceedings{Arya2016
  :                        ,
@@ -74,45 +78,45 @@ Warning--empty booktitle in vL09
 Warning--empty booktitle in Stuetzle2007
 Warning--empty booktitle in Wishart69
 Warning--empty booktitle in Yaro2017
-You've used 52 entries,
+You've used 53 entries,
             2543 wiz_defined-function locations,
-            905 strings with 13752 characters,
-and the built_in function-call counts, 21659 in all, are:
-= -- 2165
-> -- 1061
+            912 strings with 13960 characters,
+and the built_in function-call counts, 22222 in all, are:
+= -- 2219
+> -- 1101
 < -- 25
-+ -- 374
-- -- 362
-* -- 1545
-:= -- 3543
-add.period$ -- 167
-call.type$ -- 52
-change.case$ -- 338
-chr.to.int$ -- 52
-cite$ -- 62
-duplicate$ -- 880
-empty$ -- 1589
-format.name$ -- 423
-if$ -- 4445
++ -- 389
+- -- 377
+* -- 1599
+:= -- 3640
+add.period$ -- 170
+call.type$ -- 53
+change.case$ -- 348
+chr.to.int$ -- 53
+cite$ -- 63
+duplicate$ -- 894
+empty$ -- 1621
+format.name$ -- 438
+if$ -- 4552
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 51
-newline$ -- 265
-num.names$ -- 158
-pop$ -- 325
+missing$ -- 52
+newline$ -- 270
+num.names$ -- 161
+pop$ -- 332
 preamble$ -- 1
-purify$ -- 391
+purify$ -- 402
 quote$ -- 0
-skip$ -- 723
+skip$ -- 734
 stack$ -- 0
-substring$ -- 1117
-swap$ -- 141
+substring$ -- 1155
+swap$ -- 142
 text.length$ -- 25
 text.prefix$ -- 16
 top$ -- 0
-type$ -- 412
+type$ -- 420
 warning$ -- 10
-while$ -- 203
-width$ -- 58
-write$ -- 679
-(There were 15 error messages)
+while$ -- 208
+width$ -- 59
+write$ -- 692
+(There were 16 error messages)

@@ -85,6 +85,12 @@ Fr{\'e}d{\'e}ric Chazal, David Cohen-Steiner, and Andr{\'e} Lieutier.
 \newblock A sampling theory for compact sets in {E}uclidean space.
 \newblock {\em Discrete \& Computational Geometry}, 41:461--479, 2009.
 
+\bibitem[CEG{\etalchar{+}}94]{chazelle94selecting}
+Bernard Chazelle, Herbert Edelsbrunner, Leonidas~J. Guibas, John~E.
+  Hershberger, Raimund Seidel, and Micha Sharir.
+\newblock Selecting heavily covered points.
+\newblock {\em {SIAM} J. Comput.}, 23(6):1138--1151, 1994.
+
 \bibitem[CFM{\etalchar{+}}15]{cohen15approximating}
 Michael~B. Cohen, Brittany~Terese Fasy, Gary~L. Miller, Amir Nayyeri, Donald~R.
   Sheehy, and Ameya Velingker.

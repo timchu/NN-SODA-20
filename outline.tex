@@ -11,11 +11,6 @@ path-connected, compact sets. Remarkably, there is no restriction on the convexi
 simply-connectedness of these sets.
 
 As an example of using the nearest neighbor metric to compute intrinsic structure, Section~\ref{sec:persistence} shows how Theorem~\ref{thm:NN} allows us to compute the persistent homology of the nearest neighbor metric.
-Section~\ref{sec:general-spanner} outlines a proof of Theorem~\ref{thm:general-spanner}, and compares our spanner to new lower
-bounds
-on the sparsity of $(1+\eps)$-spanners of the Euclidean metric.
-We outline a proof of Theorem~\ref{thm:distribution-spanner} in
-Section~\ref{sec:distribution-spanner} and discuss its implications.
 
 Section~\ref{sec:edge-power} introduces the $p$-power metrics. We show
 that Euclidean spanners and Euclidean MSTs are special cases of
@@ -23,7 +18,14 @@ $p$-power spanners. We show how
 clustering algorithms including $k$-means, level-set methods,
 and single linkage clustering, are special cases of
 clustering with $p$-power metrics. $p$-power metrics are identical to the
-Neighbor metric when $p=2$.
+Neighbor metric when $p=2$. This is further detailed in
+Appendix~\ref{ap:clustering-link}.
+
+Section~\ref{sec:general-spanner} outlines a proof of
+Theorem~\ref{thm:general-spanner}, and compares our spanner to new lower
+bounds on the sparsity of $(1+\eps)$-spanners of the Euclidean metric.  We
+outline a proof of Theorem~\ref{thm:distribution-spanner} in
+Section~\ref{sec:distribution-spanner} and discuss its implications.
 
 
 Conclusions and open questions are in
