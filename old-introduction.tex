@@ -40,7 +40,7 @@ examined before as an optimization objective, and occur in
 natural settings including $k$-means clustering and RMS
 matching~\cite{macqueen67,Agarwal12}.
 We compare the edge-squared metric to another
-distance on point sets known as the nearest neighbor metric distance,
+distance on point sets known as the nearest neighbor metric,
 first introduced in~\cite{cohen15approximating} as the nearest neighbor
 distance. Close variants of this metric have been studied in
 probability and machine learning~\cite{sajama05estimatingDBDM, cohen15approximating,
@@ -79,7 +79,7 @@ many continuous metrics in the computational geometry
 setting~\cite{edelsbrunner02topological,gasparovic17complete,chazal08towards,chazal13persistence,carlsson09topology}.
 
 In order to perform clustering or classification with the edge-squared
-metric or nearest neighbor metric distance, we
+metric or nearest neighbor metric, we
 provide data structures that admit fast, practical
 computation of these metrics with theoretical guarantees. The
 edge-squared metric can have high doubling
@@ -163,6 +163,6 @@ single linkage clustering~\cite{Gower1969, Yaro2017}.\input{definitions}
 %% The edge-squared metric is a metric built by taking the graph of
 %% Euclidean distances between points, squaring them, and taking the
 %% shortest path on the resulting graph. The
-%% nearest neighbor metric distance is a distance based on geodesics through the
+%% nearest neighbor metric is a distance based on geodesics through the
 %% ambient space, and will be fully
 %% defined in Section~\ref{sec:definitions}.
