@@ -30,8 +30,6 @@ points and the nearest neighbor metric is \[
       \dist_2(s,p) = 4 \len(\psi) \ge 4 \inf_{\gamma\in \ourpath(s,p)} \len(\gamma) = \dist_N(s,p).\qedhere
     \]
   \end{proof}
-By
-Lemma~\ref{lem:dist_N_le_dist}, it suffices to show that for $a$ and $b$
-on Euclidean point set $P$, we have $\dist_N(a, b) \geq \dist_2(a,b)$ for $a, b
-\in P$. This allows us exact computation of the nearest neighbor metric.
+By Lemma~\ref{lem:dist_N_le_dist}, it suffices to show that $\dist_N(a, b) \geq \dist_2(a,b)$ for all $a, b \in P$.
+% This allows us to compute of the nearest neighbor metric exactly by instead computing the edge-squared metric.
 \input{proof}
