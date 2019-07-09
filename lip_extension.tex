@@ -4,7 +4,7 @@
   Proposition~\ref{prop:m_is_good} and the Kirszbraun theorem on Lipschitz extensions imply that we can extend $m$ to a $1$-Lipschitz function $f: \R^d\to \R^n$ such that $f(p) = m(p)$ for all $p\in P$ \cite{Kirszbraun1934,Valentine1945,brehm1981}.
 
   \begin{lemma}\label{lem:dist_N_lipschitz}
-    The function $f$ is also $1$-Lipschitz as mapping from $\R^d\to \R^n$ with both spaces endowed with the nearest-neighbor geodesic distance.
+    The function $f$ is also $1$-Lipschitz as mapping from $\R^d\to \R^n$ with both spaces endowed with the Nearest Neighbor Metric distance.
   \end{lemma}
   \begin{proof}
     We are interested in two distance functions $\distto_P:\R^d \to \R$ and $\distto_{f(P)}: \R^n\to \R$.
@@ -35,12 +35,12 @@
   We now restate Theorem~\ref{thm:NN} for convenience, and prove
   it.
   \begin{theorem}\label{thm:equality}
-    For any point set $P\subset\R^d$, the edge squared metric $\dist$ and the nearest-neighbor geodesic distance $\dist_N$ are identical.
+    For any point set $P\subset\R^d$, the edge squared metric $\dist$ and the Nearest Neighbor Metric distance $\dist_N$ are identical.
   \end{theorem}
   \begin{proof}
     Fix any pair of points $s$ and $p$ in $P$.
     Define the Lipschitz mapping $m$ and its extension $f$ as in \eqref{eq:defn_of_m}.
-    Let $\dist'$ and $\dist_N'$ denote the edge-squared and nearest-neighbor geodesic distances on $f(P)$ in $\R^n$.
+    Let $\dist'$ and $\dist_N'$ denote the edge-squared and Nearest Neighbor Metric distances on $f(P)$ in $\R^n$.
     \begin{align*}
       \dist_2(s,p) 
         &= \dist'(m(s), m(p)) \because{Proposition~\ref{prop:m_is_good}(iii)}\\

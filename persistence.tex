@@ -12,12 +12,12 @@
 % would be great, rather than having it be written in the exposition. As
 % it stands, I have no clue how Lemma 4.5 is used, or Lemma 4.6, to
 % compute the homologies.}
-  In this section, we show how to compute the so-called persistent homology~\cite{edelsbrunner02topological} of the nearest-neighbor geodesic distance in two different ways, one ambient and the other intrinsic.
+  In this section, we show how to compute the so-called persistent homology~\cite{edelsbrunner02topological} of the Nearest Neighbor Metric distance in two different ways, one ambient and the other intrinsic.
   The latter relies on Theorem~\ref{thm:NN} and would be quite surprising without it.
 
   Persistent homology is a popular tool in computational geometry and topology to ascribe quantitative topological invariants to spaces that are stable with respect to perturbation of the input.
   In particular, it's possible to compare the so-called persistence diagram of a function defined on a sample to that of the complete space~\cite{chazal08towards}.
-  These two aspects of persistence theory---the intrinsic nature of topological invariants and the ability to rigorously compare the discrete and the continuous---are both also present in our theory of nearest-neighbor geodesic distances.
+  These two aspects of persistence theory---the intrinsic nature of topological invariants and the ability to rigorously compare the discrete and the continuous---are both also present in our theory of Nearest Neighbor Metric distances.
   Indeed, the primary motivation for studying these metrics was to use them as inputs to persistence computations for problems such as persistence-based clustering~\cite{chazal13persistence} or metric graph reconstruction~\cite{aanjaneya12metric}.
 
   The input for persistence computation is a \emph{filtration}---a nested sequence of spaces, usually parameterized by a real number $\alpha\ge 0$.
@@ -31,7 +31,7 @@
       F_\alpha := \{x\in \R^d \mid \distto_P(x) \le \alpha\},
     \]
     for all $\alpha \ge 0$.
-    If one wanted to consider instead the nearest-neighbor geodesic distance $\dist_N$, one gets instead a filtration $(G_\alpha)_{\alpha\ge 0}$, where
+    If one wanted to consider instead the Nearest Neighbor Metric distance $\dist_N$, one gets instead a filtration $(G_\alpha)_{\alpha\ge 0}$, where
     \[
       G_\alpha := \{x\in \R^d \mid \min_{p_\in P} \dist_N(x,p) \le \alpha\},
     \]
@@ -67,8 +67,8 @@
 
     The preceding lemma shows that the two filtrations are equal up to a monotone change in parameters.
     By standard results in persistent homology, this means that their persistence diagrams are also equal up to the same change in parameters.
-    This means that one could use standard techniques such as $\alpha$-complexes~\cite{edelsbrunner02topological} to compute the persistence diagram of the Euclidean distance and convert it to the nearest-neighbor geodesic distance afterwards.
-    Moreover, one observes that the same equivalence will hold for variants of the nearest-neighbor geodesic distance that take other powers of the distance.
+    This means that one could use standard techniques such as $\alpha$-complexes~\cite{edelsbrunner02topological} to compute the persistence diagram of the Euclidean distance and convert it to the Nearest Neighbor Metric distance afterwards.
+    Moreover, one observes that the same equivalence will hold for variants of the Nearest Neighbor Metric distance that take other powers of the distance.
 
     % (some are considered in Section~\ref{sec:higher_powers}).
 
@@ -84,12 +84,12 @@
     The Nerve theorem, however, requires the common intersections to be contractible, a property easily satisfied by convex sets such as Euclidean balls.
     However, in many other topological metric spaces, the metric
     balls might not be so well-behaved.
-    In particular, the nearest-neighbor geodesic distance has metric balls which may take on very strange shapes, depending on the density of the sample.
+    In particular, the Nearest Neighbor Metric distance has metric balls which may take on very strange shapes, depending on the density of the sample.
     This is similarly true for graph metrics.
     So, in these cases, there is a difference between the information in the ambient and the intrinsic persistent homology.
 
     \begin{theorem}
-      Let $P\subset \R^d$ be finite and let $\dist_N$ be the nearest-neighbor geodesic distance with respect to $P$.
+      Let $P\subset \R^d$ be finite and let $\dist_N$ be the Nearest Neighbor Metric distance with respect to $P$.
       The edges of the intrinsic \v Cech filtration with respect to $\dist_N$ can be computed exactly in polynomial time.
     \end{theorem}
     \begin{proof}

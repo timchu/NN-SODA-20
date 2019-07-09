@@ -16,9 +16,8 @@
 %  \tim{Anything on wireless networks here? Or other prelims?}
 
 \vspace{3 mm}
-\noindent \textbf{Nearest-neighbor geodesic distance:}
-  Another metric on the points of $P$ is called the nearest-neighbor
-  geodesic distance, and is denoted $\dist_N$.
+\noindent \textbf{Nearest Neighbor Metric:}
+  Another metric on the points of $P$ is called the Nearest Neighbor Metric,  and is denoted $\dist_N$.
 This distance was first defined and studied
   in~\cite{cohen15approximating}.
   Before we can define it, we need a couple other definitions.
@@ -33,7 +32,7 @@ This distance was first defined and studied
   By considering the velocity of $\gamma$, this definition is
   independent of the parameterization of the path.
   \begin{definition}
-    The nearest-neighbor geodesic distance is defined as:
+    The Nearest Neighbor Metric distance is defined as:
   \[
     \dist_N(a,b) := 4 \inf_{\gamma\in \ourpath(a,b)}\len(\gamma).
   \]
@@ -48,7 +47,7 @@ This distance was first defined and studied
   \]
 
   This observation about pairs of points makes it easy to see that the
-  nearest-neighbor geodesic distance is never greater than the
+  Nearest Neighbor Metric distance is never greater than the
   edge-squared distance, as proven in the following lemma.
 
   \begin{lemma}\label{lem:dist_N_le_dist}

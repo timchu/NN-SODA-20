@@ -1,16 +1,19 @@
 \section{Outline}
-%   Definitions of the nearest-neighbor geodesic distance, and of the
+%   Definitions of the Nearest Neighbor Metric distance, and of the
 %     edge-squared metric, are provided in
 %    Section~\ref{sec:definitions}.
 %  
-Section~\ref{sec:NN} contains the proof of Theorem~\ref{thm:NN},
-equating the edge-squared metric and nearest-neighbor geodesic distance in
-all cases. We then
-compute the persistent homology of the nearest-neighbor
-geodesic distance.
-Section~\ref{sec:general-spanner} outlines a proof of
-Theorem~\ref{thm:general-spanner}, and compares our
-spanner to new lower bounds
+Section~\ref{sec:proof} contains the proof of Theorem~\ref{thm:NN},
+equating the edge-squared metric and Nearest Neighbor Metric distance in
+all cases. It should be noted that our proof is robust enough to handle not
+just finite point sets, but also countably infinite collections of disjoint
+path-connected, compact sets. Remarkably, there is no restriction on the convexity or
+simply-connectedness of these sets.
+
+We then compute the persistent homology of the Nearest Neighbor Metric
+distance.  Section~\ref{sec:general-spanner} outlines a proof of
+Theorem~\ref{thm:general-spanner}, and compares our spanner to new lower
+bounds
 on the sparsity of $(1+\eps)$-spanners of the Euclidean metric.
 We outline a proof of Theorem~\ref{thm:distribution-spanner} in
 Section~\ref{sec:distribution-spanner} and discuss its implications.  
