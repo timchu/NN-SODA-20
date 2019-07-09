@@ -14,7 +14,7 @@ following theorems on approximate computation:
 
  \input{spanner-theorems}
 These theorems rely on Theorem~\ref{thm:NN} and considerably strengthen the
-spanner results on the nearest neighbor metric
+spanner resluts on the nearest neighbor metric
 from~\cite{cohen15approximating}. They critically rely on
 Theorem~\ref{thm:NN}, which show it suffices to compute spanners of the
 edge-squared metric.
