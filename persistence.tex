@@ -1,11 +1,11 @@
-\subsection{Persistent Homology of the Nearest-neighbor Geodesic Distance}
+\section{Persistent Homology of the Nearest-neighbor Geodesic Distance}
   \label{sec:persistence}
 
 % \tim{This section should be prefaced somewhere -- here or in a previous
 % section -- with a statement as to why the nearest neighbor metric may
 % still be of independent interest. My main claim is that it's useful
 % since it's defined on all points rather than just two.}
-% 
+%
 % \tim{My main issue with this section is that I don't have a clean
 % theorem saying how to compute persistent homology, both in ambient and
 % intrinsic setting. Having one or two top-level theorems that say this
@@ -14,11 +14,6 @@
 % compute the homologies.}
   In this section, we show how to compute the so-called persistent homology~\cite{edelsbrunner02topological} of the nearest neighbor metric distance in two different ways, one ambient and the other intrinsic.
   The latter relies on Theorem~\ref{thm:NN} and would be quite surprising without it.
-
-  Persistent homology is a popular tool in computational geometry and topology to ascribe quantitative topological invariants to spaces that are stable with respect to perturbation of the input.
-  In particular, it's possible to compare the so-called persistence diagram of a function defined on a sample to that of the complete space~\cite{chazal08towards}.
-  These two aspects of persistence theory---the intrinsic nature of topological invariants and the ability to rigorously compare the discrete and the continuous---are both also present in our theory of nearest neighbor metric distances.
-  Indeed, the primary motivation for studying these metrics was to use them as inputs to persistence computations for problems such as persistence-based clustering~\cite{chazal13persistence} or metric graph reconstruction~\cite{aanjaneya12metric}.
 
   The input for persistence computation is a \emph{filtration}---a nested sequence of spaces, usually parameterized by a real number $\alpha\ge 0$.
   The output is a set of points in the plane called a \emph{persistence diagram} that encodes the birth and death of topological features like connected components, holes, and voids.
