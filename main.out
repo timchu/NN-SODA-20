@@ -1,8 +1,8 @@
 \BOOKMARK [1][-]{section.1}{Exactly Computing Nearest Neighbor Metrics for all point sets, and q-NN metrics on small point sets}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Proof Overview}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Reduction to q-screw simplex}{section.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.2.1}{Single Source Distance Preserving Embedding}{subsection.1.2}% 4
-\BOOKMARK [3][-]{subsubsection.1.2.2}{The Lipschitz Extension}{subsection.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.1}{Reduction to q-screw simplex}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Single Source Distance Preserving Embedding}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{The Lipschitz Extension}{subsection.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.2}{From q-NN metrics to flows on a Simplex}{section.1}% 5
 \BOOKMARK [2][-]{subsection.1.3}{Construction of G'}{section.1}% 6
 \BOOKMARK [2][-]{subsection.1.4}{Construction of C}{section.1}% 7
 \BOOKMARK [1][-]{section.2}{Proof of Theorem ?? and ??}{}% 8
