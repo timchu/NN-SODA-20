@@ -14,20 +14,38 @@ In this paper, we only deal with uncapacitated min-cost flow.
 \noindent \textbf{Unit Flow:} A unit flow on a graph from $a$ to $b$ is a
 flow from $a$ to $b$ that carries a single unit of flow.
 
-\noindent \textbf{Barycentric Subdivision:}
+\noindent \textbf{Spanners:} For real value $t \geq 1$, a $t$-spanner of
+a weighted graph $G$ is a subgraph $S$ such that $d_G(x,y) \leq d_S(x,y)
+\leq t\cdot d_G(x,y)$ where $d_G$ and $d_S$ represent the shortest path
+distance functions between vertex pairs in $G$ and $S$. Spanners
+of Euclidean distances, and general graph distances, have been
+studied extensively, and their importance as a data structure is
+well established.
+~\cite{Chew1986, Vaidya1991, Callahan1993,HarPeled13}.
 
-\noindent \textbf{Fractional Laplacian:}
+\vspace{3 mm}
+\noindent \textbf{$k$-nearest neighbor graphs:} The $k$-nearest neighbor graph
+($k$-NN graph) for a set of objects $V$ is a graph with vertex set $V$
+and an edge from $v\in V$ to its $k$ most similar objects in $V$, under
+a given distance measure. In this paper, the underlying distance
+measure is Euclidean, and the edge weights are Euclidean distance
+squared.
+$k$-NN
+graph constructions are a key data structure in machine
+learning~\cite{Dong11, Chen11}, clustering~\cite{vL09}, and manifold learning~\cite{tenenbaum00global}.
 
-\noindent \textbf{Effective Resistance:}
+\vspace{3 mm}
+\noindent \textbf{Gabriel Graphs:} The Gabriel graph is a graph where
+two vertices $p$ and $q$ are joined by an edge if and only if the disk
+with diameter $pq$ has no other points of $S$ in the interior. The
+Gabriel graph is a subgraph of the Delaunay
+triangulation~\cite{SridharMaster}, and a
+$1$-spanner of the edge-squared metric~\cite{SridharMaster}. Gabriel
+graphs will be used in the proof of
+Theorem~\ref{thm:distribution-spanner}.
+% section definitions (end)
 
-\noindent \textbf{Negative Type Distance:}
-
-\noindent \textbf{(Multiplicative) Spanner}
-
-\noindent \textbf{Gabriel Graph:}
-
-\noindent \textbf{Hwang and Hero Distance:}
-
+\tim{Cut edge-squared and nearest neighbor here?}
 \noindent \textbf{Edge-squared metric:}  For $x\in \R^d$, let $\|x\|$ denote the Euclidean norm.
   For a set of points $P\subset \R^d$:
 
@@ -95,33 +113,3 @@ This distance was first defined and studied
 
 \vspace{3 mm}
   
-\noindent \textbf{Spanners:} For real value $t \geq 1$, a $t$-spanner of
-a weighted graph $G$ is a subgraph $S$ such that $d_G(x,y) \leq d_S(x,y)
-\leq t\cdot d_G(x,y)$ where $d_G$ and $d_S$ represent the shortest path
-distance functions between vertex pairs in $G$ and $S$. Spanners
-of Euclidean distances, and general graph distances, have been
-studied extensively, and their importance as a data structure is
-well established.
-~\cite{Chew1986, Vaidya1991, Callahan1993,HarPeled13}.
-
-\vspace{3 mm}
-\noindent \textbf{$k$-nearest neighbor graphs:} The $k$-nearest neighbor graph
-($k$-NN graph) for a set of objects $V$ is a graph with vertex set $V$
-and an edge from $v\in V$ to its $k$ most similar objects in $V$, under
-a given distance measure. In this paper, the underlying distance
-measure is Euclidean, and the edge weights are Euclidean distance
-squared.
-$k$-NN
-graph constructions are a key data structure in machine
-learning~\cite{Dong11, Chen11}, clustering~\cite{vL09}, and manifold learning~\cite{tenenbaum00global}.
-
-\vspace{3 mm}
-\noindent \textbf{Gabriel Graphs:} The Gabriel graph is a graph where
-two vertices $p$ and $q$ are joined by an edge if and only if the disk
-with diameter $pq$ has no other points of $S$ in the interior. The
-Gabriel graph is a subgraph of the Delaunay
-triangulation~\cite{SridharMaster}, and a
-$1$-spanner of the edge-squared metric~\cite{SridharMaster}. Gabriel
-graphs will be used in the proof of
-Theorem~\ref{thm:distribution-spanner}.
-% section definitions (end)

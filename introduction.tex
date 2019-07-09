@@ -41,18 +41,6 @@ We then define the \textbf{density-based distance} between two points $a, b \in
 \[ d_c(a,b) \inf_{\gamma\in\ourpath(a,b)} \len_c(\gamma)\]
 \end{definition}
 
-\begin{figure}[htbp]
-  \centering
-    \includegraphics[width=0.3\textwidth]{Figures/example1.pdf}
-    \caption{In this figure we have a collection of convex bodies in black.
-      The length or cost of the green curve between the two blue points
-      is the integral along the curve scaled by the distance to the nearest body.
-    A curve may traverse a body at  no cost.}
-  \label{fig:example}
-\end{figure}
-
-
-
 Conceptually, the density-based cost of a path is the weighted path length,
 where each infinitesimal path piece is weighted with cost function $c$.
 Density-based distances have been notable in the machine learning setting
@@ -77,6 +65,15 @@ defined as $\dist_{\distto_P}$, which we short-hand as $\dist_N$.
 The factor of $2$ in $\distto_P(z)$ is a
 normalizing constant.
 \end{definition}
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.3\textwidth]{Figures/example.pdf}
+    \caption{In this figure we have a collection of points.
+      The length or cost of the green curve between the two blue points
+      is the integral along the curve scaled by the distance to the nearest body.}
+  \label{fig:example}
+\end{figure}
+
 The Nearest Neighbor metric, and density-based distances in general, are
 examples of manifold geodesics (see~\cite{} for details). Manifold
 geodesics are defined by embedding a point set into a continuous geometric
@@ -196,6 +193,21 @@ an extremely complicated object, and it is generally hard to prove
 these types of results on arbitrary point sets.\gary{Hard sell this on a
 union of line segments. Sounds surprising!}
 
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.3\textwidth]{Figures/example1.pdf}
+    \caption{In this figure we have a collection of convex bodies in black.
+      The length or cost of the green curve between the two blue points
+      is the integral along the curve scaled by the distance to the nearest body.
+    A curve may traverse a body at  no cost. Theorem~\ref{thm:NN}
+establishes that the shortest path curve between two points goes straight
+from convex body to convex body.}
+  \label{fig:example}
+\end{figure}
+
+
+
+
 \end{enumerate}
 
 We can now tackle a second problem of interest for manifold geodesics,
@@ -227,7 +239,7 @@ and exactly compute this metric for all small point sets for all $q>2$. We
 do this by equating it to the $q$-edge power metrics. Both the $q$-NN and
 $q$-edge power metrics will be defined later.
 \begin{theorem} \label{thm:qNN}
-For point sets of up to $4$ points, the $q$-NN metric is exactly equal to
+For point sets that are the union of up to $4$ compact objects, the $q$-NN metric is exactly equal to
 the $q$-edge power metric when $q>2$. This equality is false for all $q <
 2, q\not=1$.
 \end{theorem}
