@@ -9,23 +9,39 @@ However, to simplify our arguments, we further divide up each Voronoi cell
 into simplices similar to the dissection in a barycentric subdivision.
 However, rather than barycenters, we use circumcenters, so we are
 more-precisely dividing up the $q$-screw simplex with a circumcentric
-subdivision. \tim{define circumcentric/barycentric subdivision}
+subdivision. \tim{define circumcentric/barycentric subdivision. Maybe put
+this in the definitions section.}
+
+\begin{lemma}\label{lem:flow} There exists a function $\Conv$ such that for
+any
+path piece $\phi$ running from $x$ and $x+\Delta(x)$, $\len_{qN}(\phi) \geq
+MCF_{G'}(\Conv(x+\Delta(x))-\Conv(x))$. Here, $MCF_{G'}(d)$ for $d \in
+\mathbb{R}^{2^n}$ represents the minimum cost flow on $G'$ satisfying demands
+$d$ on the vertices of $G'$.
+
+\end{lemma}
 
 Let $p_{S}$ be the circumcenter of points $\{p_s | s \in S\}$ when $S
-\subset \{1, 2, \ldots n\}$. A simplicial cell in the circumcentric subdivision is
+\subset \{0, 1, \ldots n-1\}$. A simplicial cell in the circumcentric subdivision is
 defined by a permutation $a_0, a_1, \ldots a_{n-1}$ of $\{0, 1, \ldots
 n-1\}$ as follows: let
 $A_i = \{a_0, a_1, \ldots a_{i}\}$. Then the vertices $\{p_{A_i} | 0 \leq i
 < n\}$ are the vertices of the simplicial cell.  \tim{Move this definition
-upwards somewhere?} Each Voronoi cell is the disjoint~\tim{not exactly
-disjoint} union of some of
-these cells, and the cells partition the simplex \tim{This isn't quite
-true: its only true for special geometry cells, but we don't particularly
-care... how can I make this point clear?}. Our general strategy is to
-create $\Conv$ on each simplicial cell, and show that is piecewise
-continuous across the boundaries of simplicial cells.
+upwards somewhere?). We can find a unique subset of these simplicial cells
+such that they are fully contained inside some Voronoi cell, and this
+subset happens to paritition the convex hull of $p_S$ for all $S \subset
+\{0,1,2,\ldots n-1\}$. \tim{Picture}
 
-To simplify our notation, we define $\pr_i$ to be $p_{A_i}$. \tim{Make sure
+Our general strategy is to create $\Conv$ on each simplicial cell in this
+subset, and ensure that is piecewise continuous across the boundaries of simplicial
+cells. For this, we build a function $\Conv$ such that $\Conv(x)$ takes on
+non-zero values only at the vertices in $G'$ corresponding to the vertices
+of the simplicial cell containing $x$. For now, imagine that such a
+simplicial cell is defined by $a_0, a_1, \ldots a_{n-1}$.
+
+To simplify our notation, we define $\pr_i$ to be $p_{A_i}$. Now we show
+how to construct $\Conv$. Let $\Convr(x)$ be the restriction of $\Conv(x)$ to the
+vertices $\pr_i$. \tim{Make sure
 all points are $p$, not $x$. $\xr_k$ is later used to coordinate-wise split
 up $x$}.
 
@@ -43,7 +59,8 @@ coordinates $(\xr_0, \xr_1, \ldots \xr_{n-2})$, where the $i^{th}$ coordinate
 axis is parallel to $\pr_i \pr_{i+1}$.
 
 Next, we introduce how $\Convr$ is defined on the vertices $\pr_{i}$. Here,
-$\Convr_i$ is shorthand for the value of $\Convr$ on $\pr_{i}$.
+$\Convr_i$ is shorthand for the value of $\Convr$ on $\pr_{i}$, and $\Rr_i$
+is the circumcradius of $\pr_0, \ldots \pr_{i}$.
 
 \begin{align}
 \Convr(\xr)_i = \frac{
@@ -51,7 +68,7 @@ $\Convr_i$ is shorthand for the value of $\Convr$ on $\pr_{i}$.
 {\xr_s}^2\right)^{q/2}
 }
 {
-\Rr_i^q - \Rr_{i-1}^q
+\Rr_{i-1}^q - \Rr_{i-2}^q
 } - \sum_{i < j < n} \Convr(\xr)_j
 \end{align}
 
@@ -65,33 +82,35 @@ dimension are usually considered harder?}
 
 The key feature about $\Convr$ is that
 
-\[\sum_{j=i}^n \Convr(\xr)_j= \frac{
+\[\sum_{j=i}^{n-1} \Convr(\xr)_j= \frac{
 \left(\sum_{s=0}^{i-1} {\xr_s}^2\right)^{q/2} -\left(\sum_{s=0}^{i-2}
 {\xr_s}^2\right)^{q/2}
 }
 {
-\Rr_i^q - \Rr_{i-1}^q
+\Rr_{i-1}^q - \Rr_{i-2}^q
 }\]
 
-for all $i > 0$, and for $i = 0$ the LHS evaluates to $1$.
+for all $i > 0$, and for $i = 0$ the LHS evaluates to $1$. 
 
 Since we defined this function piecewise, we need to check that this
-function is piecewise continuous.
+function is piecewise continuous across the boundary.
 
-\begin{lemma} If $\xr$ is on a face of $\pr_0, \ldots \pr_n$, then
+\begin{lemma}\label{lem:continuous}
+If $\xr$ is on a face of $\pr_0, \ldots, \pr_{n-1}$, then
 $\Convr(\xr)$ has non-zero coordinates only on that face. Furthermore, the
-coordinates depend only on SOMETHING.
-
+coordinates depend only on the barycentric coordinates of $x$ with respect
+to the vertices of that face.
 \end{lemma}
 
 \begin{proof}
-
+\tim{I can't prove this!!!!}
 \end{proof}
 
 Now we are ready to prove our core lemma:
-
-\begin{lemma} For $x$ and $x+\Delta(x)$ in the convex hull of $\pr_1,
-\ldots \pr_k$, the distance:
+\tim{Make sure you assume the points are full dimensional somewhere in the
+start.}
+\begin{lemma} For $x$ and $x+\Delta(x)$ in the convex hull of $\pr_0,
+\ldots \pr_{n-1}$, the distance:
 
 \[ \|x-\pr_1\|^{q-1} \cdot \|\Delta(x)\| \geq
 F\left(\Convr(x+\Delta(x))-\Convr(x)\right)\]
@@ -100,7 +119,8 @@ where $F(d)$ is the unique cost of a flow satisfying demand $d \in
 \mathbb{R}^n$ on $\Gr$.
 
 \end{lemma}
-
+Proving this lemma, combined with Lemma~\ref{lem:continuous} will prove
+Lemma~\ref{lem:flow}.
 Here, the left hand side represents the $q$-NN cost of a path piece from
 $x$ to $x+\Delta(x)$, and the right hand side is the unique cost of the
 induced flow on graph $G'$, with the restriction that the flow is only
@@ -115,7 +135,7 @@ the sum of the demands on vertices $\pr_{i+1} \pr_{i+2}, \ldots \pr_n$,
 multiplied by the cost of the edge from $\pr_i$ to $\pr_{i+1}$. This
 quantity comes out to be:
 
-\begin{align} &\left(\Rr_{i+1}^q-\Rr_{i}^q \right) \sum_{j=i+1}^n \Convr(\xr)_j
+\begin{align} &\left(\Rr_{i}^q-\Rr_{i-1}^q \right) \sum_{j=i+1}^{n-1} \Convr(\xr)_j
 \\
 \label{eq:flow-cost}
 &=\left(\sum_{s=0}^{i-1} {\xr_s}^2\right)^{q/2} -\left(\sum_{s=0}^{i-2}
@@ -144,7 +164,7 @@ q\xr_{i-2}\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1}
 \\
 &+
 \left(q\xr_{i-1} \left(\sum_{s=0}^{i-1} \xr_s^2
-\right)^{q/2-1}\right)\Delta(\xr)_{i-1},
+\right)^{q/2-1}\right)\Delta(\xr)_{i-1}.
 \end{split}
 \end{align}
 Since 
@@ -178,7 +198,7 @@ q\xr_{i-2}\left(\sum_{s=0}^{i-2}\xr_s^2 \right)^{q/2-1}
 \end{split}
 \end{align}
 
-Expression~\ref{eq:flow-cost-upper-bound} is an upper bound on the cost of
+Therefore, we have that Expression~\ref{eq:flow-cost-upper-bound} is an upper bound on the cost of
 a flow along edge $\vr_i\vr_{i+1}$\tim{Is this the right indexing for
 edges?} induced by a path from $x$ to $x+\Delta(x)$. Now we sum this across all $i$ to get an overall cost upper bound, and group by
 $\Delta(\xr)_i$ for fixed i. The sum telescopes beautifully, and we get:
