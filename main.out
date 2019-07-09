@@ -7,14 +7,14 @@
 \BOOKMARK [3][-]{subsubsection.3.0.2}{Lifting the points to Rn}{subsubsection.3.0.1}% 7
 \BOOKMARK [3][-]{subsubsection.3.0.3}{The Lipschitz Extension}{subsubsection.3.0.1}% 8
 \BOOKMARK [2][-]{subsection.3.1}{From Finite Sets to Finite Collections of Compact Path-Connected Bodies}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.2}{Persistent Homology of the Nearest-neighbor Geodesic Distance}{section.3}% 10
-\BOOKMARK [1][-]{section.4}{Relating the nearest neighbor metric to Euclidean MSTs, Euclidean Spanners, and More}{}% 11
-\BOOKMARK [2][-]{subsection.4.1}{Relation to the Euclidean MST problem}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.2}{Generalizing Single Linkage Clustering, Level Sets, and k-Centers clustering}{section.4}% 13
-\BOOKMARK [1][-]{section.5}{Spanners for the nearest neighbor metric}{}% 14
-\BOOKMARK [2][-]{subsection.5.1}{Exact-spanners of nearest neighbor metric in the Probability Density Setting }{section.5}% 15
-\BOOKMARK [2][-]{subsection.5.2}{Fast, Sparse Spanner for the Edge-Squared Metric}{section.5}% 16
-\BOOKMARK [1][-]{section.6}{Conclusions and Open Questions}{}% 17
+\BOOKMARK [1][-]{section.4}{Persistent Homology of the Nearest-neighbor Geodesic Distance}{}% 10
+\BOOKMARK [1][-]{section.5}{Relating the nearest neighbor metric to Euclidean MSTs, Euclidean Spanners, and More}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Relation to the Euclidean MST problem}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.2}{Generalizing Single Linkage Clustering, Level Sets, and k-Centers clustering}{section.5}% 13
+\BOOKMARK [1][-]{section.6}{Spanners for the nearest neighbor metric}{}% 14
+\BOOKMARK [2][-]{subsection.6.1}{Exact-spanners of nearest neighbor metric in the Probability Density Setting }{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.2}{Fast, Sparse Spanner for the Edge-Squared Metric}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Conclusions and Open Questions}{}% 17
 \BOOKMARK [1][-]{Appendix.1.A}{Nearest Neighbor Metric and Edge-Power Metrics relate to Single Linkage Clustering, Level Sets, and k-Centers clustering}{}% 18
 \BOOKMARK [1][-]{Appendix.1.B}{Proving Faster and Sparser-than-Euclidean Approximate Spanners}{}% 19
 \BOOKMARK [2][-]{subsection.1.B.1}{1+O\(2\) spanners can be generated from a 1/ WSPD}{Appendix.1.B}% 20
