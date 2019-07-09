@@ -1,10 +1,12 @@
 \subsection{Contributions and Past Work}
 Our core contribution is Theorem~\ref{thm:NN}, which lets us exactly
 compute the Nearest Neighbor metric. This theorem should be considered
-quite surprising given that it equates the nearest neighbor metric with the
-edge-squared metric even for countable collections of compact,
-path-connected objects in countable dimension, given the geometric
-complexity of such objects.
+quite surprising: it equates the nearest neighbor metric with the
+edge-squared metric, even when the point set is a collections of compact,
+path-connected objects in arbitrarily large dimension. There are no
+restrictions on the convexity or simple-connectedness of such objects, so
+in general the Voronoi diagram of these objects (on which the nearest
+neighbor metric critically depends) can be extremely complicated.
 
  Besides for exactly computing the nearest neighbor metric, we present the
 following theorems on approximate computation:
@@ -27,7 +29,7 @@ probability density, by using a $k$-$NN$ graph for
 appropriate $k$. Our result is tight when $d$ is constant. This
 is not possible for Euclidean distance, as a $1$-spanner is almost
 surely the complete graph. Although the restrictions on the probability
-density may seem limiting (for example, they do not even cover the case of
+density may seem limiting,
 they are in fact quite flexible and standard in
 machine learning theory and practice~\cite{}. For example, although they do not cover the case
 of a Gaussian (unbounded support), they do cover the case of a Gaussian
@@ -37,13 +39,15 @@ data in a Gaussian distribution.
 Finally, we show how the nearest neighbor metric generalizes Euclidean
 distance and maximum-edge Euclidean MST distance ~\cite{LiWan2001}
 Theorem~\ref{thm:NN} will also allow us
-to compute the persistent homology of $\dist_N$. kh
+to compute the persistent homology of $\dist_N$, a task useful for
+topological data analysis~\cite{}. 
 
 The core mathematical contribution of our work is the
-statement and proof of Theorem~\ref{thm:NN}.  While the techniques to prove
-our other results are simpler and mostly leverage past work, we have
+statement and proof of Theorem~\ref{thm:NN}.  The techniques to prove
+our other results are simpler and mostly leverage past work. We have
 included them
-nonetheless to have a more complete picture of the Nearest Neighbor metric.
+nonetheless to provide a more complete picture of the Nearest Neighbor
+metric and possible directions for future work.
 
 %% Old outline: check this outline before submitting.
 %% \begin{enumerate}

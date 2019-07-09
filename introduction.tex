@@ -5,10 +5,11 @@ It is widely believed that a more useful metric on the data points would have th
 That is, distances are scaled inversely according to the density of the data along a path between points.
 We call such a metric \textbf{data-sensitive}.
 
-Data-sensitive metrics arise naturally in machine learning, and are implicitly central in celebrated methods such as $k$-NN graph methods, manifold learning, level-set methods, single-linkage clustering, and Euclidean MST-based clustering (See Appendix~\ref{} for details).
+Data-sensitive metrics arise naturally in machine learning, and are implicitly central in celebrated methods such as $k$-NN graph methods, manifold learning, level-set methods, single-linkage clustering, and Euclidean MST-based clustering.
+%(See Appendix~\ref{} for details)
 The construction of appropriate data-sensitive metrics is an active area of research.
 We consider a simple data-sensitive metric with an underlying manifold structure called the \textbf{nearest neighbor metric}.
-This metric and its close variants have been studied in the past by multiple researchers~\cite{}.
+This metric and its close variants have been studied in the past by multiple researchers~\cite{bijral11semiSupLearningDBD,vincent03,sajama05estimatingDBDM}.
 In this paper, we show how to compute the nearest neighbor metric exactly for any dimension, which solves one of the most important and challenging problems for any manifold-based metric.
 
 The starting point will be the nearest neighbor function $\distto_P$ for the data set $P$:
@@ -37,7 +38,7 @@ Conceptually, the density-based cost of a path is the weighted path length, wher
 The cost $c$ is usually some function of an underlying density $f$ (the natural choice would be $c(x) = f(x)^{-\frac{1}{k}}$).
 Density-based distances have been notable in the machine learning setting for over a decade~\cite{sajama05estimatingDBDM,bijral11semiSupLearningDBD}.
 To build a density-sensitive metric from density-based distances, we would like a cost function $c$ that is small when close to the data set, and large when far away.
-The nearest neighbor function $\distto_P$ is the most natural candidate, and has been traditionally used as a proximity measure between points and a data set in both the geometry and machine learning settings~\cite{}. It has been used as such in nearest neighbor
+The nearest neighbor function $\distto_P$ is the most natural candidate, and has been traditionally used as a proximity measure between points and a data set in both the geometry and machine learning settings~\cite{bijral11semiSupLearningDBD}. It has been used as such in nearest neighbor
 (and $k$-NN) classification, $k$-means/medians/center clustering, finite
 element methods, and any of the hundreds of methods that use Voronoi
 diagrams or Delaunay triangulation as intermediate data structures.
@@ -62,7 +63,7 @@ Exactly computing geodesics is fundamental to countless areas of physics includi
 In mathematics, manifold geodesics appear in many branches of higher mathematics including differential equations, differential geometry, Lie theory, calculus of variations, algebraic geometry, and topology.
 
 One of the most significant problems on any manifold geodesic is how to compute its length.
-Exact computation of manifold metrics is considered a fundamental problem in mathematics and physics, dating back for four centuries: entire fields of mathematics, including the celebrated calculus of variations, have arisen to tackle this~\cite{}. Historically, mathematicians placed strong emphasis on exact computation as opposed to constant factor approximations. An algorithmic problem on manifold geodesics, with modern origins, is to $(1+\eps)$ approximate these metrics efficiently on a computer.
+Exact computation of manifold metrics is considered a fundamental problem in mathematics and physics, dating back for four centuries: entire fields of mathematics, including the celebrated calculus of variations, have arisen to tackle this~\cite{Courant53}. Historically, mathematicians placed strong emphasis on exact computation as opposed to constant factor approximations. An algorithmic problem on manifold geodesics, with modern origins, is to $(1+\eps)$ approximate these metrics efficiently on a computer.
 The core difficulty in the first problem is that geodesics are the minimum cost path out of an uncountable number of paths that can travel 'anywhere' on the manifold structure.
 This makes exactly computing these metrics challenging, even in the case of the nearest neighbor metric for just four fixed points in two dimensions (the authors
 are unaware of any easy method for this simplified task).
@@ -100,8 +101,8 @@ There are several reasons why it is surprising that these metrics are equal:
 
 \item The optimal nearest neighbor path for two points not in the dataset
 is generally composed of hyperbolic arcs.
-This holds true even when the dataset is a single point, and was established by~\cite{} using tools in Riemannian surfaces and the complex plane.
-Meanwhile, Theorem~\ref{} implies an optimal nearest neighbor path for two data points is piecewise linear!
+This holds true even when the dataset is a single point, and was established by~\cite{cohen15approximating} using tools in Riemannian surfaces and the complex plane.
+Meanwhile, Their Theorem implies an optimal nearest neighbor path for two data points is piecewise linear!
 
 \item There are simple and natural variants of the nearest neighbor metric, for which no analog of Theorem~\ref{thm:NN} is known nor suspected.
 For example, if one considers powers (other than one) of the distance function as a cost, a corresponding graph-based metric is known to exist only for sets of size at most two.
@@ -137,7 +138,7 @@ Thus, there shortest paths may not even be unique.
     A curve may traverse a body at  no cost. Theorem~\ref{thm:NN}
 establishes that the shortest path curve between two points goes straight
 from convex body to convex body.}
-  \label{fig:example}
+  \label{fig:example1}
 \end{figure}
 
 
@@ -154,7 +155,7 @@ to compute than the theoretically optimal Euclidean spanners with the same
 approximation constant, and nearly match the sparsity of the best known
 Euclidean Steiner spanners. Moreover, if the point set comes from a
 well-behaved probability distribution in constant dimension (a foundational
-assumption in machine learning~\cite{}), we show that the nearest neighbor
+assumption in machine learning~\cite{hwang2016}), we show that the nearest neighbor
 metric has perfect $1$-spanners of nearly linear size. The latter result is
 impossible for many non-density sensitive metrics, such as the Euclidean
 metric. Both results rely on Theorem~\ref{thm:NN}, and significantly
