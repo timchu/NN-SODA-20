@@ -14,9 +14,8 @@
 \BOOKMARK [1][-]{section.5}{Spanners for the nearest neighbor metric}{}% 14
 \BOOKMARK [2][-]{subsection.5.1}{Exact-spanners of nearest neighbor metric in the Probability Density Setting }{section.5}% 15
 \BOOKMARK [2][-]{subsection.5.2}{Fast, Sparse Spanner for the Edge-Squared Metric}{section.5}% 16
-\BOOKMARK [2][-]{subsection.5.3}{Lower Bounds for Sparsity of Euclidean Spanners}{section.5}% 17
-\BOOKMARK [1][-]{section.6}{Conclusions and Open Questions}{}% 18
-\BOOKMARK [1][-]{section.7}{Edge-Power Metrics relate to Single Linkage Clustering, Level Sets, and k-Centers clustering}{}% 19
-\BOOKMARK [1][-]{section.8}{Proving Faster and Sparser-than-Euclidean Approximate Spanners}{}% 20
-\BOOKMARK [2][-]{subsection.8.1}{1+O\(2\) spanners can be generated from a 1/ WSPD}{section.8}% 21
-\BOOKMARK [1][-]{section.9}{Spanners in the Probability Density Setting: Full Proof}{}% 22
+\BOOKMARK [1][-]{section.6}{Conclusions and Open Questions}{}% 17
+\BOOKMARK [1][-]{section.7}{Edge-Power Metrics relate to Single Linkage Clustering, Level Sets, and k-Centers clustering}{}% 18
+\BOOKMARK [1][-]{section.8}{Proving Faster and Sparser-than-Euclidean Approximate Spanners}{}% 19
+\BOOKMARK [2][-]{subsection.8.1}{1+O\(2\) spanners can be generated from a 1/ WSPD}{section.8}% 20
+\BOOKMARK [1][-]{section.9}{Spanners in the Probability Density Setting: Full Proof}{}% 21

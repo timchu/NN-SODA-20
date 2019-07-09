@@ -1,0 +1,117 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: alpha.bst
+Database file #1: Bibtex/NNbibtex.bib
+Database file #2: Bibtex/bibtex.bib
+Repeated entry---line 316 of file Bibtex/bibtex.bib
+ : @inproceedings{Arya2016
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 333 of file Bibtex/bibtex.bib
+ : @inproceedings{alamgir12shortest
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 342 of file Bibtex/bibtex.bib
+ : @inproceedings{arya95euclid
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 465 of file Bibtex/bibtex.bib
+ : @article{tenenbaum00global
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 522 of file Bibtex/bibtex.bib
+ : @article{hwang2016
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 552 of file Bibtex/bibtex.bib
+ : @article{Kirszbraun1934
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 564 of file Bibtex/bibtex.bib
+ : @article{Valentine1945
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 577 of file Bibtex/bibtex.bib
+ : @article{brehm1981
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 587 of file Bibtex/bibtex.bib
+ : @inproceedings{bijral11semiSupLearningDBD
+ :                                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 597 of file Bibtex/bibtex.bib
+ : @inproceedings{vincent03
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 604 of file Bibtex/bibtex.bib
+ : @inproceedings{sajama05estimatingDBDM
+ :                                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 645 of file Bibtex/bibtex.bib
+ : @inproceedings{Ester1996
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 757 of file Bibtex/bibtex.bib
+ : @article{Callahan1995
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 820 of file Bibtex/bibtex.bib
+ : @inproceedings{Callahan1993
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1007 of file Bibtex/bibtex.bib
+ : @inproceedings{LiWan2001
+ :                         ,
+I'm skipping whatever remains of this entry
+Warning--empty booktitle in OPTICS96
+Warning--empty booktitle in LSH
+Warning--empty booktitle in Chen11
+Warning--empty publisher in Courant53
+Warning--empty booktitle in Dong11
+Warning--empty booktitle in vL09
+Warning--empty booktitle in Stuetzle2007
+Warning--empty booktitle in Wishart69
+Warning--empty booktitle in Yaro2017
+You've used 49 entries,
+            2543 wiz_defined-function locations,
+            883 strings with 13165 characters,
+and the built_in function-call counts, 20411 in all, are:
+= -- 2037
+> -- 992
+< -- 25
++ -- 349
+- -- 338
+* -- 1448
+:= -- 3333
+add.period$ -- 157
+call.type$ -- 49
+change.case$ -- 318
+chr.to.int$ -- 49
+cite$ -- 58
+duplicate$ -- 836
+empty$ -- 1503
+format.name$ -- 396
+if$ -- 4196
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 48
+newline$ -- 250
+num.names$ -- 149
+pop$ -- 310
+preamble$ -- 1
+purify$ -- 368
+quote$ -- 0
+skip$ -- 685
+stack$ -- 0
+substring$ -- 1054
+swap$ -- 138
+text.length$ -- 25
+text.prefix$ -- 16
+top$ -- 0
+type$ -- 388
+warning$ -- 9
+while$ -- 190
+width$ -- 55
+write$ -- 640
+(There were 15 error messages)

@@ -99,6 +99,11 @@ Fr{\'e}d{\'e}ric~Chazal Chazal, Leonidas~J. Guibas, Steve~Y. Oudot, and Primoz
 \newblock Persistence-based clustering in riemannian manifolds.
 \newblock {\em J. {ACM}}, 60(6:41):97--106, 2013.
 
+\bibitem[CH53]{Courant53}
+Richard Courant and David Hilbert.
+\newblock {\em Methods of Mathematical Physics}.
+\newblock 1953.
+
 \bibitem[Che86]{Chew1986}
 P~Chew.
 \newblock There is a planar graph almost as good as the complete graph.
@@ -132,10 +137,6 @@ Fr{\'e}d{\'{e}}ric Chazal and Steve~Y. Oudot.
 \newblock In {\em Proceedings of the 24th {ACM} Symposium on Computational
   Geometry}, pages 232--241, 2008.
 
-\bibitem[Cou53]{Courant53}
-{\em Methods of Mathematical Physics}.
-\newblock 1953.
-
 \bibitem[DCL11]{Dong11}
 Wei Dong, Moses Charikar, and Kai Li.
 \newblock Efficient k-nearest neighbor graph construction for generic
@@ -155,6 +156,11 @@ Martin Ester, Hans-Peter Kriegel, Jorg Sander, and Xiaowei Xu.
 Herbert Edelsbrunner, David Letscher, and Afra Zomorodian.
 \newblock Topological persistence and simplification.
 \newblock {\em Discrete \& Computational Geometry}, 4(28):511--533, 2002.
+
+\bibitem[Fey48]{Feynman48}
+R.~P. Feynman.
+\newblock Space-time approach to non-relativistic quantum mechanics.
+\newblock {\em Rev. Mod. Phys}, 20(367), 1948.
 
 \bibitem[GGP{\etalchar{+}}17]{gasparovic17complete}
 Ellen Gasparovic, Maria Gommel, Emilie Purvine, Bei Wang, Yusu Wang, and Lori
@@ -202,6 +208,11 @@ Ting Liu, Andrew~W. Moore, Alexander Gray, and Ke~Yang.
 \newblock In {\em Proceedings of the 17th International Conference on Neural
   Information Processing Systems}, NIPS'04, pages 825--832, Cambridge, MA, USA,
   2004. MIT Press.
+
+\bibitem[LS19]{Le19}
+Hung Le and Shay Solomon.
+\newblock Truly optimal euclidean spanners.
+\newblock {\em FOCS}, 2019.
 
 \bibitem[Lux07]{vL09}
 Ulrike~Von Luxburg.
