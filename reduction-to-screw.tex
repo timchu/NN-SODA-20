@@ -11,34 +11,18 @@ $q=2$, and noting that the proof generalizes naturally for any $q > 2$.
     \dist_q(s,p_1) \le \cdots \le \dist_q(s, p_n).
   \]
   This will imply that $p_1 = s$.
-  It will suffice to show that for all $p_i\in P$, we have $\dist_2(s,p_i) = \dist_N(s,p_i)$.
-  There are three main steps:
-  \begin{enumerate}
-  \item We first show that the theorem holds for $2$-screw simplices, and
-for any $4$ point $q$-screw simplex when $q > 2$.
-\begin{enumerate}
-  \item We will construct a graph $G'$ on the points $x_0, x_1, \ldots
-x_{n-1}$ of the $q$-screw simplex, and prove that the $q$-NN distance
-between $p_1$ and $p_n$ is bounded above by the shortest path distance
-between corresponding vertices on $G'$.
-	\item We show that the shortest path on $G'$ and the shortest path
-on $G$ coincide when $q=2$, and for $4$ point sets when $q>2$.  
-\end{enumerate}
-  \item We show how to reduce Theorem~\ref{thm:NN} and
-Conjecture~\ref{conj:qNN} to the case when we
-have $n$ points on the $q$-screw simplex. We do this by finding a Lipschitz
-map $m:\R \rightarrow \R^n$ that preserves $\dist_q(s,p)$ for all $p \in P$.
-\tim{define $\dist_q$}
-  \item We show how the Lipschitz extension of $m$ is also
-Lipschitz as a function between $q$-power Nearest Neighbor metrics. 
-We combine these pieces to show that $\dist_2 \le \dist_N$.  As $\dist_2
-\ge \dist_N$ (Lemma~\ref{lem:dist_N_le_dist}), this will conclude the proof
-that $\dist_2 = \dist_N$. The analagous result holds for $4$ point sets in
-the $q$-NN metric, which concludes the proof that $\dist_q = \dist_{qN}$
-for all $q>2$ for $4$ point sets.
-  \end{enumerate}
+  It will suffice to show that for all $p_i\in P$, we have $\dist_q(s,p_i)
+= \dist_{qN}(s,p_i)$.
+The core step is that we will find a Lipschitz map $m: \R \rightarrow \R^n$
+that preserves $\dist_q(s,p)$ for all $p \in P$. We will then show how the
+Lipschitz extension of $m$ is also Lipschitz as a function between $q$-NN
+metrics. If we can do this, then the $q$-NN cost of any path from $s$ to
+$p_i$ on our initial point set is lower bounded by the $q$-NN cost of the
+image of the path under $m$, from $m(s)$ to $m(p_i)$ (since the map is Lipschitz as a function
+between $q$-NN metrics). If the Theorem holds on $m(p_1), m(p_2), \ldots
+m(p_{n-1})$, then this $q$-NN cost is lower bounded by the shortest path
+from $p_0$ to $p_{n-1}$, as desired.
   
-  \input{boxes}
   \input{lifting}
   \input{lip_extension}
   
