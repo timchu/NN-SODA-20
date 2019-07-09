@@ -9,12 +9,12 @@ Graph $G'$ is related to the barycentric subdivision on a graph, used
 in~\cite{}.
 
 Tto lower bound the nearest neighbor cost of any path on our original point
-set, we will lower bound it by some unit flow (DFEINE) from $v_0$ to $v_n$
-in $G'$. However, note that the unit flow from $v_0$ to $v_n$ is lower
-bounded by the shortest path (where lengths of edges are the same as their
-costs) from $v_0$ to $v_n$ in $G'$. If the shortest path in $G'$ is equal
-to the $q$-edge power cost of going from $x_0$ to $x_n$, then we have
-completed our proof.
+set, we will lower bound it by the cost of some unit flow (DFEINE) from
+$v_0$ to $v_n$ in $G'$. However, note that the cost of any uncapacitated
+unit flow from $v_0$ to $v_n$ is lower bounded by the shortest path (where
+lengths of edges are their costs) from $v_0$ to $v_n$ in $G'$.
+If the shortest path in $G'$ is equal to the $q$-edge power cost of going
+from $x_0$ to $x_n$, then we have completed our proof.
 
 To lower bound the cost of the $q$-NN metric with a unit flow, we aim to build
 a potential function $\Conv:\mathbb{R}^n \rightarrow \mathbb{R}^{2^n}$ such
@@ -36,17 +36,24 @@ the $q$-NN cost of a path from $x_0$ to $x_n$ with the shortest path in $G'$.
 
 This bound holds for any initial point set $x_0, x_1, \ldots x_n$. However,
 in general the shortest path on $G'$ and the shortest path on $G$ are not
-the same. to overcome this, we show that it suffices to prove
+the same. To overcome this, we show that it suffices to prove
 Theorem~\ref{thm:NN} on $2$-screw simplices, and we show that on $2$-screw
-simplices the shortest path on $G'$ is the shortest path on $G$.
+simplices the shortest path on $G'$ is the shortest path on $G$. We further
+show that it suffices to prove Theorem~\ref{thm:qNN} on $q$-screw simplices
+with $4$ points.
 
-Therefore, our proof is devoted to two things: showing the initial
-inequality between $q$-NN metrics and shortest paths on $G'$, proving
-that it suffices to show Theorem~\ref{thm:NN} on the $2$-screw simplex, and
-proving that the shortest path between points on $G'$ and $G$ are the same
-for the $2$ screw simplex. Our proof of Theorem~\ref{thm:qNN} follows the
-same structure.
-\tim{Can slim down this section, since its duplicated with hte prevoius}
+Therefore, our proof of Theorem~\ref{thm:NN} is devoted to three things:
+proving the reduction to the $2$-screw simplex, showing the inequality
+between Nearest Neighbor metrics and shortest paths on $G'$, and proving
+that the shortest path between points on $G'$ is the same as the shortest
+path between points on $G$ when $G$ is the $q$-edge power graph of the
+$q$-screw simplex.
+
+Our proof of Theorem~\ref{thm:qNN} follows the exact same structure, where
+the main thing that prevents us from proving Conjecture~\ref{conj:qNN} is
+the fact that we aren't yet able to prove that shortest paths on $G'$ and
+$G$ are the same for $n$ points in general, and we only do so for sets of
+$4$ points. The rest of the proof still works.
 
 
 %show two things: first, that it suffices to prove our initial 

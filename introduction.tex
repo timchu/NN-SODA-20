@@ -70,7 +70,8 @@ normalizing constant.
     \includegraphics[width=0.3\textwidth]{Figures/example.pdf}
     \caption{In this figure we have a collection of points.
       The length or cost of the green curve between the two blue points
-      is the integral along the curve scaled by the distance to the nearest body.}
+      is the integral along the curve scaled by the distance to the nearest
+point.}
   \label{fig:example}
 \end{figure}
 
@@ -188,15 +189,17 @@ Theorem~\ref{thm:NN} is fairly tight.
 
 \item This theorem holds for any compact point set, whether its $n$ points
 in $n-1$ dimensional space or a countable union of compact geometric
-objects in countably infinite dimension. The geometry of the latter can be
-an extremely complicated object, and it is generally hard to prove
-these types of results on arbitrary point sets.\gary{Hard sell this on a
+objects in countably infinite dimension. There is no other restriction on
+the compact geometric objects, and they need not be convex nor simply
+connected. The geometry of these collectoins of objects can be
+extremely compliacted, and it is generally hard to prove
+these types of results on such point sets.\gary{Hard sell this on a
 union of line segments. Sounds surprising!}
 
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.3\textwidth]{Figures/example1.pdf}
-    \caption{In this figure we have a collection of convex bodies in black.
+    \caption{In this figure we have a collection of compact bodies in black.
       The length or cost of the green curve between the two blue points
       is the integral along the curve scaled by the distance to the nearest body.
     A curve may traverse a body at  no cost. Theorem~\ref{thm:NN}
@@ -235,18 +238,25 @@ can be useful for other metric computations and approximations.
 
 Besides for this contribution, we also generalize the Nearest Neighbor
 Metric to the $q$-Nearest Neighbor metric (abbreviated $q$-NN for short),
-and exactly compute this metric for all small point sets for all $q>2$. We
+and exactly compute this metric for all point sets with $\leq 4$ points for all $q>2$. We
 do this by equating it to the $q$-edge power metrics. Both the $q$-NN and
 $q$-edge power metrics will be defined later.
 \begin{theorem} \label{thm:qNN}
-For point sets that are the union of up to $4$ compact objects, the $q$-NN metric is exactly equal to
+For point sets that are the union of up to $4$ connected compact sets, the $q$-NN metric is exactly equal to
 the $q$-edge power metric when $q>2$. This equality is false for all $q <
 2, q\not=1$.
 \end{theorem}
+Our equality is robust enough to handle the union of $4$ compact sets in
+any dimension. These unions
+ch can have very complicated geometry, and their Voronoi diagrams are in
+general difficult to understand. This is what makes theorems
+Theorem~\ref{thm:qNN} surprising. We further conjecture:
 \begin{conjecture}\label{conj:qNN}
-For any $n$ points, the $q$-NN metric is exactly equal to the $q$-edge
+For any compact set, the $q$-NN metric is exactly equal to the $q$-edge
 poewr metric when $q>2$.
 \end{conjecture}
+If true, this would give us a quadratic algorithm to compute the $q$-NN
+metric for any $n$ point set.
 
 \tim{Move to contributions section?} We then use Theorem~\ref{thm:NN} to compute the persistent homology
 of the Nearest Neighbor metric, a task important in computational geometry.

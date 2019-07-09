@@ -15,19 +15,20 @@ $q=2$, and noting that the proof generalizes naturally for any $q > 2$.
   There are three main steps:
   \begin{enumerate}
   \item We first show that the theorem holds for $2$-screw simplices, and
-for $q$-screw simplices when $q > 2$.
+for any $4$ point $q$-screw simplex when $q > 2$.
 \begin{enumerate}
-  \item We will construct a graph $G'$ on the points $x_0, x_1, \ldots x_n$
-of the $q$-screw simplex, and prove that the $q$-NN distance between $p_1$
-and $p_n$ is bounded above by the shortest path distance between
-corresponding vertices on $G'$.
+  \item We will construct a graph $G'$ on the points $x_0, x_1, \ldots
+x_{n-1}$ of the $q$-screw simplex, and prove that the $q$-NN distance
+between $p_1$ and $p_n$ is bounded above by the shortest path distance
+between corresponding vertices on $G'$.
 	\item We show that the shortest path on $G'$ and the shortest path
 on $G$ coincide when $q=2$, and for $4$ point sets when $q>2$.  
 \end{enumerate}
-  \item We then show how to lift the points from $\R^d$ to $\R^n$ by a
-Lipschitz map $m$ that places all the points on the vertices of a $q$-screw
-simplex, and preserves $\dist_q(s,p)$ for all $p\in
-P$\tim{define $\dist_q$}
+  \item We show how to reduce Theorem~\ref{thm:NN} and
+Conjecture~\ref{conj:qNN} to the case when we
+have $n$ points on the $q$-screw simplex. We do this by finding a Lipschitz
+map $m:\R \rightarrow \R^n$ that preserves $\dist_q(s,p)$ for all $p \in P$.
+\tim{define $\dist_q$}
   \item We show how the Lipschitz extension of $m$ is also
 Lipschitz as a function between $q$-power Nearest Neighbor metrics. 
 We combine these pieces to show that $\dist_2 \le \dist_N$.  As $\dist_2
