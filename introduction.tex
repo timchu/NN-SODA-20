@@ -140,9 +140,9 @@ For $x\in \R^d$, let $\|x\|$ denote the Euclidean norm.
   For a set of points $P\subset \R^d$:
   the \textbf{edge-squared metric} for $a,b\in P$ is
   \[
-    \dist_2(a,b) = \min_{(p_0,\ldots, p_k)}\sum_{i=1}^k \|p_i - p_{i-1}\|^2,
+    \dist_2(a,b) = \inf_{(p_0,\ldots, p_k)}\sum_{i=1}^k \|p_i - p_{i-1}\|^2,
   \]
-  where the minimum is over sequences of points $p_0,\ldots, p_k\in P$ with $p_0 = a$ and $p_k = b$.
+  where the infimum is over sequences of points $p_0,\ldots, p_k\in P$ with $p_0 = a$ and $p_k = b$.
   \end{definition}
 
 \begin{theorem}\label{thm:NN} The nearest neighbor metric and edge squared
