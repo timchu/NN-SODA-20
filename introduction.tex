@@ -1,69 +1,61 @@
-\section{Introduction} A foundational hypothesis in non-linear dimension
-reduction and machine learning is that data can be represented as points in
-Euclidean space, and appropriate metrics on these points can be generated
-to solve a variety of problems including clustering, classification,
-regression, surface reconstruction, topological property inference, and
-more. In machine learning, two data points should intuitively be considered
-close if they are in the same data cluster, even if their Euclidean
-distance is far. This property is called the \textbf{density-sensitive}
-property.\gary{Use data-sensitive instead of density-sensitive}
+\section{Introduction}
 
-Density-sensitive metrics are considered fundamental in the study of
-machine learning, and are implicitly central in celebrated machine learning
-methods such as $k$-NN graph methods, manifold learning, level-set methods,
-single-linkage clustering, and Euclidean MST-based clustering (See Appendix
-~\ref{} for details). The construction of appropriate density-sensitive
-metrics is an active area of research in machine learning. We consider a
-simple density-sensitive metric with an underlying manifold structure.
-This metric is called the Nearest Neighbor Metric, and it and its close
-variants have been studied in the past by multiple researchers. 
-In this paper, we show how to
-compute the Nearest Neighbor metric exactly for any dimension, which solves
-one of the most important and challenging problem for any manifold-based
-metric.
+The profound success of nonlinear methods in machine learning such as kernels methods, density-based distances, and neural nets reveals that although data are often represented as points in $\R^n$, the shortest path between two points is \emph{not} a straight line.
+It is widely believed that a more useful metric on the data points would have the property that two points in a dense cluster will be close in some underlying metric, even if the Euclidean distance is far.
+That is, distances are scaled inversely according to the density of the data along a path between points.
+We call such a metric \textbf{data-sensitive}.
 
-To define the nearest neighbor metric, we first define the notion of a
-density-based distance. This is a slight variation of the original
-definition from~\cite{}.
+%A foundational hypothesis in non-linear dimension
+%reduction and machine learning is that data can be represented as points in
+%Euclidean space, and appropriate metrics on these points can be generated
+%to solve a variety of problems including clustering, classification,
+%regression, surface reconstruction, topological property inference, and
+%more. In machine learning, two data points should intuitively be considered
+%close if they are in the same data cluster, even if their Euclidean
+%distance is far. This property is called the \textbf{density-sensitive}
+%property.\gary{Use data-sensitive instead of density-sensitive}
+
+Data-sensitive metrics are fundamental in machine learning, and are implicitly central in celebrated machine learning methods such as $k$-NN graph methods, manifold learning, level-set methods, single-linkage clustering, and Euclidean MST-based clustering (See Appendix~\ref{} for details).
+The construction of appropriate data-sensitive metrics is an active area of research.
+We consider a simple data-sensitive metric with an underlying manifold structure called the \textbf{nearest neighbor metric}.
+This metric and its close variants have been studied in the past by multiple researchers~\cite{}.
+In this paper, we show how to compute the nearest neighbor metric exactly for any dimension, which solves one of the most important and challenging problems for any manifold-based metric.
+
+The nearest neighbor metric is defined with respect to the nearest neighbor function $\distto_P$ for the data set $P$:
+\[
+\distto_P(z) = 2\min_{x\in p} \|x-z\|
+\]
+It will be used as a cost function for a density-based distance defined as follows.
+The factor of $2$ normalizes and simplifies expressions later.
 
 \begin{definition}
 Given a continuous cost function $c:\R^k \rightarrow \R$, we define the density-based
-cost of a path $\gamma$ relative to $c$ as: 
+cost of a path $\gamma$ relative to $c$ as:
 \[ \len_c(\gamma) = \int_{0}^1 c(\gamma(t)) \| \gamma'(t) \|dt. \]
-Here, the path $\gamma$ is defined as a continuous mapping $\gamma:[0,1]
+Here, the path $\gamma$ is defined as a continuous map $\gamma:[0,1]
 \to \R^k$.
-Let $\ourpath(a,b)$ denote the set
-of piecewise-$C_1$ paths from $a$ to $b$.  We will compute the
-lengths of paths relative to the distance function $\distto_p$ as
-follows. 
+Let $\ourpath(a,b)$ denote the set of piecewise-$C_1$ paths from $a$ to $b$.
+% We will compute the lengths of paths relative to the distance function $\distto_p$ as follows.
 We then define the \textbf{density-based distance} between two points $a, b \in
-\R^k$ as 
+\R^k$ as
 \[ d_c(a,b) \inf_{\gamma\in\ourpath(a,b)} \len_c(\gamma)\]
 \end{definition}
 
-Conceptually, the density-based cost of a path is the weighted path length,
-where each infinitesimal path piece is weighted with cost function $c$.
-Density-based distances have been notable in the machine learning setting
-for over a decade~\cite{}. To build a density-sensitive metric from density-based
-distances, we would like a cost function $c$ that is small when close to
-the data set, and large when far away. The Nearest Neighbor function is the
-most natural candidate, and has been traditionally used as a proximity
-measure between points and a data set in both the geometry and machine
-learning settings~\cite{}. It has been used as such in Nearest Neighbor
+This is a slight simplification of the original definition from~\cite{sajama05estimatingDBDM} which included other requirements to facilitate approximtion.
+Conceptually, the density-based cost of a path is the weighted path length, where each infinitesimal path piece is weighted according to $c$.
+The cost $c$ is usually some function of an underlying density $f$ (the natural choice would be $c(x) = f(x)^{-\frac{1}{k}}$).
+Density-based distances have been notable in the machine learning setting for over a decade~\cite{sajama05estimatingDBDM,bijral11semiSupLearningDBD}.
+To build a density-sensitive metric from density-based distances, we would like a cost function $c$ that is small when close to the data set, and large when far away.
+The nearest neighbor function $\disttp_P$ is the most natural candidate, and has been traditionally used as a proximity
+measure between points and a data set in both the geometry and machine learning settings~\cite{}. It has been used as such in Nearest Neighbor
 (and $k$-NN) classification, $k$-means/medians/center clustering, finite
 element methods, and any of the hundreds of methods that use Voronoi
 diagrams or Delaunay triangulation as intermediate data structures.
 
-\begin{definition} Given any finite set $P\subset \R^k$, there is a
-real-valued function $\distto_P: \R^k\to \R$ defined as
-$\distto_P(z) = 2\min_{x\in p} \|x-z\|$.  The \textbf{Nearest Neighbor Cost}
-of a path $\gamma$ is $\len_{\distto_P}$, which we will shorthand to
-$\len_N$.  
-The \textbf{Nearest Neighbor Metric} between two points is
-defined as $\dist_{\distto_P}$, which we short-hand as $\dist_N$.
-
-The factor of $2$ in $\distto_P(z)$ is a
-normalizing constant.
+\begin{definition} Given any finite set $P\subset \R^k$, the \textbf{Nearest Neighbor Cost} of a path $\gamma$ is $\len_{\distto_P}(\gamma)$, which we will abbreviate as
+$\len_N(\gamma)$.
+The \textbf{Nearest Neighbor Metric} is
+defined as $\dist_{\distto_P}$, which we abbreviate as $\dist_N$.
 \end{definition}
 \begin{figure}[htbp]
   \centering
@@ -75,9 +67,8 @@ point.}
   \label{fig:example}
 \end{figure}
 
-The Nearest Neighbor metric, and density-based distances in general, are
-examples of manifold geodesics (see~\cite{} for details). Manifold
-geodesics are defined by embedding a point set into a continuous geometric
+The Nearest Neighbor metric, and density-based distances in general, are examples of manifold geodesics (see~\cite{} for details).
+Manifold geodesics are defined by embedding a point set into a continuous geometric
 manifold, and computing the infimum length path on the manifold structure
 between points.  Within computer science, dozens of foundational papers in
 machine learning and surface reconstruction rely on manifold-based metrics
@@ -95,7 +86,7 @@ the presence of gravitational fields (General Relativity, Schwarzschild
 metric). In mathematics, manifold geodesics appear in nearly every branch
 of higher mathematics including differential equations, differential
 geometry, Lie theory, calculus of variations, algebraic geometry, and
-topology.  
+topology.
 
 One of the most significant problems on any manifold geodesic is how to
 compute it exactly. Exact computation of manifold metrics is considered a
@@ -110,7 +101,7 @@ geodesics are the minimum cost path out of an uncountable number of paths
 that can travel 'anywhere' on the manifold structure. This makes exactly
 computing these metrics challenging, even in the case of the Nearest
 Neighbor metric for just four fixed points in two dimensions (the authors
-are unaware of any easy method for this simplified task). 
+are unaware of any easy method for this simplified task).
 The core tool for exactly
 computing manifold metrics, calculus of variations, is intractable on the
 nearest neighbor metric due to the metric's heavy dependence on the Voronoi
@@ -191,8 +182,8 @@ Theorem~\ref{thm:NN} is fairly tight.
 in $n-1$ dimensional space or a countable union of compact geometric
 objects in countably infinite dimension. There is no other restriction on
 the compact geometric objects, and they need not be convex nor simply
-connected. The geometry of these collectoins of objects can be
-extremely compliacted, and it is generally hard to prove
+connected. The geometry of these collections of objects can be
+extremely complicated, and it is generally hard to prove
 these types of results on such point sets.\gary{Hard sell this on a
 union of line segments. Sounds surprising!}
 
@@ -234,7 +225,7 @@ dimension, and approximating it quickly for both general point sets and
 point sets arising from a well-behaved probability distribution in constant
 dimension. This is the first work we know of that computes a manifold
 metric exactly without calculus of variations, and we hope that our tools
-can be useful for other metric computations and approximations. 
+can be useful for other metric computations and approximations.
 
 Besides for this contribution, we also generalize the Nearest Neighbor
 Metric to the $q$-Nearest Neighbor metric (abbreviated $q$-NN for short),
@@ -276,4 +267,3 @@ fundamental for celebrated clustering methods like single-linkage
 clustering~\cite{}. This implies that the $q$-edge power metric, and the
 Nearest Neighbor metric, can be used to generalize popular methods in
 clustering.
-
