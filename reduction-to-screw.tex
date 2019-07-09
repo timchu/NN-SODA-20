@@ -16,10 +16,10 @@ $q=2$, and noting that the proof generalizes naturally for any $q > 2$.
 The core step is that we will find a Lipschitz map $m: \R \rightarrow \R^n$
 that preserves $\dist_q(s,p)$ for all $p \in P$. We will then show how the
 Lipschitz extension of $m$ is also Lipschitz as a function between $q$-NN
-metrics. If we can do this, then the $q$-NN cost of any path from $s$ to
-$p_i$ on our initial point set is lower bounded by the $q$-NN cost of the
-image of the path under $m$, from $m(s)$ to $m(p_i)$ (since the map is Lipschitz as a function
-between $q$-NN metrics). If the Theorem holds on $m(p_1), m(p_2), \ldots
+metrics. If we can do this, then the $q$-NN cost of any path $\gamma$ from $s$ to
+$p_i$ on our initial point set is lower bounded by the $q$-NN cost of
+$m(\gamma)$ on the point set $m(p_0), \ldots m(p_{n-1})$.
+If the Theorem holds on $m(p_1), m(p_2), \ldots
 m(p_{n-1})$, then this $q$-NN cost is lower bounded by the shortest path
 from $m(p_0)$ to $m(p_{n-1})$, which is equal to the shortest path from
 $p_0$ to $p_{n-1}$. This completes our reduction.
