@@ -20,12 +20,20 @@ dimensions via Yao graphs and Gabriel graphs~\cite{LiWan2001}, but these
 did not generalize well to constant dimension: Yao
 graphs are not very efficient to compute, and Gabriel graphs can have
 quadratically many edges even in $3$ dimension.  
+
 Theorem~\ref{thm:distribution-spanner} proves that a $1$-spanner of
 the Nearest Neighbor metric can be found assuming points are samples from a
 probability density, by using a $k$-$NN$ graph for
 appropriate $k$. Our result is tight when $d$ is constant. This
 is not possible for Euclidean distance, as a $1$-spanner is almost
-surely the complete graph.
+surely the complete graph. Although the restrictions on the probability
+density may seem limiting (for example, they do not even cover the case of
+they are in fact quite flexible and standard in
+machine learning theory and practice~\cite{}. For example, although they do not cover the case
+of a Gaussian (unbounded support), they do cover the case of a Gaussian
+where the very thin tail is cut off, and this recovers most of the relevant
+data in a Gaussian distribution.
+
 Finally, we show how the nearest neighbor metric generalizes Euclidean
 distance and maximum-edge Euclidean MST distance ~\cite{LiWan2001}
 Theorem~\ref{thm:NN} will also allow us

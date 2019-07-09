@@ -5,15 +5,14 @@ the Probability Density Setting
 
 Theorem~\ref{thm:distribution-spanner} states that for $k= O(2^d \log n)$, the $k$-NN graph of $n$ points drawn i.i.d from
 a nicely behaved probability distribution is a $1$-spanner of the
-edge-squared metric. 
+Nearest Neighbor metric. This section is dedicatd to outlining a proof of
+this Theorem, the full result which will be in
+Appendix~\ref{ap:distribution-spanner}.
 This result is clearly impossible for Euclidean distances,
 whose $1$-spanner is the complete graph almost surely.  
 Our theorem implies any off-the-shelf
 $k$-nearest neighbor graph generator can compute
-edge-squared metric. In this section, we outline a proof and
-defer the analytical details to
-Appendix~\ref{ap:distribution-spanner}.
-
+edge-squared metric. 
 
 First, let us assume that the support of our
 probability density $D$ has the same dimension as our ambient space.
