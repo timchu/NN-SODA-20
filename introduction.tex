@@ -5,7 +5,11 @@ It is widely believed that a more useful metric on the data points would have th
 That is, distances are scaled inversely according to the density of the data along a path between points.
 We call such a metric \textbf{data-sensitive}.
 
-Data-sensitive metrics arise naturally in machine learning, and are implicitly central in celebrated methods such as $k$-NN graph methods, manifold learning, level-set methods, single-linkage clustering, and Euclidean MST-based clustering.
+Data-sensitive metrics arise naturally in machine learning, and are
+implicitly central in celebrated methods such as $k$-NN graph methods,
+manifold learning, level-set methods, single-linkage clustering, and
+Euclidean MST-based clustering (see Section~\ref{sec:edge-power} and
+Appendix~\ref{sec:edge-power} for details).
 %(See Appendix~\ref{} for details)
 The construction of appropriate data-sensitive metrics is an active area of research.
 We consider a simple data-sensitive metric with an underlying manifold structure called the \textbf{nearest neighbor metric}.
@@ -89,10 +93,11 @@ This allows us to compute the nearest-neighbor metric exactly for any given poin
 Here, the factor of half in the definition is a normalizing constant.
 
 \begin{theorem}\label{thm:NN} The nearest neighbor metric and edge squared
-metric are equivalent for any finite point set $P$ in arbitrary dimension
+metric are equivalent for any set $P$ in arbitrary dimension that is the
+finite collection of compact path-connected sets.
 \end{theorem}
 
-The exact equality is realized when the nearest neighbor path is piecewise
+This in particular covers the case of $n$ points in $n-1$ dimension. The exact equality is realized when the nearest neighbor path is piecewise
 linear, traveling straight from data point to data point.
 The edge squared metric has been previously studied by multiple researchers in machine learning and power-efficient wireless networks, but previously has only been linked to the nearest neighbor metric by a fairly weak 3-approximation.
 There are several reasons why it is surprising that these metrics are equal:
@@ -120,15 +125,12 @@ Thus, there shortest paths may not even be unique.
 % Thus, lowering the nearest neighbor function anywhere inside the triangle and using this to build a new density-based distance will break Theorem~\ref{thm:NN}.
 % This establishes that the equality in Theorem~\ref{thm:NN} is fairly tight.
 
-% \item This theorem holds for any compact point set, whether its $n$ points
-% in $n-1$ dimensional space or a countable union of compact geometric
-% objects in countably infinite dimension. There is no other restriction on
-% the compact geometric objects, and they need not be convex nor simply
-% connected. The geometry of these collections of objects can be
-% extremely complicated, and it is generally hard to prove
-% these types of results on such point sets.\gary{Hard sell this on a
-% union of line segments. Sounds surprising!}
-
+ \item The finite union of compact path-connected geometric bodies in arbitrary
+ dimension can have extremely complicated geometry, and the Voronoi diagram
+on which the nearest neighbor metric depends is ill-understood for even
+three of these bodies in two dimension.  There is no other restriction on
+the compact geometric objects, and they need not be convex or even simply
+connected. 
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.3\textwidth]{Figures/example1.pdf}
@@ -137,7 +139,7 @@ Thus, there shortest paths may not even be unique.
       is the integral along the curve scaled by the distance to the nearest body.
     A curve may traverse a body at  no cost. Theorem~\ref{thm:NN}
 establishes that the shortest path curve between two points goes straight
-from convex body to convex body.}
+from compact body to compact body.}
   \label{fig:example1}
 \end{figure}
 
