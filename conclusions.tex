@@ -1,43 +1,19 @@
 \section{Conclusions and Open Questions}\label{sec:conclusions}
 
 
-We examined a
-graph-based distance on Euclidean point sets, showed it equaled a
-special density-based distance, and built sparser and faster
-spanners
-on this metric than is known for Euclidean distances.
-Such sparse data structures may be
-surprising given that the metric can have high doubling dimension.
-Many problems remain open.
+We examined the Nearest Neighbor metric and showed how to compute it
+exactly, as well as find sparse data structures efficiently for approximate
+computatoin in practice.  Many problems remain open.
 
-Is there a generalization of Theorem~\ref{thm:NN} to $p$-power
-metrics? This would
-require defining a new version of the Nearest Neighbor Metric distance. Separately, are the
-proof techniques for Theorem~\ref{thm:NN} of use for computing
-or approximating other density-based distances?
-Can non-spanner data
-structures for clustering with the edge-squared metric be
-computed efficiently?
-Such data structures include core-sets and
-distance oracles~\cite{Badoiu02, Sohler18, Thorup05}.
+First: are there generalizations of these metrics, for which our proof techniques
+will still hold? The nearest neighbor metric has many natural
+generalizatoins, including the $k^{th}$ nearest neighbor or powers of the
+nearest neighbor functoin.
 
-Can we efficiently compute $o(\log n)$-spanners of the $p$-power metric in
-high dimension with a
-nearly linear number of edges?
+Can we efficiently compute $o(\log n)$-spanners of the Nearest Neighbor
+metric in high dimension, such the the spanners have a nearly linear number of edges?
 The existence of such spanners has been studied for Euclidean metrics in~\cite{HarPeled13}, where the stretch
 obtained is $\sqrt{\log n}$.
-Good constructions for $(1+\eps)$-spanners of the
-normalized $\infty$-power metric are known: many (but not all) approximate Euclidean MST constructions are
-$(1+\eps)$-spanners of this metric~\cite{Callahan1995, Yaro2017}.
-Can high-dimensional
-approximate Euclidean MST algorithms~\cite{Alman2016, Yaro2017, Andoni2014}
-be adapted to
-create efficient $p$-power spanners?
-Any spanner for high-dimensional
-edge-squared metrics must
-give the same quality spanner for negative type
-distances~\cite{Schoenberg1937, Deza1997},
-which include $l_2$ and $l_1$.
 
 Does computing $k$-NN graphs with approximate nearest neighbor methods give $1$-spanners of the
 edge-squared metric with high probability?
@@ -53,7 +29,7 @@ how the edge-squared metric is generated from the Euclidean distance.
 
 It remains an open question how well clustering or
 classification with
-edge-squared metrics and Nearest Neighbor Metric distances performs on real-world
+Nearest Neighbor Metric distances performs on real-world
 data.
 Experiments have been done by Bijral, Ratliff, and
 Srebro in~\cite{bijral11semiSupLearningDBD}.
